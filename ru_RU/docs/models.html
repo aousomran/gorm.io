@@ -6,47 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://gorm.io/ru_RU/docs/models.html">
+  <link rel="canonical" href="https://gorm.io/ru_RU/docs/models.html">
   <!-- Alternative links -->
   
   <!-- Icon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
-  <meta name="msapplication-TileColor" content="#2f83cd">
-  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
-  <meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- CSS -->
   <!-- build:css build/css/navy.css -->
   
 <link rel="stylesheet" href="/css/navy.css">
 
   <!-- endbuild -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="GORM">
+  <link rel="alternate" href="/atom.xml" title="GORM" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Объявление моделейМодели обычно являются обычными Golang структурами, основными типами Go или указателями. sql.Scanner и driver.Valuer интерфейсы также поддерживаются. Пример модели: type User struct">
+  <meta name="description" content="Объявление моделейМодели являются обычными структурами с основными типами Go, указателями&#x2F;псевдонимами или пользовательскими типами, реализующими интерфейсы Scanner и Valuer Например: type User s">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Объявление моделей">
-<meta property="og:url" content="http://gorm.io/ru_RU/docs/models.html">
+<meta property="og:url" content="https://gorm.io/ru_RU/docs/models.html">
 <meta property="og:site_name" content="GORM">
-<meta property="og:description" content="Объявление моделейМодели обычно являются обычными Golang структурами, основными типами Go или указателями. sql.Scanner и driver.Valuer интерфейсы также поддерживаются. Пример модели: type User struct">
+<meta property="og:description" content="Объявление моделейМодели являются обычными структурами с основными типами Go, указателями&#x2F;псевдонимами или пользовательскими типами, реализующими интерфейсы Scanner и Valuer Например: type User s">
 <meta property="og:locale" content="ru_RU">
-<meta property="article:published_time" content="2020-02-19T02:13:50.021Z">
-<meta property="article:modified_time" content="2020-02-19T02:13:50.021Z">
+<meta property="article:published_time" content="2023-11-10T12:07:29.123Z">
+<meta property="article:modified_time" content="2023-11-10T12:07:29.123Z">
 <meta property="article:author" content="Jinzhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="zhangjinzhu">
@@ -59,22 +46,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WSNPD75');</script>
 
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
     <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="/ru_RU/" id="logo">GORM</a>
+      <a href="/ru_RU/" id="logo">
+        <img src="/gorm.svg" alt="GORM">
+      </a>
     </h1>
     <nav id="main-nav">
-      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></I>Документация</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fa fa-slack"></I>Сообщество</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></I>Поддержать</a>
+      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/gen/" class="main-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fab fa-slack"></i>Сообщество</a><a href="https://pkg.go.dev/gorm.io/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Внести вклад</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
         </div>
-        <input type="search" id="search-input" placeholder="Поиск...">
+        <input type="search" id="search-input" placeholder="Поиск в документации...">
       </div>
     </nav>
     <div id="lang-select-wrap">
@@ -87,19 +76,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <option value="de_DE">Deutsch</option>
         
-          <option value="es_ES">Español</option>
-        
           <option value="id_ID">bahasa Indonesia</option>
-        
-          <option value="it_IT">Italiano</option>
         
           <option value="ja_JP">日本語</option>
         
           <option value="ru_RU" selected>Русский</option>
         
+          <option value="ko_KR">한국어</option>
+        
+          <option value="hi_IN">हिन्दी</option>
+        
           <option value="fr_FR">French</option>
         
-          <option value="ko_KR">한국어</option>
+          <option value="it_IT">Italiano</option>
+        
+          <option value="es_ES">Español</option>
         
       </select>
     </div>
@@ -120,169 +111,267 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">Объявление моделей</h1>
-                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/ru_RU/docs/models.md" target="_blank" rel="noopener" class="article-edit-link" title="Улучшить этот раздел"><i class="fa fa-pencil"></i></a>
+                
+                <a target="_blank" rel="noopener" href="https://translate.gorm.io/project/go-gorm/ru" class="article-edit-link" title="Улучшить эту страницу"><i class="fa fa-pencil"></i></a>
+                
               </header>
               <div class="article-content" itemprop="articleBody">
-                <html><head></head><body><h2 id="Объявление-моделей" class="article-heading"><a href="#Объявление-моделей" class="headerlink" title="Объявление моделей"></a>Объявление моделей<a class="article-anchor" href="#Объявление-моделей" aria-hidden="true"></a></h2><p>Модели обычно являются обычными Golang структурами, основными типами Go или указателями. <a href="https://golang.org/pkg/database/sql/#Scanner" target="_blank" rel="noopener"><code>sql.Scanner</code></a> и <a href="https://golang.org/pkg/database/sql/driver/#Valuer" target="_blank" rel="noopener"><code>driver.Valuer</code></a> интерфейсы также поддерживаются.</p>
-<p>Пример модели:</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {   </span><br><span class="line">    gorm.Model   Name <span class="keyword">string</span>   </span><br><span class="line">    Age sql.NullInt64   </span><br><span class="line">    Birthday *time.Time   </span><br><span class="line">    Email <span class="keyword">string</span> <span class="string">`gorm:"type:varchar(100);unique_index"`</span>   </span><br><span class="line">    Role <span class="keyword">string</span> <span class="string">`gorm:"size:255"`</span> <span class="comment">// установим размер поля в 255 символов   </span></span><br><span class="line">    MemberNumber *<span class="keyword">string</span> <span class="string">`gorm:"unique;not null"`</span> <span class="comment">// сделаем поле уникальным и не null</span></span><br><span class="line">    Num <span class="keyword">int</span> <span class="string">`gorm:"AUTO_INCREMENT"`</span> <span class="comment">// установим число как автоинкремент</span></span><br><span class="line">    Address <span class="keyword">string</span> <span class="string">`gorm:"index:addr"`</span> <span class="comment">// сделаем индекс `addr` для поля</span></span><br><span class="line">    IgnoreMe <span class="keyword">int</span> <span class="string">`gorm:"-"`</span> <span class="comment">// игнорируем это поле</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+                <html><head></head><body><h2 id="Объявление-моделей" class="article-heading"><a href="#Объявление-моделей" class="headerlink" title="Объявление моделей"></a>Объявление моделей<a class="article-anchor" href="#Объявление-моделей" aria-hidden="true"></a></h2><p>Модели являются обычными структурами с основными типами Go, указателями/псевдонимами или пользовательскими типами, реализующими интерфейсы <a target="_blank" rel="noopener" href="https://pkg.go.dev/database/sql/?tab=doc#Scanner">Scanner</a> и <a target="_blank" rel="noopener" href="https://pkg.go.dev/database/sql/driver#Valuer">Valuer</a></p>
+<p>Например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  ID           <span class="type">uint</span></span><br><span class="line">  Name         <span class="type">string</span></span><br><span class="line">  Email        *<span class="type">string</span></span><br><span class="line">  Age          <span class="type">uint8</span></span><br><span class="line">  Birthday     *time.Time</span><br><span class="line">  MemberNumber sql.NullString</span><br><span class="line">  ActivatedAt  sql.NullTime</span><br><span class="line">  CreatedAt    time.Time</span><br><span class="line">  UpdatedAt    time.Time</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Теги-структуры" class="article-heading"><a href="#Теги-структуры" class="headerlink" title="Теги структуры"></a>Теги структуры<a class="article-anchor" href="#Теги-структуры" aria-hidden="true"></a></h2><p>Теги необязательно используются при объявлении моделей. GORM поддерживает следующие теги:</p>
-<h3 id="Поддерживаемые-теги" class="article-heading"><a href="#Поддерживаемые-теги" class="headerlink" title="Поддерживаемые теги"></a>Поддерживаемые теги<a class="article-anchor" href="#Поддерживаемые-теги" aria-hidden="true"></a></h3><table>
-<thead>
-<tr>
-<th>Тег</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Column</td>
-<td>Указывает имя столбца</td>
-</tr>
-<tr>
-<td>Type</td>
-<td>Укажите тип данных столбца</td>
-</tr>
-<tr>
-<td>Size</td>
-<td>Задает размер столбца, по умолчанию 255</td>
-</tr>
-<tr>
-<td>PRIMARY_KEY</td>
-<td>Определяет столбец как первичный ключ</td>
-</tr>
-<tr>
-<td>UNIQUE</td>
-<td>Указывает столбец как уникальный</td>
-</tr>
-<tr>
-<td>DEFAULT</td>
-<td>Задает значение столбца по умолчанию</td>
-</tr>
-<tr>
-<td>PRECISION</td>
-<td>Определяет точность столбца</td>
-</tr>
-<tr>
-<td>NOT NULL</td>
-<td>Определяет столбец как NOT NULL</td>
-</tr>
-<tr>
-<td>AUTO_INCREMENT</td>
-<td>Указывает столбец как автоинкрементный или нет</td>
-</tr>
-<tr>
-<td>INDEX</td>
-<td>Создать индекс с именем или без него, то же имя создает составные индексы</td>
-</tr>
-<tr>
-<td>UNIQUE_INDEX</td>
-<td>Как и <code>INDEX</code>, создает уникальный индекс</td>
-</tr>
-<tr>
-<td>EMBEDDED</td>
-<td>Установить структуру как встроенную</td>
-</tr>
-<tr>
-<td>EMBEDDED_PREFIX</td>
-<td>Установить префикс для встроенной структуры</td>
-</tr>
-<tr>
-<td>-</td>
-<td>Игнорировать эти поля</td>
-</tr>
-</tbody></table>
-<h3 id="Теги-структуры-для-ассоциаций" class="article-heading"><a href="#Теги-структуры-для-ассоциаций" class="headerlink" title="Теги структуры для ассоциаций"></a>Теги структуры для ассоциаций<a class="article-anchor" href="#Теги-структуры-для-ассоциаций" aria-hidden="true"></a></h3><p>Подробнее о разделе “Связи”</p>
+<h2 id="Преобразования" class="article-heading"><a href="#Преобразования" class="headerlink" title="Преобразования"></a>Преобразования<a class="article-anchor" href="#Преобразования" aria-hidden="true"></a></h2><p>GORM предпочитает преобразование конфигурации. По умолчанию GORM использует <code>ID</code> в качестве первичного ключа, преобразует имя структуры во множественное число в <code>snake_cases</code> в качестве имени таблицы, <code>snake_case</code> в качестве имени столбца и использует <code>СreatedAt</code>, <code>UpdatedAt</code> для отслеживания времени создания/обновления записи</p>
+<p>Если вы будете следовать соглашениям, принятым GORM, вам нужно будет написать очень мало конфигурации / кода. Если соглашение не соответствует вашим требованиям, <a href="conventions.html">GORM позволяет вам настраивать их</a></p>
+<h2 id="gorm-Model" class="article-heading"><a href="#gorm-Model" class="headerlink" title="gorm.Model"></a>gorm.Model<a class="article-anchor" href="#gorm-Model" aria-hidden="true"></a></h2><p>GORM определяет структуру <code>gorm.Model</code>, которая включает в себя поля <code>ID</code>, <code>CreatedAt</code>, <code>UpdatedAt</code>, <code>DeletedAt</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// объявление gorm.Model</span></span><br><span class="line"><span class="keyword">type</span> Model <span class="keyword">struct</span> {</span><br><span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:"primaryKey"`</span></span><br><span class="line">  CreatedAt time.Time</span><br><span class="line">  UpdatedAt time.Time</span><br><span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:"index"`</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Вы можете встроить gorm.Model в свою структуру. Чтобы включить эти поля, смотрите <a href="#embedded_struct">Встроенные структуры</a></p>
+<h2 id="Дополнительно" class="article-heading"><a href="#Дополнительно" class="headerlink" title="Дополнительно"></a>Дополнительно<a class="article-anchor" href="#Дополнительно" aria-hidden="true"></a></h2><h3 id="Разрешение-для-каждого-поля" class="article-heading"><a href="#Разрешение-для-каждого-поля" class="headerlink" title="Разрешение для каждого поля"></a><span id="field_permission">Разрешение для каждого поля</span><a class="article-anchor" href="#Разрешение-для-каждого-поля" aria-hidden="true"></a></h3><p>Экспортированные поля имеют все разрешения при выполнении CRUD с помощью GORM, и GORM позволяет вам изменять разрешение на уровне поля с помощью тегов, поэтому вы можете сделать поле доступным только для чтения, записи, создания, обновления или игнорируемым</p>
+<blockquote class="note warn"><p>Игнорируемые поля не будут созданы при использовании GORM Migrator для создания таблицы</p>
+</blockquote>
+
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-:create"`</span> <span class="comment">// разрешены чтение и создание</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-:update"`</span> <span class="comment">// разрешены чтение и обновление</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-"`</span>        <span class="comment">// разрешены чтение и запись (создание и обновление)</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-:false"`</span>  <span class="comment">// разрешено чтение, отключена запись</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-&gt;"`</span>        <span class="comment">// только чтение (отключена запись если она не настроена)</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-&gt;;&lt;-:create"`</span> <span class="comment">// разрешены чтение и создание</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-&gt;:false;&lt;-:create"`</span> <span class="comment">// только создание (отключено чтение из базы данных)</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-"`</span>            <span class="comment">// игнорируйте это поле при записи и чтении с помощью struct</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-:all"`</span>        <span class="comment">// игнорируйте это поле при записи, чтении и миграции с помощью struct</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-:migration"`</span>  <span class="comment">// игнорируйте это поле при миграции с помощью struct</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Создание-x2F-обновление-Time-x2F-Unix-Milli-x2F-Nano-секунд-отслеживания" class="article-heading"><a href="#Создание-x2F-обновление-Time-x2F-Unix-Milli-x2F-Nano-секунд-отслеживания" class="headerlink" title="Создание/обновление Time/Unix (Milli/Nano) секунд отслеживания"></a><name id="time_tracking">Создание/обновление Time/Unix (Milli/Nano) секунд отслеживания</name><a class="article-anchor" href="#Создание-x2F-обновление-Time-x2F-Unix-Milli-x2F-Nano-секунд-отслеживания" aria-hidden="true"></a></h3><p>GORM использует <code>CreatedAt</code>, <code>UpdatedAt</code> для отслеживания создания/обновления времени. Если эти поля определены, GORM автоматически установит <a href="gorm_config.html#now_func">текущее время</a> при создании/обновлении</p>
+<p>Чтобы использовать поля с другим именем, вы можете настроить эти поля при помощи тегов <code>autoCreateTime</code>, <code>autoUpdateTime</code></p>
+<p>Если вы предпочитаете сохранять UNIX (milli/nano) секунды вместо времени, вы можете просто изменить тип данных поля с <code>time.Time</code> на <code>int</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  CreatedAt time.Time <span class="comment">// Установить текущее время, если оно равно нулю при создании</span></span><br><span class="line">  UpdatedAt <span class="type">int</span>       <span class="comment">// Установить в формате секунд unix при обновлении или создание, если оно равно нулю</span></span><br><span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:"autoUpdateTime:nano"`</span> <span class="comment">// Использование формата unix в наносекундах в качестве времени обновления</span></span><br><span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:"autoUpdateTime:milli"`</span><span class="comment">// Использование формата unix в миллисекундах в качестве времени обновления</span></span><br><span class="line">  Created   <span class="type">int64</span> <span class="string">`gorm:"autoCreateTime"`</span>      <span class="comment">// Использование формата unix в секундах при создании</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Вложенные-структуры" class="article-heading"><a href="#Вложенные-структуры" class="headerlink" title="Вложенные структуры"></a><span id="embedded_struct">Вложенные структуры</span><a class="article-anchor" href="#Вложенные-структуры" aria-hidden="true"></a></h3><p>Для анонимных полей GORM будет включать свои поля в свою же родительскую структуру, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// эквивалентно</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:"primaryKey"`</span></span><br><span class="line">  CreatedAt time.Time</span><br><span class="line">  UpdatedAt time.Time</span><br><span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:"index"`</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Вы можете вставить обычные поля структуры с тегом <code>embedded</code>, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Author <span class="keyword">struct</span> {</span><br><span class="line">    Name  <span class="type">string</span></span><br><span class="line">    Email <span class="type">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID      <span class="type">int</span></span><br><span class="line">  Author  Author <span class="string">`gorm:"embedded"`</span></span><br><span class="line">  Upvotes <span class="type">int32</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// эквивалентно</span></span><br><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID    <span class="type">int64</span></span><br><span class="line">    Name  <span class="type">string</span></span><br><span class="line">    Email <span class="type">string</span></span><br><span class="line">  Upvotes  <span class="type">int32</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Также вы можете использовать тег <code>embeddedPrefix</code> для добавления префикса во встроенные поля в db, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID      <span class="type">int</span></span><br><span class="line">  Author  Author <span class="string">`gorm:"embedded;embeddedPrefix:author_"`</span></span><br><span class="line">  Upvotes <span class="type">int32</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// эквивалентно</span></span><br><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID          <span class="type">int64</span></span><br><span class="line">    AuthorName  <span class="type">string</span></span><br><span class="line">    AuthorEmail <span class="type">string</span></span><br><span class="line">  Upvotes     <span class="type">int32</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="Теги-полей" class="article-heading"><a href="#Теги-полей" class="headerlink" title="Теги полей"></a><span id="tags">Теги полей</span><a class="article-anchor" href="#Теги-полей" aria-hidden="true"></a></h3><p>Теги необязательны для использования при определении моделей, GORM поддерживает следующие теги: Теги не чувствительны к регистру, однако <code>регистру</code> является предпочтительным.</p>
 <table>
 <thead>
 <tr>
-<th>Тег</th>
+<th>Наименование тэга</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>MANY2MANY</td>
-<td>Указывает имя таблицы объединения</td>
+<td>column</td>
+<td>название столбца</td>
 </tr>
 <tr>
-<td>FOREIGNKEY</td>
-<td>Определяет внешний ключ</td>
+<td>type</td>
+<td>тип данных столбца, предпочитайте использовать совместимый общий тип, например: bool, int, uint, float, string, time, bytes, который работает для всех баз данных и может использоваться вместе с другими тегами, например <code>not null</code>, <code>size</code>, <code>autoIncrement</code>… также поддерживается указанный тип данных базы данных, например <code>varbinary (8)</code>, при использовании указанного типа данных базы данных он должен быть полным типом данных базы данных, например: <code>MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT</code></td>
 </tr>
 <tr>
-<td>ASSOCIATION_FOREIGNKEY</td>
-<td>Определяет ассоциативный внешний ключ</td>
+<td>serializer</td>
+<td>указывает сериализатор для сериализации и десериализации данных в Бд, например: <code>serializer:json/gob/unixtime</code></td>
 </tr>
 <tr>
-<td>POLYMORPHIC</td>
-<td>Определяет полиморфический тип</td>
+<td>size</td>
+<td>определяет размер/длину данных столбца, например: <code>size:256</code></td>
 </tr>
 <tr>
-<td>POLYMORPHIC_VALUE</td>
-<td>Определяет полиморфическое значение</td>
+<td>primaryKey</td>
+<td>указывает столбец в качестве первичного ключа</td>
 </tr>
 <tr>
-<td>JOINTABLE_FOREIGNKEY</td>
-<td>Определяет внешний ключ подключения</td>
+<td>unique</td>
+<td>указывает столбец, как уникальный</td>
 </tr>
 <tr>
-<td>ASSOCIATION_JOINTABLE_FOREIGNKEY</td>
-<td>Определяет ассоциативный внешний ключ подключения</td>
+<td>default</td>
+<td>задает значение столбца по умолчанию</td>
 </tr>
 <tr>
-<td>SAVE_ASSOCIATIONS</td>
-<td>Автосохранение ассоциаций или нет</td>
+<td>precision</td>
+<td>определяет точность значений столбца</td>
 </tr>
 <tr>
-<td>ASSOCIATION_AUTOUPDATE</td>
-<td>Автообновление ассоциаций или нет</td>
+<td>scale</td>
+<td>specifies column scale</td>
 </tr>
 <tr>
-<td>ASSOCIATION_AUTOCREATE</td>
-<td>Автосоздание ассоциаций или нет</td>
+<td>not null</td>
+<td>указывает столбец, как NOT NULL</td>
 </tr>
 <tr>
-<td>ASSOCIATION_SAVE_REFERENCE</td>
-<td>Автосохранение ассоциаций или нет</td>
+<td>autoIncrement</td>
+<td>определяет столбец с авто инкрементом</td>
 </tr>
 <tr>
-<td>PRELOAD</td>
-<td>Предзагрузка ассоциаций или нет</td>
+<td>autoIncrementIncrement</td>
+<td>шаг автоматического увеличения, управляет интервалом между последовательными значениями столбца</td>
+</tr>
+<tr>
+<td>embedded</td>
+<td>встраиваемое поле</td>
+</tr>
+<tr>
+<td>embeddedPrefix</td>
+<td>префикс имени столбца для встроенных полей</td>
+</tr>
+<tr>
+<td>autoCreateTime</td>
+<td>отслеживать текущее время при создании, для полей <code>int</code>, он будет отслеживать секунды unix, используйте значение <code>nano</code>/<code>milli</code> для отслеживания unix нано/миллисекунд, например: <code>autoCreateTime:nano</code></td>
+</tr>
+<tr>
+<td>autoUpdateTime</td>
+<td>отслеживайте текущее время при создании/обновлении, для полей <code>int</code> оно будет отслеживать секунды unix, используйте значение <code>nano</code>/<code>milli</code> для отслеживания unix нано/миллисекунд, например: <code>autoUpdateTime:milli</code></td>
+</tr>
+<tr>
+<td>index</td>
+<td>создает индекс с параметрами, используйте одно и то же имя для нескольких полей, создавая составные индексы, смотрите <a href="indexes.html">Индексы</a> для получения подробной информации</td>
+</tr>
+<tr>
+<td>uniqueIndex</td>
+<td>то же, что и параметр <code>index</code>, но создает уникальный индекс</td>
+</tr>
+<tr>
+<td>check</td>
+<td>создает ограничение проверки, например: <code>check:age &gt; 13</code>, смотрите <a href="constraints.html">Ограничения</a></td>
+</tr>
+<tr>
+<td>&lt;-</td>
+<td>устанавливает разрешение на запись поля, <code>&lt;-:create</code> поле только для создания, <code>&lt;-:update</code> поле только для обновления, <code>&lt;-:false</code> нет разрешения на запись, <code>&lt;-</code> разрешение на создание и обновление</td>
+</tr>
+<tr>
+<td>-&gt;</td>
+<td>устанавливает разрешение на чтение поля, <code>-&gt;:false</code> нет разрешения на чтение</td>
+</tr>
+<tr>
+<td>-</td>
+<td>игнорировать это поле, <code>-</code> нет разрешения на чтение/запись, <code>-:migration</code> нет разрешения на миграцию, <code>-:all</code> нет разрешения на чтение/запись/миграцию</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>добавить комментарий к полю при миграции</td>
 </tr>
 </tbody></table>
+<h3 id="Взаимосвязи" class="article-heading"><a href="#Взаимосвязи" class="headerlink" title="Взаимосвязи"></a>Взаимосвязи<a class="article-anchor" href="#Взаимосвязи" aria-hidden="true"></a></h3><p>GORM позволяет настраивать внешние ключи (foreign keys), ограничения (constraints), отношения многие ко многим через теги связей, для получения подробной информации перейдите в <a href="associations.html#tags">раздел Ассоциации</a></p>
 </body></html>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-19T02:13:50.021Z" itemprop="dateModified">Последнее обновление: 2020-02-19</time>
-<a href="index.html" class="article-footer-prev" title="Общие сведения"><i class="fa fa-chevron-left"></i><span>Назад</span></a><a href="conventions.html" class="article-footer-next" title="Определения"><span>Далее</span><i class="fa fa-chevron-right"></i></a>
-              </footer>
+
               
-<section id="comments">
-<div id="disqus_thread"></div>
-</sction>
+              <div>
+                <a href="v2_release_note.html" target="_blank">
+                  <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/go-gorm/gorm?label=Latest GORM Release&color=red&&style=for-the-badge&logo=go&logoColor=red">
+                </a>
+              </div>
+              
 
-<script>
-var disqus_config = function () {
-this.page.url = 'http://gorm.io/ru_RU/docs/models.html';
-this.page.identifier = 'http://gorm.io/ru_RU/docs/models.html';
-this.language = 'ru';
-};
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-11-10T12:07:29.123Z" itemprop="dateModified">Последнее обновление: 2023-11-10</time>
+<a href="index.html" class="article-footer-prev" title="Обзор"><i class="fa fa-chevron-left"></i><span>Пред.</span></a><a href="connecting_to_the_database.html" class="article-footer-next" title="Подключение к базе данных"><span>След.</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gorm.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+              <div class="post_sponsors">
+                <div class="sponsors-wrapper-pc open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
 
+    <div class="sponsors">
+      <h1>Gold Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <div class="sponsor_item">
+        <a href="https://hubuc.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="sponsors-wrapper-mobile open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors</h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h1>Gold Sponsors</h1>
+      <div class="sponsor_item">
+        <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+
+              <!--  -->
+<!-- <section id="comments"> -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- </sction> -->
+
+<!-- <script> -->
+<!-- var disqus_config = function () { -->
+<!-- this.page.url = 'https://gorm.io/ru_RU/docs/models.html'; -->
+<!-- this.page.identifier = 'https://gorm.io/ru_RU/docs/models.html'; -->
+<!-- this.language = 'ru'; -->
+<!-- }; -->
+
+<!-- (function() { // DON'T EDIT BELOW THIS LINE -->
+<!-- var d = document, s = d.createElement('script'); -->
+<!-- s.src = 'https://gormv2.disqus.com/embed.js'; -->
+<!-- s.setAttribute('data-timestamp', +new Date()); -->
+<!-- (d.head || d.body).appendChild(s); -->
+<!-- })(); -->
+<!-- </script> -->
+<!--  -->
 
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
-              <strong class="sidebar-title">Содержание</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Объявление-моделей"><span class="toc-text">Объявление моделей</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Теги-структуры"><span class="toc-text">Теги структуры</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Поддерживаемые-теги"><span class="toc-text">Поддерживаемые теги</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Теги-структуры-для-ассоциаций"><span class="toc-text">Теги структуры для ассоциаций</span></a></li></ol></li></ol>
+              <strong class="sidebar-title">Содержимое</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%B1%D1%8A%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B5%D0%B9"><span class="toc-text">Объявление моделей</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><span class="toc-text">Преобразования</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gorm-Model"><span class="toc-text">gorm.Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%94%D0%BE%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE"><span class="toc-text">Дополнительно</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%A0%D0%B0%D0%B7%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B4%D0%BB%D1%8F-%D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%B3%D0%BE-%D0%BF%D0%BE%D0%BB%D1%8F"><span class="toc-text">Разрешение для каждого поля</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-x2F-%D0%BE%D0%B1%D0%BD%D0%BE%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-Time-x2F-Unix-Milli-x2F-Nano-%D1%81%D0%B5%D0%BA%D1%83%D0%BD%D0%B4-%D0%BE%D1%82%D1%81%D0%BB%D0%B5%D0%B6%D0%B8%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><span class="toc-text">Создание&#x2F;обновление Time&#x2F;Unix (Milli&#x2F;Nano) секунд отслеживания</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%92%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B"><span class="toc-text">Вложенные структуры</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%A2%D0%B5%D0%B3%D0%B8-%D0%BF%D0%BE%D0%BB%D0%B5%D0%B9"><span class="toc-text">Теги полей</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%92%D0%B7%D0%B0%D0%B8%D0%BC%D0%BE%D1%81%D0%B2%D1%8F%D0%B7%D0%B8"><span class="toc-text">Взаимосвязи</span></a></li></ol></li></ol>
+
+              
+                <a href="https://translate.gorm.io/project/go-gorm/ru" target="_blank" id="article-improve">
+                  Улучшить эту страницу
+                </a>
+              
               <a href="#" id="article-toc-top">Вернуться к началу</a>
             </div>
           </aside>
@@ -290,7 +379,7 @@ s.setAttribute('data-timestamp', +new Date());
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">С чего начать?</strong><a href="index.html" class="sidebar-link">Общие сведения</a><a href="models.html" class="sidebar-link current">Объявление моделей</a><a href="conventions.html" class="sidebar-link">Определения</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создание</a><a href="query.html" class="sidebar-link">Запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удаление</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Связи</a><a href="preload.html" class="sidebar-link">Подгрузка данных(Жадная загрузка)</a><strong class="sidebar-title">Туториалы</strong><a href="method_chaining.html" class="sidebar-link">Цепочка вызовов</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграции</a><a href="sql_builder.html" class="sidebar-link">Чистый SQL и SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Нативный интерфейс БД</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="composite_primary_key.html" class="sidebar-link">Составной первичный ключ</a><a href="write_plugins.html" class="sidebar-link">Плагины (Колбеки)</a><a href="dialects.html" class="sidebar-link">Поддерживаемые БД</a><a href="logger.html" class="sidebar-link">Логирование</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Сделать вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевод текущего сайта</a>
+    <strong class="sidebar-title">Начало работы</strong><a href="index.html" class="sidebar-link">Обзор</a><a href="models.html" class="sidebar-link current">Объявление моделей</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создать</a><a href="query.html" class="sidebar-link">Запрос</a><a href="advanced_query.html" class="sidebar-link">Расширенный запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удалить</a><a href="sql_builder.html" class="sidebar-link">Raw SQL и конструктор SQL</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Режим связи</a><a href="preload.html" class="sidebar-link">Предзагрузка (Нетерпеливая загрузка)</a><strong class="sidebar-title">Обучение</strong><a href="context.html" class="sidebar-link">Контекст</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="method_chaining.html" class="sidebar-link">Цепочки методов</a><a href="session.html" class="sidebar-link">Сессия</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграция</a><a href="logger.html" class="sidebar-link">Logger</a><a href="generic_interface.html" class="sidebar-link">Универсальный интерфейс базы данных</a><a href="performance.html" class="sidebar-link">Производительность</a><a href="data_types.html" class="sidebar-link">Настройка типов данных</a><a href="scopes.html" class="sidebar-link">Области</a><a href="conventions.html" class="sidebar-link">Преобразования</a><a href="settings.html" class="sidebar-link">Настройки</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="dbresolver.html" class="sidebar-link">Резолвер базы данных</a><a href="sharding.html" class="sidebar-link">Шардирование</a><a href="serializer.html" class="sidebar-link">Сериализатор</a><a href="prometheus.html" class="sidebar-link">Prometheus</a><a href="hints.html" class="sidebar-link">Подсказки</a><a href="indexes.html" class="sidebar-link">Индексы</a><a href="constraints.html" class="sidebar-link">Ограничения</a><a href="composite_primary_key.html" class="sidebar-link">Композитный первичный ключ</a><a href="security.html" class="sidebar-link">Безопасность</a><a href="gorm_config.html" class="sidebar-link">Настройки GORM</a><a href="write_plugins.html" class="sidebar-link">Написание плагинов</a><a href="write_driver.html" class="sidebar-link">Написание драйверов</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Внести вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевести текущий сайт</a>
   </div>
 </aside>
 
@@ -301,13 +390,22 @@ s.setAttribute('data-timestamp', +new Date());
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2013~2020 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      &copy; 2013~2023 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
-      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+      <div id="gorm.cn" style="display:none">
+      感谢 <a href="https://www.qiniu.com/" target="_blank">七牛云</a> 对 CDN 的赞助，<a href="https://github.com/unknwon" target="_blank">无闻</a> 对域名 <a href="https://gorm.cn" target="_blank">gorm.cn</a> 的捐赠<br>
+      <a href="http://beian.miit.gov.cn/" target="_blank" data-spm-anchor-id="a3c00.7621333.7y9jhqsfz.112">浙ICP备2020033190号-1</a><br>
+      </div>
+
+      <script>
+        if (window.location.hostname.includes("gorm.cn")) {
+          document.getElementById("gorm.cn").style.display = 'block';
+        }
+      </script>
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/go-gorm/gorm" class="footer-link" target="_blank"><i class="fab fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -318,9 +416,9 @@ s.setAttribute('data-timestamp', +new Date());
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
       <li class="mobile-nav-item">
-        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></I>Главная</a>
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Главная</a>
       </li>
-      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></I>Документация</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fa fa-slack"></I>Сообщество</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></I>Поддержать</a>
+      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/gen/" class="mobile-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fab fa-slack"></i>Сообщество</a><a href="https://pkg.go.dev/gorm.io/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Внести вклад</a>
     </ul>
     
   </div>
@@ -334,19 +432,21 @@ s.setAttribute('data-timestamp', +new Date());
       
         <option value="de_DE">Deutsch</option>
       
-        <option value="es_ES">Español</option>
-      
         <option value="id_ID">bahasa Indonesia</option>
-      
-        <option value="it_IT">Italiano</option>
       
         <option value="ja_JP">日本語</option>
       
         <option value="ru_RU" selected>Русский</option>
       
+        <option value="ko_KR">한국어</option>
+      
+        <option value="hi_IN">हिन्दी</option>
+      
         <option value="fr_FR">French</option>
       
-        <option value="ko_KR">한국어</option>
+        <option value="it_IT">Italiano</option>
+      
+        <option value="es_ES">Español</option>
       
     </select>
   </div>
@@ -364,12 +464,9 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/js/mobile_nav.js"></script>
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 <script src="/js/code_expander.js"></script>
-
-
-<script src="/js/404_fix.js"></script>
 
 <!-- endbuild -->
 

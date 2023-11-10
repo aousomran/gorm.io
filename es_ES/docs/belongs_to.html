@@ -2,73 +2,62 @@
 <html lang="es_ES">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Belongs To | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <title>Pertenecer a | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://gorm.io/es_ES/docs/belongs_to.html">
+  <link rel="canonical" href="https://gorm.io/es_ES/docs/belongs_to.html">
   <!-- Alternative links -->
   
     
-      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/belongs_to.html">
+      <link rel="alternative" hreflang="en" href="https://gorm.io/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/belongs_to.html">
+      <link rel="alternative" hreflang="zh_CN" href="https://gorm.io/zh_CN/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/belongs_to.html">
+      <link rel="alternative" hreflang="de_DE" href="https://gorm.io/de_DE/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/belongs_to.html">
+      <link rel="alternative" hreflang="id_ID" href="https://gorm.io/id_ID/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/belongs_to.html">
+      <link rel="alternative" hreflang="ja_JP" href="https://gorm.io/ja_JP/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/belongs_to.html">
+      <link rel="alternative" hreflang="ru_RU" href="https://gorm.io/ru_RU/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/belongs_to.html">
+      <link rel="alternative" hreflang="ko_KR" href="https://gorm.io/ko_KR/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/belongs_to.html">
+      <link rel="alternative" hreflang="hi_IN" href="https://gorm.io/hi_IN/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/belongs_to.html">
+      <link rel="alternative" hreflang="fr_FR" href="https://gorm.io/fr_FR/docs/belongs_to.html">
     
-      <link rel="alternative" hreflang="ko_KR" href="http://gorm.io/ko_KR/docs/belongs_to.html">
+      <link rel="alternative" hreflang="it_IT" href="https://gorm.io/it_IT/docs/belongs_to.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="https://gorm.io/es_ES/docs/belongs_to.html">
     
   
   <!-- Icon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
-  <meta name="msapplication-TileColor" content="#2f83cd">
-  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
-  <meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- CSS -->
   <!-- build:css build/css/navy.css -->
   
 <link rel="stylesheet" href="/css/navy.css">
 
   <!-- endbuild -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="GORM">
+  <link rel="alternate" href="/atom.xml" title="GORM" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Belongs ToUna asociación belongs to establece una conexión uno a uno con otro modelo, de modo que cada instancia del modelo de declaración “pertenece a” una instancia del otro modelo. Por ejemplo, si">
+  <meta name="description" content="Pertenecer aUn pertenece a establece una conexión de uno a uno con otro modelo, de tal manera que cada instancia del modelo declarante “pertenece” a una instancia del otro modelo. Por ejemplo, si su a">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Belongs To">
-<meta property="og:url" content="http://gorm.io/es_ES/docs/belongs_to.html">
+<meta property="og:title" content="Pertenecer a">
+<meta property="og:url" content="https://gorm.io/es_ES/docs/belongs_to.html">
 <meta property="og:site_name" content="GORM">
-<meta property="og:description" content="Belongs ToUna asociación belongs to establece una conexión uno a uno con otro modelo, de modo que cada instancia del modelo de declaración “pertenece a” una instancia del otro modelo. Por ejemplo, si">
+<meta property="og:description" content="Pertenecer aUn pertenece a establece una conexión de uno a uno con otro modelo, de tal manera que cada instancia del modelo declarante “pertenece” a una instancia del otro modelo. Por ejemplo, si su a">
 <meta property="og:locale" content="es_ES">
-<meta property="article:published_time" content="2020-02-19T02:13:50.009Z">
-<meta property="article:modified_time" content="2020-02-19T02:13:50.009Z">
+<meta property="article:published_time" content="2023-11-10T12:07:29.079Z">
+<meta property="article:modified_time" content="2023-11-10T12:07:29.079Z">
 <meta property="article:author" content="Jinzhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="zhangjinzhu">
@@ -81,17 +70,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WSNPD75');</script>
 
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
     <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="/es_ES/" id="logo">GORM</a>
+      <a href="/es_ES/" id="logo">
+        <img src="/gorm.svg" alt="GORM">
+      </a>
     </h1>
     <nav id="main-nav">
-      <a href="/es_ES/docs/" class="main-nav-link"><i class="fa fa-book"></i>Documentos</a><a href="/es_ES/community.html" class="main-nav-link"><i class="fa fa-slack"></i>Comunidad</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
+      <a href="/es_ES/docs/" class="main-nav-link"><i class="fa fa-lock"></i>Documentación</a><a href="/es_ES/gen/" class="main-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/es_ES/community.html" class="main-nav-link"><i class="fab fa-slack"></i>Community</a><a href="https://pkg.go.dev/gorm.io/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -109,19 +100,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <option value="de_DE">Deutsch</option>
         
-          <option value="es_ES" selected>Español</option>
-        
           <option value="id_ID">bahasa Indonesia</option>
-        
-          <option value="it_IT">Italiano</option>
         
           <option value="ja_JP">日本語</option>
         
           <option value="ru_RU">Русский</option>
         
+          <option value="ko_KR">한국어</option>
+        
+          <option value="hi_IN">हिन्दी</option>
+        
           <option value="fr_FR">French</option>
         
-          <option value="ko_KR">한국어</option>
+          <option value="it_IT">Italiano</option>
+        
+          <option value="es_ES" selected>Español</option>
         
       </select>
     </div>
@@ -141,70 +134,167 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Belongs To</h1>
-                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/es_ES/docs/belongs_to.md" target="_blank" rel="noopener" class="article-edit-link" title="Mejorar este documento"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Pertenecer a</h1>
+                
+                <a target="_blank" rel="noopener" href="https://translate.gorm.io/project/go-gorm/es-ES" class="article-edit-link" title="Mejora este documento"><i class="fa fa-pencil"></i></a>
+                
               </header>
               <div class="article-content" itemprop="articleBody">
-                <html><head></head><body><h2 id="Belongs-To" class="article-heading"><a href="#Belongs-To" class="headerlink" title="Belongs To"></a>Belongs To<a class="article-anchor" href="#Belongs-To" aria-hidden="true"></a></h2><p>Una asociación <code>belongs to</code> establece una conexión uno a uno con otro modelo, de modo que cada instancia del modelo de declaración “pertenece a” una instancia del otro modelo.</p>
-<p>Por ejemplo, si su aplicación incluye usuarios y perfiles, y cada perfil puede asignarse exactamente a un usuario</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {   gorm.Model   Name <span class="keyword">string</span> } <span class="comment">// `Profile` pertenece a `User`, `UserID` es la clave foránea type Profile struct {   gorm.Model   UserID int   User User   Name string }</span></span><br></pre></td></tr></tbody></table></figure>
+                <html><head></head><body><h2 id="Pertenecer-a" class="article-heading"><a href="#Pertenecer-a" class="headerlink" title="Pertenecer a"></a>Pertenecer a<a class="article-anchor" href="#Pertenecer-a" aria-hidden="true"></a></h2><p>Un <code>pertenece a</code> establece una conexión de uno a uno con otro modelo, de tal manera que cada instancia del modelo declarante “pertenece” a una instancia del otro modelo.</p>
+<p>Por ejemplo, si su aplicación incluye usuarios y empresas, y cada usuario puede ser asignado a una empresa exactamente, los siguientes tipos representan esa relación. Ten en cuenta que en el objeto <code>User</code> hay tanto un <code>CompanyID</code> como una <code>Company</code>. Por defecto, el <code>CompanyID</code> se utiliza implícitamente para crear una relación de clave foránea entre las tablas <code>User</code> y <code>Company</code>, y por lo tanto debe incluirse en la estructura <code>User</code> con el fin de llenar el struct <code>Company</code>.</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// `User` belongs to `Company`, `CompanyID` is the foreign key</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">int</span></span><br><span class="line">  Company   Company</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Foreign-Key" class="article-heading"><a href="#Foreign-Key" class="headerlink" title="Foreign Key"></a>Foreign Key<a class="article-anchor" href="#Foreign-Key" aria-hidden="true"></a></h2><p>Para definir una relación de pertenencia, la clave foránea debe existir, la clave foránea predeterminada usa el nombre de tipo más su clave principal.</p>
-<p>En el ejemplo anterior, para definir un modelo que pertenece a <code>User</code> la foreign key debe ser <code>UserID</code>.</p>
+<p>Consulte <a href="belongs_to.html#Eager-Loading">Carga diligente</a> para obtener detalles sobre cómo llenar la estructura interior.</p>
+<h2 id="Sobrescritura-de-Clave-Foranea" class="article-heading"><a href="#Sobrescritura-de-Clave-Foranea" class="headerlink" title="Sobrescritura de Clave Foránea"></a>Sobrescritura de Clave Foránea<a class="article-anchor" href="#Sobrescritura-de-Clave-Foranea" aria-hidden="true"></a></h2><p>Para definir una relación de pertenencia, la clave foránea debe existir, la clave foránea por defecto utiliza el nombre del tipo del propietario más el nombre del campo principal.</p>
+<p>Para el ejemplo anterior, para definir el modelo <code>User</code> que pertenece a <code>Company</code>, la clave foránea debe ser <code>CompanyID</code> por convención</p>
 <p>GORM proporciona una manera de personalizar la clave foránea, por ejemplo:</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Profile <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="keyword">string</span></span><br><span class="line">  User      User <span class="string">`gorm:"foreignkey:UserRefer"`</span> <span class="comment">// use UserRefer as foreign key</span></span><br><span class="line">  UserRefer <span class="keyword">uint</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name         <span class="type">string</span></span><br><span class="line">  CompanyRefer <span class="type">int</span></span><br><span class="line">  Company      Company <span class="string">`gorm:"foreignKey:CompanyRefer"`</span></span><br><span class="line">  <span class="comment">// use CompanyRefer as foreign key</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Asociacion-ForeignKey" class="article-heading"><a href="#Asociacion-ForeignKey" class="headerlink" title="Asociación ForeignKey"></a>Asociación ForeignKey<a class="article-anchor" href="#Asociacion-ForeignKey" aria-hidden="true"></a></h2><p>Para una relación de pertenencia, GORM suele usar la clave primaria del usuario como el valor de la clave foránea, por ejemplo, es <code>User</code>‘s <code>ID</code>.</p>
-<p>Cuando asigna un perfil a un usuario, GORM guardará el <code>ID</code> del usuario en el campo <code>UserID</code>.</p>
-<p>Puede cambiarlo con la etiqueta <code>association_foreignkey</code>, por ejemplo:</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Refer <span class="keyword">string</span></span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Profile <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="keyword">string</span></span><br><span class="line">  User      User <span class="string">`gorm:"association_foreignkey:Refer"`</span> <span class="comment">// use Refer as association foreign key</span></span><br><span class="line">  UserRefer <span class="keyword">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Sobrescritura-de-Referencias" class="article-heading"><a href="#Sobrescritura-de-Referencias" class="headerlink" title="Sobrescritura de Referencias"></a>Sobrescritura de Referencias<a class="article-anchor" href="#Sobrescritura-de-Referencias" aria-hidden="true"></a></h2><p>Para una relación perteneciente, GORM usualmente usa el campo primario del propietario como el valor de la clave foránea, para el ejemplo anterior, es el campo <code>ID</code> de <code>Company</code>.</p>
+<p>Al asignar un usuario a una empresa, GORM guardará el <code>ID</code> de la empresa en el campo <code>CompanyID</code> del usuario.</p>
+<p>Puedes cambiarlo con la etiqueta <code>references</code>, por ejemplo:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">string</span></span><br><span class="line">  Company   Company <span class="string">`gorm:"references:Code"`</span> <span class="comment">// use Code as references</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Code <span class="type">string</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Trabajando-con-Belongs-To" class="article-heading"><a href="#Trabajando-con-Belongs-To" class="headerlink" title="Trabajando con Belongs To"></a>Trabajando con Belongs To<a class="article-anchor" href="#Trabajando-con-Belongs-To" aria-hidden="true"></a></h2><p>Se puede encontrar la asociación <code>belongs to</code>con <code>Related</code></p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Model(&user).Related(&profile) <span class="comment">//// SELECT * FROM profiles WHERE user_id = 111; // 111 es el ID de usuario</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote class="note warn"><p><strong>NOTA</strong> GORM generalmente asume la relación como <code>tiene una</code> si el nombre de clave foránea ya existe en el tipo del propietario, necesitamos especificar <code>references</code> en la relación <code>pertenece a</code>.</p>
+</blockquote>
 
-<p>For advanced usage, refer <a href="associations.html#Association-Mode">Association Mode</a></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">string</span></span><br><span class="line">  Company   Company <span class="string">`gorm:"references:CompanyID"`</span> <span class="comment">// use Company.CompanyID as references</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  CompanyID   <span class="type">int</span></span><br><span class="line">  Code        <span class="type">string</span></span><br><span class="line">  Name        <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CRUD-con-Pertenece-a" class="article-heading"><a href="#CRUD-con-Pertenece-a" class="headerlink" title="CRUD con Pertenece a"></a>CRUD con Pertenece a<a class="article-anchor" href="#CRUD-con-Pertenece-a" aria-hidden="true"></a></h2><p>Por favor, compruebe que <a href="associations.html#Association-Mode">el modo de asociación</a> para trabajar con relaciones pertenece a</p>
+<h2 id="Carga-diligente" class="article-heading"><a href="#Carga-diligente" class="headerlink" title="Carga diligente"></a>Carga diligente<a class="article-anchor" href="#Carga-diligente" aria-hidden="true"></a></h2><p>GORM permite la carga diligente con asociaciones pertenece a usando <code>precarga</code> o <code>Uniones</code>, consulte <a href="preload.html">precarga (carga diligente)</a> para más detalles</p>
+<h2 id="Restricciones-de-Clave-Foranea" class="article-heading"><a href="#Restricciones-de-Clave-Foranea" class="headerlink" title="Restricciones de Clave Foránea"></a>Restricciones de Clave Foránea<a class="article-anchor" href="#Restricciones-de-Clave-Foranea" aria-hidden="true"></a></h2><p>Puede configurar <code>OnUpdate</code>, <code>OnDelete</code> restricciones con la etiqueta <code>constraint</code>, se creará al migrar con GORM, por ejemplo:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">int</span></span><br><span class="line">  Company   Company <span class="string">`gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 </body></html>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-19T02:13:50.009Z" itemprop="dateModified">Última actualización: 2020-02-19</time>
-<a href="delete.html" class="article-footer-prev" title="Eliminar"><i class="fa fa-chevron-left"></i><span>Anterior</span></a><a href="has_one.html" class="article-footer-next" title="Has One"><span>Siguiente</span><i class="fa fa-chevron-right"></i></a>
-              </footer>
+
               
-<section id="comments">
-<div id="disqus_thread"></div>
-</sction>
+              <div>
+                <a href="v2_release_note.html" target="_blank">
+                  <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/go-gorm/gorm?label=Latest GORM Release&color=red&&style=for-the-badge&logo=go&logoColor=red">
+                </a>
+              </div>
+              
 
-<script>
-var disqus_config = function () {
-this.page.url = 'http://gorm.io/es_ES/docs/belongs_to.html';
-this.page.identifier = 'http://gorm.io/es_ES/docs/belongs_to.html';
-this.language = 'es';
-};
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-11-10T12:07:29.079Z" itemprop="dateModified">Última actualización: 2023-11-10</time>
+<a href="sql_builder.html" class="article-footer-prev" title="Consultas SQL Directas"><i class="fa fa-chevron-left"></i><span>Anterior</span></a><a href="has_one.html" class="article-footer-next" title="Tiene uno"><span>Siguiente</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gorm.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+              <div class="post_sponsors">
+                <div class="sponsors-wrapper-pc open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
 
+    <div class="sponsors">
+      <h1>Gold Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <div class="sponsor_item">
+        <a href="https://hubuc.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="sponsors-wrapper-mobile open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors</h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h1>Gold Sponsors</h1>
+      <div class="sponsor_item">
+        <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+
+              <!--  -->
+<!-- <section id="comments"> -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- </sction> -->
+
+<!-- <script> -->
+<!-- var disqus_config = function () { -->
+<!-- this.page.url = 'https://gorm.io/es_ES/docs/belongs_to.html'; -->
+<!-- this.page.identifier = 'https://gorm.io/es_ES/docs/belongs_to.html'; -->
+<!-- this.language = 'es'; -->
+<!-- }; -->
+
+<!-- (function() { // DON'T EDIT BELOW THIS LINE -->
+<!-- var d = document, s = d.createElement('script'); -->
+<!-- s.src = 'https://gormv2.disqus.com/embed.js'; -->
+<!-- s.setAttribute('data-timestamp', +new Date()); -->
+<!-- (d.head || d.body).appendChild(s); -->
+<!-- })(); -->
+<!-- </script> -->
+<!--  -->
 
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
-              <strong class="sidebar-title">Contenidos</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Belongs-To"><span class="toc-text">Belongs To</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Foreign-Key"><span class="toc-text">Foreign Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Asociacion-ForeignKey"><span class="toc-text">Asociación ForeignKey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Trabajando-con-Belongs-To"><span class="toc-text">Trabajando con Belongs To</span></a></li></ol>
-              <a href="#" id="article-toc-top">Volver al principio</a>
+              <strong class="sidebar-title">Contenido</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Pertenecer-a"><span class="toc-text">Pertenecer a</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sobrescritura-de-Clave-Foranea"><span class="toc-text">Sobrescritura de Clave Foránea</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Sobrescritura-de-Referencias"><span class="toc-text">Sobrescritura de Referencias</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CRUD-con-Pertenece-a"><span class="toc-text">CRUD con Pertenece a</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Carga-diligente"><span class="toc-text">Carga diligente</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Restricciones-de-Clave-Foranea"><span class="toc-text">Restricciones de Clave Foránea</span></a></li></ol>
+
+              
+                <a href="https://translate.gorm.io/project/go-gorm/es-ES" target="_blank" id="article-improve">
+                  Mejora este documento
+                </a>
+              
+              <a href="#" id="article-toc-top">Ir al principio de la página</a>
             </div>
           </aside>
         </div>
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">Empezando</strong><a href="index.html" class="sidebar-link">Información General</a><a href="models.html" class="sidebar-link">Declarando Modelos</a><a href="conventions.html" class="sidebar-link">Convenciones</a><a href="connecting_to_the_database.html" class="sidebar-link">Conectando a Base de Datos</a><strong class="sidebar-title">CRUD Interface</strong><a href="create.html" class="sidebar-link">Crear</a><a href="query.html" class="sidebar-link">Query</a><a href="update.html" class="sidebar-link">Actualizar</a><a href="delete.html" class="sidebar-link">Eliminar</a><strong class="sidebar-title">Asociaciones</strong><a href="belongs_to.html" class="sidebar-link current">Pertenece A</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Asociaciones</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">Tutoriales</strong><a href="method_chaining.html" class="sidebar-link">Method Chaining</a><a href="error_handling.html" class="sidebar-link">Manejo de Errores</a><a href="hooks.html" class="sidebar-link">Ganchos</a><a href="transactions.html" class="sidebar-link">Transacciones</a><a href="migration.html" class="sidebar-link">Migración</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Interfaz de base de datos genérica</a><strong class="sidebar-title">Tópicos Avanzados</strong><a href="composite_primary_key.html" class="sidebar-link">Composite Primary Key</a><a href="write_plugins.html" class="sidebar-link">Write Plugins</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link">ChangeLog</a><a href="/community.html" class="sidebar-link">Comunidad</a><a href="/contribute.html" class="sidebar-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Traducir sitio actual</a>
+    <strong class="sidebar-title">Primeros pasos</strong><a href="index.html" class="sidebar-link">Resumen</a><a href="models.html" class="sidebar-link">Declarando modelos</a><a href="connecting_to_the_database.html" class="sidebar-link">Conectar a la base de datos</a><strong class="sidebar-title">Interfaz CRUD</strong><a href="create.html" class="sidebar-link">Crear</a><a href="query.html" class="sidebar-link">Consulta</a><a href="advanced_query.html" class="sidebar-link">Consulta avanzada</a><a href="update.html" class="sidebar-link">Actualizar</a><a href="delete.html" class="sidebar-link">Eliminar</a><a href="sql_builder.html" class="sidebar-link">Consultas SQL Directas</a><strong class="sidebar-title">Asociaciones</strong><a href="belongs_to.html" class="sidebar-link current">Pertenece a</a><a href="has_one.html" class="sidebar-link">Tiene uno</a><a href="has_many.html" class="sidebar-link">Tiene muchos</a><a href="many_to_many.html" class="sidebar-link">Muchos a muchos</a><a href="associations.html" class="sidebar-link">Tipos de asociación</a><a href="preload.html" class="sidebar-link">Precarga (Carga Antigua)</a><strong class="sidebar-title">Tutoriales</strong><a href="context.html" class="sidebar-link">Contexto</a><a href="error_handling.html" class="sidebar-link">Manejo de Errores</a><a href="method_chaining.html" class="sidebar-link">Concatenar métodos</a><a href="session.html" class="sidebar-link">Sesión</a><a href="hooks.html" class="sidebar-link">Disparadores</a><a href="transactions.html" class="sidebar-link">Transacciones</a><a href="migration.html" class="sidebar-link">Migraciones</a><a href="logger.html" class="sidebar-link">Logger</a><a href="generic_interface.html" class="sidebar-link">Interfaz de base de datos genérica</a><a href="performance.html" class="sidebar-link">Rendimiento</a><a href="data_types.html" class="sidebar-link">Tipos de Datos Personalizados</a><a href="scopes.html" class="sidebar-link">Ámbitos</a><a href="conventions.html" class="sidebar-link">Convenciones</a><a href="settings.html" class="sidebar-link">Configuración</a><strong class="sidebar-title">Temas Avanzados</strong><a href="dbresolver.html" class="sidebar-link">Resolución de base de datos</a><a href="sharding.html" class="sidebar-link">Sharding</a><a href="serializer.html" class="sidebar-link">Serializer</a><a href="prometheus.html" class="sidebar-link">Prometheus</a><a href="hints.html" class="sidebar-link">Pistas</a><a href="indexes.html" class="sidebar-link">Índices</a><a href="constraints.html" class="sidebar-link">Restricciones</a><a href="composite_primary_key.html" class="sidebar-link">Clave primaria compuesta</a><a href="security.html" class="sidebar-link">Seguridad</a><a href="gorm_config.html" class="sidebar-link">Configuración de GORM</a><a href="write_plugins.html" class="sidebar-link">Escribir Plugins</a><a href="write_driver.html" class="sidebar-link">Escribir conectores</a><a href="changelog.html" class="sidebar-link">Registro de cambios</a><a href="/community.html" class="sidebar-link">Comunidad</a><a href="/contribute.html" class="sidebar-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Traducir sitio actual</a>
   </div>
 </aside>
 
@@ -215,13 +305,22 @@ s.setAttribute('data-timestamp', +new Date());
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2013~2020 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      &copy; 2013~2023 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
-      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+      <div id="gorm.cn" style="display:none">
+      感谢 <a href="https://www.qiniu.com/" target="_blank">七牛云</a> 对 CDN 的赞助，<a href="https://github.com/unknwon" target="_blank">无闻</a> 对域名 <a href="https://gorm.cn" target="_blank">gorm.cn</a> 的捐赠<br>
+      <a href="http://beian.miit.gov.cn/" target="_blank" data-spm-anchor-id="a3c00.7621333.7y9jhqsfz.112">浙ICP备2020033190号-1</a><br>
+      </div>
+
+      <script>
+        if (window.location.hostname.includes("gorm.cn")) {
+          document.getElementById("gorm.cn").style.display = 'block';
+        }
+      </script>
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/go-gorm/gorm" class="footer-link" target="_blank"><i class="fab fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -232,12 +331,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
       <li class="mobile-nav-item">
-        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Inicio</a>
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i> Inicio</a>
       </li>
-      <a href="/es_ES/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Documentos</a><a href="/es_ES/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>Comunidad</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
+      <a href="/es_ES/docs/" class="mobile-nav-link"><i class="fa fa-lock"></i>Documentación</a><a href="/es_ES/gen/" class="mobile-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/es_ES/community.html" class="mobile-nav-link"><i class="fab fa-slack"></i>Community</a><a href="https://pkg.go.dev/gorm.io/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/es_ES/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribuir</a>
     </ul>
     
-      <strong class="mobile-nav-title">Empezando</strong><a href="index.html" class="mobile-nav-link">Información General</a><a href="models.html" class="mobile-nav-link">Declarando Modelos</a><a href="conventions.html" class="mobile-nav-link">Convenciones</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Conectando a Base de Datos</a><strong class="mobile-nav-title">CRUD Interface</strong><a href="create.html" class="mobile-nav-link">Crear</a><a href="query.html" class="mobile-nav-link">Query</a><a href="update.html" class="mobile-nav-link">Actualizar</a><a href="delete.html" class="mobile-nav-link">Eliminar</a><strong class="mobile-nav-title">Asociaciones</strong><a href="belongs_to.html" class="mobile-nav-link current">Pertenece A</a><a href="has_one.html" class="mobile-nav-link">Has One</a><a href="has_many.html" class="mobile-nav-link">Has Many</a><a href="many_to_many.html" class="mobile-nav-link">Many To Many</a><a href="associations.html" class="mobile-nav-link">Asociaciones</a><a href="preload.html" class="mobile-nav-link">Preloading (Eager Loading)</a><strong class="mobile-nav-title">Tutoriales</strong><a href="method_chaining.html" class="mobile-nav-link">Method Chaining</a><a href="error_handling.html" class="mobile-nav-link">Manejo de Errores</a><a href="hooks.html" class="mobile-nav-link">Ganchos</a><a href="transactions.html" class="mobile-nav-link">Transacciones</a><a href="migration.html" class="mobile-nav-link">Migración</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="mobile-nav-link">Interfaz de base de datos genérica</a><strong class="mobile-nav-title">Tópicos Avanzados</strong><a href="composite_primary_key.html" class="mobile-nav-link">Composite Primary Key</a><a href="write_plugins.html" class="mobile-nav-link">Write Plugins</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="changelog.html" class="mobile-nav-link">ChangeLog</a><a href="/community.html" class="mobile-nav-link">Comunidad</a><a href="/contribute.html" class="mobile-nav-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">Traducir sitio actual</a>
+      <strong class="mobile-nav-title">Primeros pasos</strong><a href="index.html" class="mobile-nav-link">Resumen</a><a href="models.html" class="mobile-nav-link">Declarando modelos</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Conectar a la base de datos</a><strong class="mobile-nav-title">Interfaz CRUD</strong><a href="create.html" class="mobile-nav-link">Crear</a><a href="query.html" class="mobile-nav-link">Consulta</a><a href="advanced_query.html" class="mobile-nav-link">Consulta avanzada</a><a href="update.html" class="mobile-nav-link">Actualizar</a><a href="delete.html" class="mobile-nav-link">Eliminar</a><a href="sql_builder.html" class="mobile-nav-link">Consultas SQL Directas</a><strong class="mobile-nav-title">Asociaciones</strong><a href="belongs_to.html" class="mobile-nav-link current">Pertenece a</a><a href="has_one.html" class="mobile-nav-link">Tiene uno</a><a href="has_many.html" class="mobile-nav-link">Tiene muchos</a><a href="many_to_many.html" class="mobile-nav-link">Muchos a muchos</a><a href="associations.html" class="mobile-nav-link">Tipos de asociación</a><a href="preload.html" class="mobile-nav-link">Precarga (Carga Antigua)</a><strong class="mobile-nav-title">Tutoriales</strong><a href="context.html" class="mobile-nav-link">Contexto</a><a href="error_handling.html" class="mobile-nav-link">Manejo de Errores</a><a href="method_chaining.html" class="mobile-nav-link">Concatenar métodos</a><a href="session.html" class="mobile-nav-link">Sesión</a><a href="hooks.html" class="mobile-nav-link">Disparadores</a><a href="transactions.html" class="mobile-nav-link">Transacciones</a><a href="migration.html" class="mobile-nav-link">Migraciones</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="generic_interface.html" class="mobile-nav-link">Interfaz de base de datos genérica</a><a href="performance.html" class="mobile-nav-link">Rendimiento</a><a href="data_types.html" class="mobile-nav-link">Tipos de Datos Personalizados</a><a href="scopes.html" class="mobile-nav-link">Ámbitos</a><a href="conventions.html" class="mobile-nav-link">Convenciones</a><a href="settings.html" class="mobile-nav-link">Configuración</a><strong class="mobile-nav-title">Temas Avanzados</strong><a href="dbresolver.html" class="mobile-nav-link">Resolución de base de datos</a><a href="sharding.html" class="mobile-nav-link">Sharding</a><a href="serializer.html" class="mobile-nav-link">Serializer</a><a href="prometheus.html" class="mobile-nav-link">Prometheus</a><a href="hints.html" class="mobile-nav-link">Pistas</a><a href="indexes.html" class="mobile-nav-link">Índices</a><a href="constraints.html" class="mobile-nav-link">Restricciones</a><a href="composite_primary_key.html" class="mobile-nav-link">Clave primaria compuesta</a><a href="security.html" class="mobile-nav-link">Seguridad</a><a href="gorm_config.html" class="mobile-nav-link">Configuración de GORM</a><a href="write_plugins.html" class="mobile-nav-link">Escribir Plugins</a><a href="write_driver.html" class="mobile-nav-link">Escribir conectores</a><a href="changelog.html" class="mobile-nav-link">Registro de cambios</a><a href="/community.html" class="mobile-nav-link">Comunidad</a><a href="/contribute.html" class="mobile-nav-link">Contribuir</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">Traducir sitio actual</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
@@ -250,19 +349,21 @@ s.setAttribute('data-timestamp', +new Date());
       
         <option value="de_DE">Deutsch</option>
       
-        <option value="es_ES" selected>Español</option>
-      
         <option value="id_ID">bahasa Indonesia</option>
-      
-        <option value="it_IT">Italiano</option>
       
         <option value="ja_JP">日本語</option>
       
         <option value="ru_RU">Русский</option>
       
+        <option value="ko_KR">한국어</option>
+      
+        <option value="hi_IN">हिन्दी</option>
+      
         <option value="fr_FR">French</option>
       
-        <option value="ko_KR">한국어</option>
+        <option value="it_IT">Italiano</option>
+      
+        <option value="es_ES" selected>Español</option>
       
     </select>
   </div>
@@ -280,12 +381,9 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/js/mobile_nav.js"></script>
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 <script src="/js/code_expander.js"></script>
-
-
-<script src="/js/404_fix.js"></script>
 
 <!-- endbuild -->
 

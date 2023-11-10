@@ -2,51 +2,38 @@
 <html lang="ru_RU">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Конструктор SQL "SQL Builder" | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <title>Конструктор SQL | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://gorm.io/ru_RU/docs/sql_builder.html">
+  <link rel="canonical" href="https://gorm.io/ru_RU/docs/sql_builder.html">
   <!-- Alternative links -->
   
   <!-- Icon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
-  <meta name="msapplication-TileColor" content="#2f83cd">
-  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
-  <meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- CSS -->
   <!-- build:css build/css/navy.css -->
   
 <link rel="stylesheet" href="/css/navy.css">
 
   <!-- endbuild -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="GORM">
+  <link rel="alternate" href="/atom.xml" title="GORM" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Запуск сырого SQLЗапуск сырого SQL, который не может быть связан с другими методами db.Exec(&quot;DROP TABLE users;&quot;)db.Exec(&quot;UPDATE orders SET shipped_at&#x3D;? WHERE id IN (?)&quot;, time.Now(), []int64&amp;#123;11,22">
+  <meta name="description" content="Чистый SQLЗапрос сырых SQL с помощью Scan type Result struct &amp;#123;  ID   int  Name string  Age  int&amp;#125;var result Resultdb.Raw(&quot;SELECT id, name, age FROM users WHERE id &#x3D; ?&quot;, 3).Scan(&amp;amp">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Конструктор SQL &quot;SQL Builder&quot;">
-<meta property="og:url" content="http://gorm.io/ru_RU/docs/sql_builder.html">
+<meta property="og:title" content="Конструктор SQL">
+<meta property="og:url" content="https://gorm.io/ru_RU/docs/sql_builder.html">
 <meta property="og:site_name" content="GORM">
-<meta property="og:description" content="Запуск сырого SQLЗапуск сырого SQL, который не может быть связан с другими методами db.Exec(&quot;DROP TABLE users;&quot;)db.Exec(&quot;UPDATE orders SET shipped_at&#x3D;? WHERE id IN (?)&quot;, time.Now(), []int64&amp;#123;11,22">
+<meta property="og:description" content="Чистый SQLЗапрос сырых SQL с помощью Scan type Result struct &amp;#123;  ID   int  Name string  Age  int&amp;#125;var result Resultdb.Raw(&quot;SELECT id, name, age FROM users WHERE id &#x3D; ?&quot;, 3).Scan(&amp;amp">
 <meta property="og:locale" content="ru_RU">
-<meta property="article:published_time" content="2020-02-19T02:13:50.021Z">
-<meta property="article:modified_time" content="2020-02-19T02:13:50.021Z">
+<meta property="article:published_time" content="2023-11-10T12:07:29.123Z">
+<meta property="article:modified_time" content="2023-11-10T12:07:29.123Z">
 <meta property="article:author" content="Jinzhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="zhangjinzhu">
@@ -59,22 +46,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WSNPD75');</script>
 
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
     <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="/ru_RU/" id="logo">GORM</a>
+      <a href="/ru_RU/" id="logo">
+        <img src="/gorm.svg" alt="GORM">
+      </a>
     </h1>
     <nav id="main-nav">
-      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></I>Документация</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fa fa-slack"></I>Сообщество</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></I>Поддержать</a>
+      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/gen/" class="main-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fab fa-slack"></i>Сообщество</a><a href="https://pkg.go.dev/gorm.io/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Внести вклад</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
         </div>
-        <input type="search" id="search-input" placeholder="Поиск...">
+        <input type="search" id="search-input" placeholder="Поиск в документации...">
       </div>
     </nav>
     <div id="lang-select-wrap">
@@ -87,19 +76,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <option value="de_DE">Deutsch</option>
         
-          <option value="es_ES">Español</option>
-        
           <option value="id_ID">bahasa Indonesia</option>
-        
-          <option value="it_IT">Italiano</option>
         
           <option value="ja_JP">日本語</option>
         
           <option value="ru_RU" selected>Русский</option>
         
+          <option value="ko_KR">한국어</option>
+        
+          <option value="hi_IN">हिन्दी</option>
+        
           <option value="fr_FR">French</option>
         
-          <option value="ko_KR">한국어</option>
+          <option value="it_IT">Italiano</option>
+        
+          <option value="es_ES">Español</option>
         
       </select>
     </div>
@@ -119,50 +110,189 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Конструктор SQL "SQL Builder"</h1>
-                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/ru_RU/docs/sql_builder.md" target="_blank" rel="noopener" class="article-edit-link" title="Улучшить этот раздел"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">Конструктор SQL</h1>
+                
+                <a target="_blank" rel="noopener" href="https://translate.gorm.io/project/go-gorm/ru" class="article-edit-link" title="Улучшить эту страницу"><i class="fa fa-pencil"></i></a>
+                
               </header>
               <div class="article-content" itemprop="articleBody">
-                <html><head></head><body><h2 id="Запуск-сырого-SQL" class="article-heading"><a href="#Запуск-сырого-SQL" class="headerlink" title="Запуск сырого SQL"></a>Запуск сырого SQL<a class="article-anchor" href="#Запуск-сырого-SQL" aria-hidden="true"></a></h2><p>Запуск сырого SQL, который не может быть связан с другими методами</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Exec(<span class="string">"DROP TABLE users;"</span>)</span><br><span class="line">db.Exec(<span class="string">"UPDATE orders SET shipped_at=? WHERE id IN (?)"</span>, time.Now(), []<span class="keyword">int64</span>{<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>})</span><br><span class="line"></span><br><span class="line"><span class="comment">// Scan</span></span><br><span class="line"><span class="keyword">type</span> Result <span class="keyword">struct</span> {</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">  Age  <span class="keyword">int</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result Result</span><br><span class="line">db.Raw(<span class="string">"SELECT name, age FROM users WHERE name = ?"</span>, <span class="number">3</span>).Scan(&result)</span><br></pre></td></tr></tbody></table></figure>
+                <html><head></head><body><h2 id="Чистый-SQL" class="article-heading"><a href="#Чистый-SQL" class="headerlink" title="Чистый SQL"></a>Чистый SQL<a class="article-anchor" href="#Чистый-SQL" aria-hidden="true"></a></h2><p>Запрос сырых SQL с помощью <code>Scan</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Result <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">  Age  <span class="type">int</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> result Result</span><br><span class="line">db.Raw(<span class="string">"SELECT id, name, age FROM users WHERE id = ?"</span>, <span class="number">3</span>).Scan(&amp;result)</span><br><span class="line"></span><br><span class="line">db.Raw(<span class="string">"SELECT id, name, age FROM users WHERE name = ?"</span>, <span class="string">"jinzhu"</span>).Scan(&amp;result)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> age <span class="type">int</span></span><br><span class="line">db.Raw(<span class="string">"SELECT SUM(age) FROM users WHERE role = ?"</span>, <span class="string">"admin"</span>).Scan(&amp;age)</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> users []User</span><br><span class="line">db.Raw(<span class="string">"UPDATE users SET name = ? WHERE age = ? RETURNING id, name"</span>, <span class="string">"jinzhu"</span>, <span class="number">20</span>).Scan(&amp;users)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="sql-Row-amp-sql-Rows" class="article-heading"><a href="#sql-Row-amp-sql-Rows" class="headerlink" title="sql.Row & sql.Rows"></a><code>sql.Row</code> & <code>sql.Rows</code><a class="article-anchor" href="#sql-Row-amp-sql-Rows" aria-hidden="true"></a></h2><p>Получить результат запроса в формате <code>*sql.Row</code> или <code>*sql.Rows</code></p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">row := db.Table(<span class="string">"users"</span>).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Select(<span class="string">"name, age"</span>).Row() <span class="comment">// (*sql.Row)</span></span><br><span class="line">row.Scan(&name, &age)</span><br><span class="line"></span><br><span class="line">rows, err := db.Model(&User{}).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Select(<span class="string">"name, age, email"</span>).Rows() <span class="comment">// (*sql.Rows, error)</span></span><br><span class="line"><span class="keyword">defer</span> rows.Close()</span><br><span class="line"><span class="keyword">for</span> rows.Next() {</span><br><span class="line">  ...</span><br><span class="line">  rows.Scan(&name, &age, &email)</span><br><span class="line">  ...</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// Raw SQL</span></span><br><span class="line">rows, err := db.Raw(<span class="string">"select name, age, email from users where name = ?"</span>, <span class="string">"jinzhu"</span>).Rows() <span class="comment">// (*sql.Rows, error)</span></span><br><span class="line"><span class="keyword">defer</span> rows.Close()</span><br><span class="line"><span class="keyword">for</span> rows.Next() {</span><br><span class="line">  ...</span><br><span class="line">  rows.Scan(&name, &age, &email)</span><br><span class="line">  ...</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p><code>Exec</code> с помощью сырого SQL</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Exec(<span class="string">"DROP TABLE users"</span>)</span><br><span class="line">db.Exec(<span class="string">"UPDATE orders SET shipped_at = ? WHERE id IN ?"</span>, time.Now(), []<span class="type">int64</span>{<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>})</span><br><span class="line"></span><br><span class="line"><span class="comment">// Exec с помощью сырого выражения SQL</span></span><br><span class="line">db.Exec(<span class="string">"UPDATE users SET money = ? WHERE name = ?"</span>, gorm.Expr(<span class="string">"money * ? + ?"</span>, <span class="number">10000</span>, <span class="number">1</span>), <span class="string">"jinzhu"</span>)</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Сканировать-sql-Rows-в-модель" class="article-heading"><a href="#Сканировать-sql-Rows-в-модель" class="headerlink" title="Сканировать sql.Rows в модель"></a>Сканировать <code>sql.Rows</code> в модель<a class="article-anchor" href="#Сканировать-sql-Rows-в-модель" aria-hidden="true"></a></h2><figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">rows, err := db.Model(&User{}).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Select(<span class="string">"name, age, email"</span>).Rows() <span class="comment">// (*sql.Rows, error)</span></span><br><span class="line"><span class="keyword">defer</span> rows.Close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> rows.Next() {</span><br><span class="line">  <span class="keyword">var</span> user User</span><br><span class="line">  <span class="comment">// ScanRows сканирует строку в user</span></span><br><span class="line">  db.ScanRows(rows, &user)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// что-то делаем</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure></body></html>
+<blockquote class="note warn"><p><strong>ПРИМЕЧАНИЕ</strong> GORM позволяет кэшировать подготовленные операторы для повышения производительности, подробности смотрите в <a href="performance.html">Производительность</a></p>
+</blockquote>
+
+<h2 id="Именованные-аргументы" class="article-heading"><a href="#Именованные-аргументы" class="headerlink" title="Именованные аргументы"></a><span id="named_argument">Именованные аргументы</span><a class="article-anchor" href="#Именованные-аргументы" aria-hidden="true"></a></h2><p>GORM поддерживает именованные аргументы с помощью <a target="_blank" rel="noopener" href="https://tip.golang.org/pkg/database/sql/#NamedArg"><code>sql.NamedArg</code></a>, <code>map[string]interface{}{}</code> или структуры, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Where(<span class="string">"name1 = @name OR name2 = @name"</span>, sql.Named(<span class="string">"name"</span>, <span class="string">"jinzhu"</span>)).Find(&amp;user)</span><br><span class="line"><span class="comment">// SELECT * FROM `users` WHERE name1 = "jinzhu" OR name2 = "jinzhu"</span></span><br><span class="line"></span><br><span class="line">db.Where(<span class="string">"name1 = @name OR name2 = @name"</span>, <span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"jinzhu2"</span>}).First(&amp;result3)</span><br><span class="line"><span class="comment">// SELECT * FROM `users` WHERE name1 = "jinzhu2" OR name2 = "jinzhu2" ORDER BY `users`.`id` LIMIT 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Именованные аргументы в сыром SQL</span></span><br><span class="line">db.Raw(<span class="string">"SELECT * FROM users WHERE name1 = @name OR name2 = @name2 OR name3 = @name"</span>,</span><br><span class="line">   sql.Named(<span class="string">"name"</span>, <span class="string">"jinzhu1"</span>), sql.Named(<span class="string">"name2"</span>, <span class="string">"jinzhu2"</span>)).Find(&amp;user)</span><br><span class="line"><span class="comment">// SELECT * FROM users WHERE name1 = "jinzhu1" OR name2 = "jinzhu2" OR name3 = "jinzhu1"</span></span><br><span class="line"></span><br><span class="line">db.Exec(<span class="string">"UPDATE users SET name1 = @name, name2 = @name2, name3 = @name"</span>,</span><br><span class="line">   sql.Named(<span class="string">"name"</span>, <span class="string">"jinzhunew"</span>), sql.Named(<span class="string">"name2"</span>, <span class="string">"jinzhunew2"</span>))</span><br><span class="line"><span class="comment">// UPDATE users SET name1 = "jinzhunew", name2 = "jinzhunew2", name3 = "jinzhunew"</span></span><br><span class="line"></span><br><span class="line">db.Raw(<span class="string">"SELECT * FROM users WHERE (name1 = @name AND name3 = @name) AND name2 = @name2"</span>,</span><br><span class="line">   <span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"jinzhu"</span>, <span class="string">"name2"</span>: <span class="string">"jinzhu2"</span>}).Find(&amp;user)</span><br><span class="line"><span class="comment">// SELECT * FROM users WHERE (name1 = "jinzhu" AND name3 = "jinzhu") AND name2 = "jinzhu2"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> NamedArgument <span class="keyword">struct</span> {</span><br><span class="line">    Name <span class="type">string</span></span><br><span class="line">    Name2 <span class="type">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">db.Raw(<span class="string">"SELECT * FROM users WHERE (name1 = @Name AND name3 = @Name) AND name2 = @Name2"</span>,</span><br><span class="line">     NamedArgument{Name: <span class="string">"jinzhu"</span>, Name2: <span class="string">"jinzhu2"</span>}).Find(&amp;user)</span><br><span class="line"><span class="comment">// SELECT * FROM users WHERE (name1 = "jinzhu" AND name3 = "jinzhu") AND name2 = "jinzhu2"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Режим-DryRun" class="article-heading"><a href="#Режим-DryRun" class="headerlink" title="Режим DryRun"></a>Режим DryRun<a class="article-anchor" href="#Режим-DryRun" aria-hidden="true"></a></h2><p>Генерировать <code>SQL</code> и его аргументы без выполнения, может быть использовано для подготовки или тестирования сгенерированного SQL. Смотрите <a href="session.html">Сессии</a> для деталей</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">stmt := db.Session(&amp;gorm.Session{DryRun: <span class="literal">true</span>}).First(&amp;user, <span class="number">1</span>).Statement</span><br><span class="line">stmt.SQL.String() <span class="comment">//=&gt; SELECT * FROM `users` WHERE `id` = $1 ORDER BY `id`</span></span><br><span class="line">stmt.Vars         <span class="comment">//=&gt; []interface{}{1}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="ToSQL" class="article-heading"><a href="#ToSQL" class="headerlink" title="ToSQL"></a>ToSQL<a class="article-anchor" href="#ToSQL" aria-hidden="true"></a></h2><p>Возвращает сгенерированный <code>SQL</code> без выполнения.</p>
+<p>GORM использует плейсхолдеры аргументов базы данных/sql для построения запроса SQL, которые автоматически защищают от инъекций SQL, но сгенерированный SQL не предоставляет гарантий безопасности. Пожалуйста, используйте его только для отладки.</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">sql := db.ToSQL(<span class="function"><span class="keyword">func</span><span class="params">(tx *gorm.DB)</span></span> *gorm.DB {</span><br><span class="line">  <span class="keyword">return</span> tx.Model(&amp;User{}).Where(<span class="string">"id = ?"</span>, <span class="number">100</span>).Limit(<span class="number">10</span>).Order(<span class="string">"age desc"</span>).Find(&amp;[]User{})</span><br><span class="line">})</span><br><span class="line">sql <span class="comment">//=&gt; SELECT * FROM "users" WHERE id = 100 AND "users"."deleted_at" IS NULL ORDER BY age desc LIMIT 10</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Row-и-Rows" class="article-heading"><a href="#Row-и-Rows" class="headerlink" title="Row и Rows"></a><code>Row</code> и <code>Rows</code><a class="article-anchor" href="#Row-и-Rows" aria-hidden="true"></a></h2><p>Получение <code>*sql.Row</code> в результате запроса</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Использование GORM API для построения SQL</span></span><br><span class="line">row := db.Table(<span class="string">"users"</span>).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Select(<span class="string">"name"</span>, <span class="string">"age"</span>).Row()</span><br><span class="line">row.Scan(&amp;name, &amp;age)</span><br><span class="line"></span><br><span class="line"><span class="comment">// Использование сырого SQL</span></span><br><span class="line">row := db.Raw(<span class="string">"select name, age, email from users where name = ?"</span>, <span class="string">"jinzhu"</span>).Row()</span><br><span class="line">row.Scan(&amp;name, &amp;age, &amp;email)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Получение <code>*sql.Rows</code> в результате запроса</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Использование GORM API для построения SQL</span></span><br><span class="line">rows, err := db.Model(&amp;User{}).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Select(<span class="string">"name, age, email"</span>).Rows()</span><br><span class="line"><span class="keyword">defer</span> rows.Close()</span><br><span class="line"><span class="keyword">for</span> rows.Next() {</span><br><span class="line">  rows.Scan(&amp;name, &amp;age, &amp;email)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// делаем что-нибудь</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// Сырой SQL</span></span><br><span class="line">rows, err := db.Raw(<span class="string">"select name, age, email from users where name = ?"</span>, <span class="string">"jinzhu"</span>).Rows()</span><br><span class="line"><span class="keyword">defer</span> rows.Close()</span><br><span class="line"><span class="keyword">for</span> rows.Next() {</span><br><span class="line">  rows.Scan(&amp;name, &amp;age, &amp;email)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// делаем что-нибудь</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Посмотрите <a href="advanced_query.html">FindInBatches</a>, как запрашивать и обрабатывать записи пакетом. Ознакомьтесь с <a href="advanced_query.html#group_conditions">Группировка условий</a> для создания сложных SQL запросов</p>
+<h2 id="Сканирование-sql-Rows-в-структуру" class="article-heading"><a href="#Сканирование-sql-Rows-в-структуру" class="headerlink" title="Сканирование *sql.Rows в структуру"></a>Сканирование <code>*sql.Rows</code> в структуру<a class="article-anchor" href="#Сканирование-sql-Rows-в-структуру" aria-hidden="true"></a></h2><p>Используйте <code>ScanRows</code>, чтобы отсканировать строку в структуру, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">rows, err := db.Model(&amp;User{}).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Select(<span class="string">"name, age, email"</span>).Rows() <span class="comment">// (*sql.Rows, error)</span></span><br><span class="line"><span class="keyword">defer</span> rows.Close()</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> user User</span><br><span class="line"><span class="keyword">for</span> rows.Next() {</span><br><span class="line">  <span class="comment">// ScanRows сканирует строку в user</span></span><br><span class="line">  db.ScanRows(rows, &amp;user)</span><br><span class="line"></span><br><span class="line">  <span class="comment">// делаем что-нибудь</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Connection" class="article-heading"><a href="#Connection" class="headerlink" title="Connection"></a><span id="connection">Connection</span><a class="article-anchor" href="#Connection" aria-hidden="true"></a></h2><p>Run mutliple SQL in same db tcp connection (not in a transaction)</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Connection(<span class="function"><span class="keyword">func</span><span class="params">(tx *gorm.DB)</span></span> <span class="type">error</span> {</span><br><span class="line">  tx.Exec(<span class="string">"SET my.role = ?"</span>, <span class="string">"admin"</span>)</span><br><span class="line"></span><br><span class="line">  tx.First(&amp;User{})</span><br><span class="line">})</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="Advanced" class="article-heading"><a href="#Advanced" class="headerlink" title="Advanced"></a>Advanced<a class="article-anchor" href="#Advanced" aria-hidden="true"></a></h2><h3 id="Clauses" class="article-heading"><a href="#Clauses" class="headerlink" title="Clauses"></a><span id="clauses">Clauses</span><a class="article-anchor" href="#Clauses" aria-hidden="true"></a></h3><p>GORM uses SQL builder generates SQL internally, for each operation, GORM creates a <code>*gorm.Statement</code> object, all GORM APIs add/change <code>Clause</code> for the <code>Statement</code>, at last, GORM generated SQL based on those clauses</p>
+<p>For example, when querying with <code>First</code>, it adds the following clauses to the <code>Statement</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> limit = <span class="number">1</span></span><br><span class="line">clause.Select{Columns: []clause.Column{{Name: <span class="string">"*"</span>}}}</span><br><span class="line">clause.From{Tables: []clause.Table{{Name: clause.CurrentTable}}}</span><br><span class="line">clause.Limit{Limit: &amp;limit}</span><br><span class="line">clause.OrderBy{Columns: []clause.OrderByColumn{</span><br><span class="line">  {</span><br><span class="line">    Column: clause.Column{</span><br><span class="line">      Table: clause.CurrentTable,</span><br><span class="line">      Name:  clause.PrimaryKey,</span><br><span class="line">    },</span><br><span class="line">  },</span><br><span class="line">}}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Then GORM build finally querying SQL in the <code>Query</code> callbacks like:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">Statement.Build(<span class="string">"SELECT"</span>, <span class="string">"FROM"</span>, <span class="string">"WHERE"</span>, <span class="string">"GROUP BY"</span>, <span class="string">"ORDER BY"</span>, <span class="string">"LIMIT"</span>, <span class="string">"FOR"</span>)</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Which generate SQL:</p>
+<figure class="highlight sql"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> `users` <span class="keyword">ORDER</span> <span class="keyword">BY</span> `users`.`id` LIMIT <span class="number">1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>You can define your own <code>Clause</code> and use it with GORM, it needs to implements <a target="_blank" rel="noopener" href="https://pkg.go.dev/gorm.io/gorm/clause?tab=doc#Interface">Interface</a></p>
+<p>Check out <a target="_blank" rel="noopener" href="https://github.com/go-gorm/gorm/tree/master/clause">examples</a> for reference</p>
+<h3 id="Построитель-операторов" class="article-heading"><a href="#Построитель-операторов" class="headerlink" title="Построитель операторов"></a>Построитель операторов<a class="article-anchor" href="#Построитель-операторов" aria-hidden="true"></a></h3><p>For different databases, Clauses may generate different SQL, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Offset(<span class="number">10</span>).Limit(<span class="number">5</span>).Find(&amp;users)</span><br><span class="line"><span class="comment">// Generated for SQL Server</span></span><br><span class="line"><span class="comment">// SELECT * FROM "users" OFFSET 10 ROW FETCH NEXT 5 ROWS ONLY</span></span><br><span class="line"><span class="comment">// Generated for MySQL</span></span><br><span class="line"><span class="comment">// SELECT * FROM `users` LIMIT 5 OFFSET 10</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>Which is supported because GORM allows database driver register Clause Builder to replace the default one, take the <a target="_blank" rel="noopener" href="https://github.com/go-gorm/sqlserver/blob/512546241200023819d2e7f8f2f91d7fb3a52e42/sqlserver.go#L45">Limit</a> as example</p>
+<h3 id="Варианты-операторов" class="article-heading"><a href="#Варианты-операторов" class="headerlink" title="Варианты операторов"></a>Варианты операторов<a class="article-anchor" href="#Варианты-операторов" aria-hidden="true"></a></h3><p>GORM defined <a target="_blank" rel="noopener" href="https://github.com/go-gorm/gorm/tree/master/clause">Many Clauses</a>, and some clauses provide advanced options can be used for your application</p>
+<p>Although most of them are rarely used, if you find GORM public API can’t match your requirements, may be good to check them out, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Clauses(clause.Insert{Modifier: <span class="string">"IGNORE"</span>}).Create(&amp;user)</span><br><span class="line"><span class="comment">// INSERT IGNORE INTO users (name,age...) VALUES ("jinzhu",18...);</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="StatementModifier" class="article-heading"><a href="#StatementModifier" class="headerlink" title="StatementModifier"></a>StatementModifier<a class="article-anchor" href="#StatementModifier" aria-hidden="true"></a></h3><p>GORM provides interface <a target="_blank" rel="noopener" href="https://pkg.go.dev/gorm.io/gorm?tab=doc#StatementModifier">StatementModifier</a> allows you modify statement to match your requirements, take <a href="hints.html">Hints</a> as example</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> <span class="string">"gorm.io/hints"</span></span><br><span class="line"></span><br><span class="line">db.Clauses(hints.New(<span class="string">"hint"</span>)).Find(&amp;User{})</span><br><span class="line"><span class="comment">// SELECT * /*+ hint */ FROM `users`</span></span><br></pre></td></tr></tbody></table></figure>
+</body></html>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-19T02:13:50.021Z" itemprop="dateModified">Последнее обновление: 2020-02-19</time>
-<a href="migration.html" class="article-footer-prev" title="Миграции"><i class="fa fa-chevron-left"></i><span>Назад</span></a><a href="generic_interface.html" class="article-footer-next" title="Нативный интерфейс БД"><span>Далее</span><i class="fa fa-chevron-right"></i></a>
-              </footer>
+
               
-<section id="comments">
-<div id="disqus_thread"></div>
-</sction>
+              <div>
+                <a href="v2_release_note.html" target="_blank">
+                  <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/go-gorm/gorm?label=Latest GORM Release&color=red&&style=for-the-badge&logo=go&logoColor=red">
+                </a>
+              </div>
+              
 
-<script>
-var disqus_config = function () {
-this.page.url = 'http://gorm.io/ru_RU/docs/sql_builder.html';
-this.page.identifier = 'http://gorm.io/ru_RU/docs/sql_builder.html';
-this.language = 'ru';
-};
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-11-10T12:07:29.123Z" itemprop="dateModified">Последнее обновление: 2023-11-10</time>
+<a href="delete.html" class="article-footer-prev" title="Удалить"><i class="fa fa-chevron-left"></i><span>Пред.</span></a><a href="belongs_to.html" class="article-footer-next" title="Belongs To"><span>След.</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gorm.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+              <div class="post_sponsors">
+                <div class="sponsors-wrapper-pc open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
 
+    <div class="sponsors">
+      <h1>Gold Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <div class="sponsor_item">
+        <a href="https://hubuc.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="sponsors-wrapper-mobile open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors</h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h1>Gold Sponsors</h1>
+      <div class="sponsor_item">
+        <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+
+              <!--  -->
+<!-- <section id="comments"> -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- </sction> -->
+
+<!-- <script> -->
+<!-- var disqus_config = function () { -->
+<!-- this.page.url = 'https://gorm.io/ru_RU/docs/sql_builder.html'; -->
+<!-- this.page.identifier = 'https://gorm.io/ru_RU/docs/sql_builder.html'; -->
+<!-- this.language = 'ru'; -->
+<!-- }; -->
+
+<!-- (function() { // DON'T EDIT BELOW THIS LINE -->
+<!-- var d = document, s = d.createElement('script'); -->
+<!-- s.src = 'https://gormv2.disqus.com/embed.js'; -->
+<!-- s.setAttribute('data-timestamp', +new Date()); -->
+<!-- (d.head || d.body).appendChild(s); -->
+<!-- })(); -->
+<!-- </script> -->
+<!--  -->
 
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
-              <strong class="sidebar-title">Содержание</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Запуск-сырого-SQL"><span class="toc-text">Запуск сырого SQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sql-Row-amp-sql-Rows"><span class="toc-text">sql.Row &amp; sql.Rows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Сканировать-sql-Rows-в-модель"><span class="toc-text">Сканировать sql.Rows в модель</span></a></li></ol>
+              <strong class="sidebar-title">Содержимое</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%A7%D0%B8%D1%81%D1%82%D1%8B%D0%B9-SQL"><span class="toc-text">Чистый SQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%98%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D0%B5-%D0%B0%D1%80%D0%B3%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B"><span class="toc-text">Именованные аргументы</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC-DryRun"><span class="toc-text">Режим DryRun</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#ToSQL"><span class="toc-text">ToSQL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Row-%D0%B8-Rows"><span class="toc-text">Row и Rows</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%A1%D0%BA%D0%B0%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-sql-Rows-%D0%B2-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%83"><span class="toc-text">Сканирование *sql.Rows в структуру</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Connection"><span class="toc-text">Connection</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Advanced"><span class="toc-text">Advanced</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Clauses"><span class="toc-text">Clauses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%9F%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D1%8C-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2"><span class="toc-text">Построитель операторов</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%D0%92%D0%B0%D1%80%D0%B8%D0%B0%D0%BD%D1%82%D1%8B-%D0%BE%D0%BF%D0%B5%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BE%D0%B2"><span class="toc-text">Варианты операторов</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#StatementModifier"><span class="toc-text">StatementModifier</span></a></li></ol></li></ol>
+
+              
+                <a href="https://translate.gorm.io/project/go-gorm/ru" target="_blank" id="article-improve">
+                  Улучшить эту страницу
+                </a>
+              
               <a href="#" id="article-toc-top">Вернуться к началу</a>
             </div>
           </aside>
@@ -170,7 +300,7 @@ s.setAttribute('data-timestamp', +new Date());
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">С чего начать?</strong><a href="index.html" class="sidebar-link">Общие сведения</a><a href="models.html" class="sidebar-link">Объявление моделей</a><a href="conventions.html" class="sidebar-link">Определения</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создание</a><a href="query.html" class="sidebar-link">Запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удаление</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Связи</a><a href="preload.html" class="sidebar-link">Подгрузка данных(Жадная загрузка)</a><strong class="sidebar-title">Туториалы</strong><a href="method_chaining.html" class="sidebar-link">Цепочка вызовов</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграции</a><a href="sql_builder.html" class="sidebar-link current">Чистый SQL и SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Нативный интерфейс БД</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="composite_primary_key.html" class="sidebar-link">Составной первичный ключ</a><a href="write_plugins.html" class="sidebar-link">Плагины (Колбеки)</a><a href="dialects.html" class="sidebar-link">Поддерживаемые БД</a><a href="logger.html" class="sidebar-link">Логирование</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Сделать вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевод текущего сайта</a>
+    <strong class="sidebar-title">Начало работы</strong><a href="index.html" class="sidebar-link">Обзор</a><a href="models.html" class="sidebar-link">Объявление моделей</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создать</a><a href="query.html" class="sidebar-link">Запрос</a><a href="advanced_query.html" class="sidebar-link">Расширенный запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удалить</a><a href="sql_builder.html" class="sidebar-link current">Raw SQL и конструктор SQL</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Режим связи</a><a href="preload.html" class="sidebar-link">Предзагрузка (Нетерпеливая загрузка)</a><strong class="sidebar-title">Обучение</strong><a href="context.html" class="sidebar-link">Контекст</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="method_chaining.html" class="sidebar-link">Цепочки методов</a><a href="session.html" class="sidebar-link">Сессия</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграция</a><a href="logger.html" class="sidebar-link">Logger</a><a href="generic_interface.html" class="sidebar-link">Универсальный интерфейс базы данных</a><a href="performance.html" class="sidebar-link">Производительность</a><a href="data_types.html" class="sidebar-link">Настройка типов данных</a><a href="scopes.html" class="sidebar-link">Области</a><a href="conventions.html" class="sidebar-link">Преобразования</a><a href="settings.html" class="sidebar-link">Настройки</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="dbresolver.html" class="sidebar-link">Резолвер базы данных</a><a href="sharding.html" class="sidebar-link">Шардирование</a><a href="serializer.html" class="sidebar-link">Сериализатор</a><a href="prometheus.html" class="sidebar-link">Prometheus</a><a href="hints.html" class="sidebar-link">Подсказки</a><a href="indexes.html" class="sidebar-link">Индексы</a><a href="constraints.html" class="sidebar-link">Ограничения</a><a href="composite_primary_key.html" class="sidebar-link">Композитный первичный ключ</a><a href="security.html" class="sidebar-link">Безопасность</a><a href="gorm_config.html" class="sidebar-link">Настройки GORM</a><a href="write_plugins.html" class="sidebar-link">Написание плагинов</a><a href="write_driver.html" class="sidebar-link">Написание драйверов</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Внести вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевести текущий сайт</a>
   </div>
 </aside>
 
@@ -181,13 +311,22 @@ s.setAttribute('data-timestamp', +new Date());
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2013~2020 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      &copy; 2013~2023 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
-      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+      <div id="gorm.cn" style="display:none">
+      感谢 <a href="https://www.qiniu.com/" target="_blank">七牛云</a> 对 CDN 的赞助，<a href="https://github.com/unknwon" target="_blank">无闻</a> 对域名 <a href="https://gorm.cn" target="_blank">gorm.cn</a> 的捐赠<br>
+      <a href="http://beian.miit.gov.cn/" target="_blank" data-spm-anchor-id="a3c00.7621333.7y9jhqsfz.112">浙ICP备2020033190号-1</a><br>
+      </div>
+
+      <script>
+        if (window.location.hostname.includes("gorm.cn")) {
+          document.getElementById("gorm.cn").style.display = 'block';
+        }
+      </script>
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/go-gorm/gorm" class="footer-link" target="_blank"><i class="fab fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -198,9 +337,9 @@ s.setAttribute('data-timestamp', +new Date());
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
       <li class="mobile-nav-item">
-        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></I>Главная</a>
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Главная</a>
       </li>
-      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></I>Документация</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fa fa-slack"></I>Сообщество</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></I>Поддержать</a>
+      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/gen/" class="mobile-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fab fa-slack"></i>Сообщество</a><a href="https://pkg.go.dev/gorm.io/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Внести вклад</a>
     </ul>
     
   </div>
@@ -214,19 +353,21 @@ s.setAttribute('data-timestamp', +new Date());
       
         <option value="de_DE">Deutsch</option>
       
-        <option value="es_ES">Español</option>
-      
         <option value="id_ID">bahasa Indonesia</option>
-      
-        <option value="it_IT">Italiano</option>
       
         <option value="ja_JP">日本語</option>
       
         <option value="ru_RU" selected>Русский</option>
       
+        <option value="ko_KR">한국어</option>
+      
+        <option value="hi_IN">हिन्दी</option>
+      
         <option value="fr_FR">French</option>
       
-        <option value="ko_KR">한국어</option>
+        <option value="it_IT">Italiano</option>
+      
+        <option value="es_ES">Español</option>
       
     </select>
   </div>
@@ -244,12 +385,9 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/js/mobile_nav.js"></script>
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 <script src="/js/code_expander.js"></script>
-
-
-<script src="/js/404_fix.js"></script>
 
 <!-- endbuild -->
 

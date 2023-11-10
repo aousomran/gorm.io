@@ -2,73 +2,62 @@
 <html lang="ja_JP">
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="utf-8">
-  <title>Update | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
+  <title>レコードの更新 | GORM - The fantastic ORM library for Golang, aims to be developer friendly.</title>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://gorm.io/ja_JP/docs/update.html">
+  <link rel="canonical" href="https://gorm.io/ja_JP/docs/update.html">
   <!-- Alternative links -->
   
     
-      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/update.html">
+      <link rel="alternative" hreflang="en" href="https://gorm.io/docs/update.html">
     
-      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/update.html">
+      <link rel="alternative" hreflang="zh_CN" href="https://gorm.io/zh_CN/docs/update.html">
     
-      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/update.html">
+      <link rel="alternative" hreflang="de_DE" href="https://gorm.io/de_DE/docs/update.html">
     
-      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/update.html">
+      <link rel="alternative" hreflang="id_ID" href="https://gorm.io/id_ID/docs/update.html">
     
-      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/update.html">
+      <link rel="alternative" hreflang="ja_JP" href="https://gorm.io/ja_JP/docs/update.html">
     
-      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/update.html">
+      <link rel="alternative" hreflang="ru_RU" href="https://gorm.io/ru_RU/docs/update.html">
     
-      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/update.html">
+      <link rel="alternative" hreflang="ko_KR" href="https://gorm.io/ko_KR/docs/update.html">
     
-      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/update.html">
+      <link rel="alternative" hreflang="hi_IN" href="https://gorm.io/hi_IN/docs/update.html">
     
-      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/update.html">
+      <link rel="alternative" hreflang="fr_FR" href="https://gorm.io/fr_FR/docs/update.html">
     
-      <link rel="alternative" hreflang="ko_KR" href="http://gorm.io/ko_KR/docs/update.html">
+      <link rel="alternative" hreflang="it_IT" href="https://gorm.io/it_IT/docs/update.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="https://gorm.io/es_ES/docs/update.html">
     
   
   <!-- Icon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
-  <meta name="msapplication-TileColor" content="#2f83cd">
-  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
-  <meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- CSS -->
   <!-- build:css build/css/navy.css -->
   
 <link rel="stylesheet" href="/css/navy.css">
 
   <!-- endbuild -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="GORM">
+  <link rel="alternate" href="/atom.xml" title="GORM" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="全フィールドの更新Save は SQL を実行する際にすべてのフィールドを含みます。 db.First(&amp;user)user.Name &#x3D; &quot;jinzhu 2&quot;user.Age &#x3D; 100db.Save(&amp;user)&#x2F;&#x2F;&#x2F;&#x2F; UPDATE users SET name&#x3D;&#39;jinzhu 2&#39;, age&#x3D;100, birthday&#x3D;&#39;2016-01-01&#39;, updated_at &#x3D;">
+  <meta name="description" content="すべてのフィールドを保存するSaveは 、SQLを実行するときにすべてのフィールドを更新します。 db.First(&amp;user)user.Name &#x3D; &quot;jinzhu 2&quot;user.Age &#x3D; 100db.Save(&amp;user)&#x2F;&#x2F; UPDATE users SET name&#x3D;&amp;#x27;jinzhu 2&amp;#x27;, age&#x3D;100, birthday&#x3D;&amp;#x">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Update">
-<meta property="og:url" content="http://gorm.io/ja_JP/docs/update.html">
+<meta property="og:title" content="レコードの更新">
+<meta property="og:url" content="https://gorm.io/ja_JP/docs/update.html">
 <meta property="og:site_name" content="GORM">
-<meta property="og:description" content="全フィールドの更新Save は SQL を実行する際にすべてのフィールドを含みます。 db.First(&amp;user)user.Name &#x3D; &quot;jinzhu 2&quot;user.Age &#x3D; 100db.Save(&amp;user)&#x2F;&#x2F;&#x2F;&#x2F; UPDATE users SET name&#x3D;&#39;jinzhu 2&#39;, age&#x3D;100, birthday&#x3D;&#39;2016-01-01&#39;, updated_at &#x3D;">
+<meta property="og:description" content="すべてのフィールドを保存するSaveは 、SQLを実行するときにすべてのフィールドを更新します。 db.First(&amp;user)user.Name &#x3D; &quot;jinzhu 2&quot;user.Age &#x3D; 100db.Save(&amp;user)&#x2F;&#x2F; UPDATE users SET name&#x3D;&amp;#x27;jinzhu 2&amp;#x27;, age&#x3D;100, birthday&#x3D;&amp;#x">
 <meta property="og:locale" content="ja_JP">
-<meta property="article:published_time" content="2020-02-19T02:13:50.017Z">
-<meta property="article:modified_time" content="2020-02-19T02:13:50.017Z">
+<meta property="article:published_time" content="2023-11-10T12:07:29.103Z">
+<meta property="article:modified_time" content="2023-11-10T12:07:29.103Z">
 <meta property="article:author" content="Jinzhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="zhangjinzhu">
@@ -81,22 +70,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WSNPD75');</script>
 
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
     <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="/ja_JP/" id="logo">GORM</a>
+      <a href="/ja_JP/" id="logo">
+        <img src="/gorm.svg" alt="GORM">
+      </a>
     </h1>
     <nav id="main-nav">
-      <a href="/ja_JP/docs/" class="main-nav-link"><i class="fa fa-book"></i>ドキュメント</a><a href="/ja_JP/community.html" class="main-nav-link"><i class="fa fa-slack"></i>コミュニティ</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ja_JP/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>コントリビュート</a>
+      <a href="/ja_JP/docs/" class="main-nav-link"><i class="fa fa-book"></i>ドキュメント</a><a href="/ja_JP/gen/" class="main-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ja_JP/community.html" class="main-nav-link"><i class="fab fa-slack"></i>コミュニティ</a><a href="https://pkg.go.dev/gorm.io/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ja_JP/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
         </div>
-        <input type="search" id="search-input" placeholder="ドキュメントを検索します...">
+        <input type="search" id="search-input" placeholder="ドキュメントを検索する">
       </div>
     </nav>
     <div id="lang-select-wrap">
@@ -109,19 +100,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <option value="de_DE">Deutsch</option>
         
-          <option value="es_ES">Español</option>
-        
           <option value="id_ID">bahasa Indonesia</option>
-        
-          <option value="it_IT">Italiano</option>
         
           <option value="ja_JP" selected>日本語</option>
         
           <option value="ru_RU">Русский</option>
         
+          <option value="ko_KR">한국어</option>
+        
+          <option value="hi_IN">हिन्दी</option>
+        
           <option value="fr_FR">French</option>
         
-          <option value="ko_KR">한국어</option>
+          <option value="it_IT">Italiano</option>
+        
+          <option value="es_ES">Español</option>
         
       </select>
     </div>
@@ -141,64 +134,190 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <div class="article">
             <div class="inner">
               <header class="article-header">
-                <h1 class="article-title" itemprop="name">Update</h1>
-                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/ja_JP/docs/update.md" target="_blank" rel="noopener" class="article-edit-link" title="このドキュメントを改善する"><i class="fa fa-pencil"></i></a>
+                <h1 class="article-title" itemprop="name">レコードの更新</h1>
+                
+                <a target="_blank" rel="noopener" href="https://translate.gorm.io/project/go-gorm/ja" class="article-edit-link" title="このページを改善する"><i class="fa fa-pencil"></i></a>
+                
               </header>
               <div class="article-content" itemprop="articleBody">
-                <html><head></head><body><h2 id="全フィールドの更新" class="article-heading"><a href="#全フィールドの更新" class="headerlink" title="全フィールドの更新"></a>全フィールドの更新<a class="article-anchor" href="#全フィールドの更新" aria-hidden="true"></a></h2><p><code>Save</code> は SQL を実行する際にすべてのフィールドを含みます。</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.First(&user)</span><br><span class="line"></span><br><span class="line">user.Name = <span class="string">"jinzhu 2"</span></span><br><span class="line">user.Age = <span class="number">100</span></span><br><span class="line">db.Save(&user)</span><br><span class="line"></span><br><span class="line"><span class="comment">//// UPDATE users SET name='jinzhu 2', age=100, birthday='2016-01-01', updated_at = '2013-11-17 21:34:10' WHERE id=111;</span></span><br></pre></td></tr></tbody></table></figure>
+                <html><head></head><body><h2 id="すべてのフィールドを保存する" class="article-heading"><a href="#すべてのフィールドを保存する" class="headerlink" title="すべてのフィールドを保存する"></a>すべてのフィールドを保存する<a class="article-anchor" href="#すべてのフィールドを保存する" aria-hidden="true"></a></h2><p><code>Save</code>は 、SQLを実行するときにすべてのフィールドを更新します。</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.First(&amp;user)</span><br><span class="line"></span><br><span class="line">user.Name = <span class="string">"jinzhu 2"</span></span><br><span class="line">user.Age = <span class="number">100</span></span><br><span class="line">db.Save(&amp;user)</span><br><span class="line"><span class="comment">// UPDATE users SET name='jinzhu 2', age=100, birthday='2016-01-01', updated_at = '2013-11-17 21:34:10' WHERE id=111;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="フィールドの更新" class="article-heading"><a href="#フィールドの更新" class="headerlink" title="フィールドの更新"></a>フィールドの更新<a class="article-anchor" href="#フィールドの更新" aria-hidden="true"></a></h2><p>特定のフィールドだけ更新したい場合、 <code>Update</code> と <code>Updates</code> を使うことができます。</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// ひとつのフィールドを更新します</span></span><br><span class="line">db.Model(&user).Update(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 条件付きでひとつのフィールドを更新します</span></span><br><span class="line">db.Model(&user).Where(<span class="string">"active = ?"</span>, <span class="literal">true</span>).Update(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', updated_at='2013-11-17 21:34:10' WHERE id=111 AND active=true;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `map` で複数のフィールドを更新します(対象のフィールドのみ)</span></span><br><span class="line">db.Model(&user).Updates(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>, <span class="string">"actived"</span>: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', age=18, actived=false, updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// `struct` で複数のフィールドを更新します(空ではないフィールドのみ)</span></span><br><span class="line">db.Model(&user).Updates(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', age=18, updated_at = '2013-11-17 21:34:10' WHERE id = 111;</span></span><br></pre></td></tr></tbody></table></figure>
+<p><code>Save</code> is a combination function. If save value does not contain primary key, it will execute <code>Create</code>, otherwise it will execute <code>Update</code> (with all fields).</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Save(&amp;User{Name: <span class="string">"jinzhu"</span>, Age: <span class="number">100</span>})</span><br><span class="line"><span class="comment">// INSERT INTO `users` (`name`,`age`,`birthday`,`update_at`) VALUES ("jinzhu",100,"0000-00-00 00:00:00","0000-00-00 00:00:00")</span></span><br><span class="line"></span><br><span class="line">db.Save(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>, Age: <span class="number">100</span>})</span><br><span class="line"><span class="comment">// UPDATE `users` SET `name`="jinzhu",`age`=100,`birthday`="0000-00-00 00:00:00",`update_at`="0000-00-00 00:00:00" WHERE `id` = 1</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="更新するフィールドを指定" class="article-heading"><a href="#更新するフィールドを指定" class="headerlink" title="更新するフィールドを指定"></a>更新するフィールドを指定<a class="article-anchor" href="#更新するフィールドを指定" aria-hidden="true"></a></h2><p>もしupdate時に特定のフィールドのみを更新する、もしくは無視する時に、<code>select</code>と<code>omit</code>が使えます。</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Model(&user).Select(<span class="string">"name"</span>).Updates(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>, <span class="string">"actived"</span>: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br><span class="line"></span><br><span class="line">db.Model(&user).Omit(<span class="string">"name"</span>).Updates(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>, <span class="string">"actived"</span>: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET age=18, actived=false, updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote class="note warn"><p><strong>NOTE</strong> Don’t use <code>Save</code> with <code>Model</code>, it’s an <strong>Undefined Behavior</strong>.</p>
+</blockquote>
 
-<h2 id="Hook-なしでの更新" class="article-heading"><a href="#Hook-なしでの更新" class="headerlink" title="Hook なしでの更新"></a>Hook なしでの更新<a class="article-anchor" href="#Hook-なしでの更新" aria-hidden="true"></a></h2><p>上記の更新処理は、<code>BeforeUpdate</code>, <code>AfterUpdate</code>メソッドを実行します。その結果更新時に<code>UpdatedAt</code>のタイムスタンプや 持っている <code>Associations</code> が更新されます。もしそれらのメソッドを呼びたくない場合は<code>UpdateColumn</code>と<code>UpdateColumns</code>が使えます。</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Update single attribute, similar with `Update`</span></span><br><span class="line">db.Model(&user).UpdateColumn(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello' WHERE id = 111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update multiple attributes, similar with `Updates`</span></span><br><span class="line">db.Model(&user).UpdateColumns(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', age=18 WHERE id = 111;</span></span><br></pre></td></tr></tbody></table></figure>
+<h2 id="単一のカラムを更新する" class="article-heading"><a href="#単一のカラムを更新する" class="headerlink" title="単一のカラムを更新する"></a>単一のカラムを更新する<a class="article-anchor" href="#単一のカラムを更新する" aria-hidden="true"></a></h2><p>When updating a single column with <code>Update</code>, it needs to have any conditions or it will raise error <code>ErrMissingWhereClause</code>, checkout <a href="#block_global_updates">Block Global Updates</a> for details. When using the <code>Model</code> method and its value has a primary value, the primary key will be used to build the condition, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Update with conditions</span></span><br><span class="line">db.Model(&amp;User{}).Where(<span class="string">"active = ?"</span>, <span class="literal">true</span>).Update(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', updated_at='2013-11-17 21:34:10' WHERE active=true;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// User's ID is `111`:</span></span><br><span class="line">db.Model(&amp;user).Update(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update with conditions and model value</span></span><br><span class="line">db.Model(&amp;user).Where(<span class="string">"active = ?"</span>, <span class="literal">true</span>).Update(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', updated_at='2013-11-17 21:34:10' WHERE id=111 AND active=true;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="バッチでの更新" class="article-heading"><a href="#バッチでの更新" class="headerlink" title="バッチでの更新"></a>バッチでの更新<a class="article-anchor" href="#バッチでの更新" aria-hidden="true"></a></h2><p>フックはバッチアップデート時は実行されません。</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Table(<span class="string">"users"</span>).Where(<span class="string">"id IN (?)"</span>, []<span class="keyword">int</span>{<span class="number">10</span>, <span class="number">11</span>}).Updates(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', age=18 WHERE id IN (10, 11);</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update with struct only works with none zero values, or use map[string]interface{}</span></span><br><span class="line">db.Model(User{}).Updates(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>})</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', age=18;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Get updated records count with `RowsAffected`</span></span><br><span class="line">db.Model(User{}).Updates(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>}).RowsAffected</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="複数のカラムを更新する" class="article-heading"><a href="#複数のカラムを更新する" class="headerlink" title="複数のカラムを更新する"></a>複数のカラムを更新する<a class="article-anchor" href="#複数のカラムを更新する" aria-hidden="true"></a></h2><p><code>Updates</code> supports updating with <code>struct</code> or <code>map[string]interface{}</code>, when updating with <code>struct</code> it will only update non-zero fields by default</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Update attributes with `struct`, will only update non-zero fields</span></span><br><span class="line">db.Model(&amp;user).Updates(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>, Active: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=18, updated_at = '2013-11-17 21:34:10' WHERE id = 111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update attributes with `map`</span></span><br><span class="line">db.Model(&amp;user).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>, <span class="string">"active"</span>: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=18, active=false, updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="expression-クエリをともなう更新" class="article-heading"><a href="#expression-クエリをともなう更新" class="headerlink" title="expression クエリをともなう更新"></a>expression クエリをともなう更新<a class="article-anchor" href="#expression-クエリをともなう更新" aria-hidden="true"></a></h2><figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">DB.Model(&product).Update(<span class="string">"price"</span>, gorm.Expr(<span class="string">"price * ? + ?"</span>, <span class="number">2</span>, <span class="number">100</span>))</span><br><span class="line"><span class="comment">//// UPDATE "products" SET "price" = price * '2' + '100', "updated_at" = '2013-11-17 21:34:10' WHERE "id" = '2';</span></span><br><span class="line"></span><br><span class="line">DB.Model(&product).Updates(<span class="keyword">map</span>[<span class="keyword">string</span>]<span class="keyword">interface</span>{}{<span class="string">"price"</span>: gorm.Expr(<span class="string">"price * ? + ?"</span>, <span class="number">2</span>, <span class="number">100</span>)})</span><br><span class="line"><span class="comment">//// UPDATE "products" SET "price" = price * '2' + '100', "updated_at" = '2013-11-17 21:34:10' WHERE "id" = '2';</span></span><br><span class="line"></span><br><span class="line">DB.Model(&product).UpdateColumn(<span class="string">"quantity"</span>, gorm.Expr(<span class="string">"quantity - ?"</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment">//// UPDATE "products" SET "quantity" = quantity - 1 WHERE "id" = '2';</span></span><br><span class="line"></span><br><span class="line">DB.Model(&product).Where(<span class="string">"quantity > 1"</span>).UpdateColumn(<span class="string">"quantity"</span>, gorm.Expr(<span class="string">"quantity - ?"</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment">//// UPDATE "products" SET "quantity" = quantity - 1 WHERE "id" = '2' AND quantity > 1;</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote class="note warn"><p><strong>NOTE</strong> When updating with struct, GORM will only update non-zero fields. You might want to use <code>map</code> to update attributes or use <code>Select</code> to specify fields to update</p>
+</blockquote>
 
-<h2 id="Hook-での値変更" class="article-heading"><a href="#Hook-での値変更" class="headerlink" title="Hook での値変更"></a>Hook での値変更<a class="article-anchor" href="#Hook-での値変更" aria-hidden="true"></a></h2><p><code>BeforeUpdate</code>, <code>BeforeSave</code>を使ってフック時に値を更新したい場合には<code>scope.SetColumn</code>が使えます。例えば</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(user *User)</span> <span class="title">BeforeSave</span><span class="params">(scope *gorm.Scope)</span> <span class="params">(err error)</span></span> {</span><br><span class="line">  <span class="keyword">if</span> pw, err := bcrypt.GenerateFromPassword(user.Password, <span class="number">0</span>); err == <span class="literal">nil</span> {</span><br><span class="line">    scope.SetColumn(<span class="string">"EncryptedPassword"</span>, pw)</span><br><span class="line">  }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="選択したフィールドを更新する" class="article-heading"><a href="#選択したフィールドを更新する" class="headerlink" title="選択したフィールドを更新する"></a>選択したフィールドを更新する<a class="article-anchor" href="#選択したフィールドを更新する" aria-hidden="true"></a></h2><p>If you want to update selected fields or ignore some fields when updating, you can use <code>Select</code>, <code>Omit</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Select with Map</span></span><br><span class="line"><span class="comment">// User's ID is `111`:</span></span><br><span class="line">db.Model(&amp;user).Select(<span class="string">"name"</span>).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>, <span class="string">"active"</span>: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello' WHERE id=111;</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;user).Omit(<span class="string">"name"</span>).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>, <span class="string">"active"</span>: <span class="literal">false</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET age=18, active=false, updated_at='2013-11-17 21:34:10' WHERE id=111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Select with Struct (select zero value fields)</span></span><br><span class="line">db.Model(&amp;user).Select(<span class="string">"Name"</span>, <span class="string">"Age"</span>).Updates(User{Name: <span class="string">"new_name"</span>, Age: <span class="number">0</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='new_name', age=0 WHERE id=111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Select all fields (select all fields include zero value fields)</span></span><br><span class="line">db.Model(&amp;user).Select(<span class="string">"*"</span>).Updates(User{Name: <span class="string">"jinzhu"</span>, Role: <span class="string">"admin"</span>, Age: <span class="number">0</span>})</span><br><span class="line"></span><br><span class="line"><span class="comment">// Select all fields but omit Role (select all fields include zero value fields)</span></span><br><span class="line">db.Model(&amp;user).Select(<span class="string">"*"</span>).Omit(<span class="string">"Role"</span>).Updates(User{Name: <span class="string">"jinzhu"</span>, Role: <span class="string">"admin"</span>, Age: <span class="number">0</span>})</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="その他のオプション" class="article-heading"><a href="#その他のオプション" class="headerlink" title="その他のオプション"></a>その他のオプション<a class="article-anchor" href="#その他のオプション" aria-hidden="true"></a></h2><figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Add extra SQL option for updating SQL</span></span><br><span class="line">db.Model(&user).Set(<span class="string">"gorm:update_option"</span>, <span class="string">"OPTION (OPTIMIZE FOR UNKNOWN)"</span>).Update(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">//// UPDATE users SET name='hello', updated_at = '2013-11-17 21:34:10' WHERE id=111 OPTION (OPTIMIZE FOR UNKNOWN);</span></span><br></pre></td></tr></tbody></table></figure></body></html>
+<h2 id="更新時のHook" class="article-heading"><a href="#更新時のHook" class="headerlink" title="更新時のHook"></a>更新時のHook<a class="article-anchor" href="#更新時のHook" aria-hidden="true"></a></h2><p>GORM allows the hooks <code>BeforeSave</code>, <code>BeforeUpdate</code>, <code>AfterSave</code>, <code>AfterUpdate</code>. Those methods will be called when updating a record, refer <a href="hooks.html">Hooks</a> for details</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(u *User)</span></span> BeforeUpdate(tx *gorm.DB) (err <span class="type">error</span>) {</span><br><span class="line">    <span class="keyword">if</span> u.Role == <span class="string">"admin"</span> {</span><br><span class="line">        <span class="keyword">return</span> errors.New(<span class="string">"admin user not allowed to update"</span>)</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="一括更新" class="article-heading"><a href="#一括更新" class="headerlink" title="一括更新"></a>一括更新<a class="article-anchor" href="#一括更新" aria-hidden="true"></a></h2><p>If we haven’t specified a record having a primary key value with <code>Model</code>, GORM will perform a batch update</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Update with struct</span></span><br><span class="line">db.Model(User{}).Where(<span class="string">"role = ?"</span>, <span class="string">"admin"</span>).Updates(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=18 WHERE role = 'admin';</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update with map</span></span><br><span class="line">db.Table(<span class="string">"users"</span>).Where(<span class="string">"id IN ?"</span>, []<span class="type">int</span>{<span class="number">10</span>, <span class="number">11</span>}).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"name"</span>: <span class="string">"hello"</span>, <span class="string">"age"</span>: <span class="number">18</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=18 WHERE id IN (10, 11);</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Global-Updatesを防ぐ" class="article-heading"><a href="#Global-Updatesを防ぐ" class="headerlink" title="Global Updatesを防ぐ"></a><span id="block_global_updates">Global Updatesを防ぐ</span><a class="article-anchor" href="#Global-Updatesを防ぐ" aria-hidden="true"></a></h3><p>If you perform a batch update without any conditions, GORM WON’T run it and will return <code>ErrMissingWhereClause</code> error by default</p>
+<p>You have to use some conditions or use raw SQL or enable the <code>AllowGlobalUpdate</code> mode, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Model(&amp;User{}).Update(<span class="string">"name"</span>, <span class="string">"jinzhu"</span>).Error <span class="comment">// gorm.ErrMissingWhereClause</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;User{}).Where(<span class="string">"1 = 1"</span>).Update(<span class="string">"name"</span>, <span class="string">"jinzhu"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET `name` = "jinzhu" WHERE 1=1</span></span><br><span class="line"></span><br><span class="line">db.Exec(<span class="string">"UPDATE users SET name = ?"</span>, <span class="string">"jinzhu"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET name = "jinzhu"</span></span><br><span class="line"></span><br><span class="line">db.Session(&amp;gorm.Session{AllowGlobalUpdate: <span class="literal">true</span>}).Model(&amp;User{}).Update(<span class="string">"name"</span>, <span class="string">"jinzhu"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET `name` = "jinzhu"</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="更新されたレコード数をカウントする" class="article-heading"><a href="#更新されたレコード数をカウントする" class="headerlink" title="更新されたレコード数をカウントする"></a>更新されたレコード数をカウントする<a class="article-anchor" href="#更新されたレコード数をカウントする" aria-hidden="true"></a></h3><p>Get the number of rows affected by a update</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Get updated records count with `RowsAffected`</span></span><br><span class="line">result := db.Model(User{}).Where(<span class="string">"role = ?"</span>, <span class="string">"admin"</span>).Updates(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=18 WHERE role = 'admin';</span></span><br><span class="line"></span><br><span class="line">result.RowsAffected <span class="comment">// returns updated records count</span></span><br><span class="line">result.Error        <span class="comment">// returns updating error</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="高度な機能" class="article-heading"><a href="#高度な機能" class="headerlink" title="高度な機能"></a>高度な機能<a class="article-anchor" href="#高度な機能" aria-hidden="true"></a></h2><h3 id="SQL式で更新する" class="article-heading"><a href="#SQL式で更新する" class="headerlink" title="SQL式で更新する"></a><span id="update_from_sql_expr">SQL式で更新する</span><a class="article-anchor" href="#SQL式で更新する" aria-hidden="true"></a></h3><p>GORM allows updating a column with a SQL expression, e.g:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// product's ID is `3`</span></span><br><span class="line">db.Model(&amp;product).Update(<span class="string">"price"</span>, gorm.Expr(<span class="string">"price * ? + ?"</span>, <span class="number">2</span>, <span class="number">100</span>))</span><br><span class="line"><span class="comment">// UPDATE "products" SET "price" = price * 2 + 100, "updated_at" = '2013-11-17 21:34:10' WHERE "id" = 3;</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;product).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"price"</span>: gorm.Expr(<span class="string">"price * ? + ?"</span>, <span class="number">2</span>, <span class="number">100</span>)})</span><br><span class="line"><span class="comment">// UPDATE "products" SET "price" = price * 2 + 100, "updated_at" = '2013-11-17 21:34:10' WHERE "id" = 3;</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;product).UpdateColumn(<span class="string">"quantity"</span>, gorm.Expr(<span class="string">"quantity - ?"</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment">// UPDATE "products" SET "quantity" = quantity - 1 WHERE "id" = 3;</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;product).Where(<span class="string">"quantity &gt; 1"</span>).UpdateColumn(<span class="string">"quantity"</span>, gorm.Expr(<span class="string">"quantity - ?"</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment">// UPDATE "products" SET "quantity" = quantity - 1 WHERE "id" = 3 AND quantity &gt; 1;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<p>And GORM also allows updating with SQL Expression/Context Valuer with <a href="data_types.html#gorm_valuer_interface">Customized Data Types</a>, e.g:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Create from customized data type</span></span><br><span class="line"><span class="keyword">type</span> Location <span class="keyword">struct</span> {</span><br><span class="line">    X, Y <span class="type">int</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(loc Location)</span></span> GormValue(ctx context.Context, db *gorm.DB) clause.Expr {</span><br><span class="line">  <span class="keyword">return</span> clause.Expr{</span><br><span class="line">    SQL:  <span class="string">"ST_PointFromText(?)"</span>,</span><br><span class="line">    Vars: []<span class="keyword">interface</span>{}{fmt.Sprintf(<span class="string">"POINT(%d %d)"</span>, loc.X, loc.Y)},</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>}).Updates(User{</span><br><span class="line">  Name:  <span class="string">"jinzhu"</span>,</span><br><span class="line">  Location: Location{X: <span class="number">100</span>, Y: <span class="number">100</span>},</span><br><span class="line">})</span><br><span class="line"><span class="comment">// UPDATE `user_with_points` SET `name`="jinzhu",`location`=ST_PointFromText("POINT(100 100)") WHERE `id` = 1</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="サブクエリでの更新" class="article-heading"><a href="#サブクエリでの更新" class="headerlink" title="サブクエリでの更新"></a>サブクエリでの更新<a class="article-anchor" href="#サブクエリでの更新" aria-hidden="true"></a></h3><p>Update a table by using SubQuery</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Model(&amp;user).Update(<span class="string">"company_name"</span>, db.Model(&amp;Company{}).Select(<span class="string">"name"</span>).Where(<span class="string">"companies.id = users.company_id"</span>))</span><br><span class="line"><span class="comment">// UPDATE "users" SET "company_name" = (SELECT name FROM companies WHERE companies.id = users.company_id);</span></span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"users as u"</span>).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Update(<span class="string">"company_name"</span>, db.Table(<span class="string">"companies as c"</span>).Select(<span class="string">"name"</span>).Where(<span class="string">"c.id = u.company_id"</span>))</span><br><span class="line"></span><br><span class="line">db.Table(<span class="string">"users as u"</span>).Where(<span class="string">"name = ?"</span>, <span class="string">"jinzhu"</span>).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{}{<span class="string">"company_name"</span>: db.Table(<span class="string">"companies as c"</span>).Select(<span class="string">"name"</span>).Where(<span class="string">"c.id = u.company_id"</span>)})</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Hooksやタイムトラッキングなしでの更新" class="article-heading"><a href="#Hooksやタイムトラッキングなしでの更新" class="headerlink" title="Hooksやタイムトラッキングなしでの更新"></a>Hooksやタイムトラッキングなしでの更新<a class="article-anchor" href="#Hooksやタイムトラッキングなしでの更新" aria-hidden="true"></a></h3><p>If you want to skip <code>Hooks</code> methods and don’t track the update time when updating, you can use <code>UpdateColumn</code>, <code>UpdateColumns</code>, it works like <code>Update</code>, <code>Updates</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// Update single column</span></span><br><span class="line">db.Model(&amp;user).UpdateColumn(<span class="string">"name"</span>, <span class="string">"hello"</span>)</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello' WHERE id = 111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update multiple columns</span></span><br><span class="line">db.Model(&amp;user).UpdateColumns(User{Name: <span class="string">"hello"</span>, Age: <span class="number">18</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=18 WHERE id = 111;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Update selected columns</span></span><br><span class="line">db.Model(&amp;user).Select(<span class="string">"name"</span>, <span class="string">"age"</span>).UpdateColumns(User{Name: <span class="string">"hello"</span>, Age: <span class="number">0</span>})</span><br><span class="line"><span class="comment">// UPDATE users SET name='hello', age=0 WHERE id = 111;</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="変更されたレコードのデータを返却する" class="article-heading"><a href="#変更されたレコードのデータを返却する" class="headerlink" title="変更されたレコードのデータを返却する"></a>変更されたレコードのデータを返却する<a class="article-anchor" href="#変更されたレコードのデータを返却する" aria-hidden="true"></a></h3><p>Returning changed data only works for databases which support Returning, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// return all columns</span></span><br><span class="line"><span class="keyword">var</span> users []User</span><br><span class="line">db.Model(&amp;users).Clauses(clause.Returning{}).Where(<span class="string">"role = ?"</span>, <span class="string">"admin"</span>).Update(<span class="string">"salary"</span>, gorm.Expr(<span class="string">"salary * ?"</span>, <span class="number">2</span>))</span><br><span class="line"><span class="comment">// UPDATE `users` SET `salary`=salary * 2,`updated_at`="2021-10-28 17:37:23.19" WHERE role = "admin" RETURNING *</span></span><br><span class="line"><span class="comment">// users =&gt; []User{{ID: 1, Name: "jinzhu", Role: "admin", Salary: 100}, {ID: 2, Name: "jinzhu.2", Role: "admin", Salary: 1000}}</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// return specified columns</span></span><br><span class="line">db.Model(&amp;users).Clauses(clause.Returning{Columns: []clause.Column{{Name: <span class="string">"name"</span>}, {Name: <span class="string">"salary"</span>}}}).Where(<span class="string">"role = ?"</span>, <span class="string">"admin"</span>).Update(<span class="string">"salary"</span>, gorm.Expr(<span class="string">"salary * ?"</span>, <span class="number">2</span>))</span><br><span class="line"><span class="comment">// UPDATE `users` SET `salary`=salary * 2,`updated_at`="2021-10-28 17:37:23.19" WHERE role = "admin" RETURNING `name`, `salary`</span></span><br><span class="line"><span class="comment">// users =&gt; []User{{ID: 0, Name: "jinzhu", Role: "", Salary: 100}, {ID: 0, Name: "jinzhu.2", Role: "", Salary: 1000}}</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="フィールドが変更されたかチェックする" class="article-heading"><a href="#フィールドが変更されたかチェックする" class="headerlink" title="フィールドが変更されたかチェックする"></a>フィールドが変更されたかチェックする<a class="article-anchor" href="#フィールドが変更されたかチェックする" aria-hidden="true"></a></h3><p>GORM provides the <code>Changed</code> method which could be used in <strong>Before Update Hooks</strong>, it will return whether the field has changed or not.</p>
+<p>The <code>Changed</code> method only works with methods <code>Update</code>, <code>Updates</code>, and it only checks if the updating value from <code>Update</code> / <code>Updates</code> equals the model value. It will return true if it is changed and not omitted</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(u *User)</span></span> BeforeUpdate(tx *gorm.DB) (err <span class="type">error</span>) {</span><br><span class="line">  <span class="comment">// if Role changed</span></span><br><span class="line">    <span class="keyword">if</span> tx.Statement.Changed(<span class="string">"Role"</span>) {</span><br><span class="line">    <span class="keyword">return</span> errors.New(<span class="string">"role not allowed to change"</span>)</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> tx.Statement.Changed(<span class="string">"Name"</span>, <span class="string">"Admin"</span>) { <span class="comment">// if Name or Role changed</span></span><br><span class="line">    tx.Statement.SetColumn(<span class="string">"Age"</span>, <span class="number">18</span>)</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="comment">// if any fields changed</span></span><br><span class="line">    <span class="keyword">if</span> tx.Statement.Changed() {</span><br><span class="line">        tx.Statement.SetColumn(<span class="string">"RefreshedAt"</span>, time.Now())</span><br><span class="line">    }</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>}).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{<span class="string">"name"</span>: <span class="string">"jinzhu2"</span>})</span><br><span class="line"><span class="comment">// Changed("Name") =&gt; true</span></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>}).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{<span class="string">"name"</span>: <span class="string">"jinzhu"</span>})</span><br><span class="line"><span class="comment">// Changed("Name") =&gt; false, `Name` not changed</span></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>}).Select(<span class="string">"Admin"</span>).Updates(<span class="keyword">map</span>[<span class="type">string</span>]<span class="keyword">interface</span>{</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"jinzhu2"</span>, <span class="string">"admin"</span>: <span class="literal">false</span>,</span><br><span class="line">})</span><br><span class="line"><span class="comment">// Changed("Name") =&gt; false, `Name` not selected to update</span></span><br><span class="line"></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>}).Updates(User{Name: <span class="string">"jinzhu2"</span>})</span><br><span class="line"><span class="comment">// Changed("Name") =&gt; true</span></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>}).Updates(User{Name: <span class="string">"jinzhu"</span>})</span><br><span class="line"><span class="comment">// Changed("Name") =&gt; false, `Name` not changed</span></span><br><span class="line">db.Model(&amp;User{ID: <span class="number">1</span>, Name: <span class="string">"jinzhu"</span>}).Select(<span class="string">"Admin"</span>).Updates(User{Name: <span class="string">"jinzhu2"</span>})</span><br><span class="line"><span class="comment">// Changed("Name") =&gt; false, `Name` not selected to update</span></span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="更新値の変更" class="article-heading"><a href="#更新値の変更" class="headerlink" title="更新値の変更"></a>更新値の変更<a class="article-anchor" href="#更新値の変更" aria-hidden="true"></a></h3><p>To change updating values in Before Hooks, you should use <code>SetColumn</code> unless it is a full update with <code>Save</code>, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(user *User)</span></span> BeforeSave(tx *gorm.DB) (err <span class="type">error</span>) {</span><br><span class="line">  <span class="keyword">if</span> pw, err := bcrypt.GenerateFromPassword(user.Password, <span class="number">0</span>); err == <span class="literal">nil</span> {</span><br><span class="line">    tx.Statement.SetColumn(<span class="string">"EncryptedPassword"</span>, pw)</span><br><span class="line">  }</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> tx.Statement.Changed(<span class="string">"Code"</span>) {</span><br><span class="line">    user.Age += <span class="number">20</span></span><br><span class="line">    tx.Statement.SetColumn(<span class="string">"Age"</span>, user.Age)</span><br><span class="line">  }</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line">db.Model(&amp;user).Update(<span class="string">"Name"</span>, <span class="string">"jinzhu"</span>)</span><br></pre></td></tr></tbody></table></figure>
+</body></html>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-19T02:13:50.017Z" itemprop="dateModified">最終更新日: 2020-02-19</time>
-<a href="query.html" class="article-footer-prev" title="Query"><i class="fa fa-chevron-left"></i><span>前へ</span></a><a href="delete.html" class="article-footer-next" title="Delete"><span>次へ</span><i class="fa fa-chevron-right"></i></a>
-              </footer>
+
               
-<section id="comments">
-<div id="disqus_thread"></div>
-</sction>
+              <div>
+                <a href="v2_release_note.html" target="_blank">
+                  <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/go-gorm/gorm?label=Latest GORM Release&color=red&&style=for-the-badge&logo=go&logoColor=red">
+                </a>
+              </div>
+              
 
-<script>
-var disqus_config = function () {
-this.page.url = 'http://gorm.io/ja_JP/docs/update.html';
-this.page.identifier = 'http://gorm.io/ja_JP/docs/update.html';
-this.language = 'jp';
-};
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-11-10T12:07:29.103Z" itemprop="dateModified">最終更新: 2023-11-10</time>
+<a href="advanced_query.html" class="article-footer-prev" title="高度なクエリ"><i class="fa fa-chevron-left"></i><span>前へ</span></a><a href="delete.html" class="article-footer-next" title="レコードの削除"><span>次へ</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gorm.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+              <div class="post_sponsors">
+                <div class="sponsors-wrapper-pc open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
 
+    <div class="sponsors">
+      <h1>Gold Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <div class="sponsor_item">
+        <a href="https://hubuc.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="sponsors-wrapper-mobile open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors</h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h1>Gold Sponsors</h1>
+      <div class="sponsor_item">
+        <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+
+              <!--  -->
+<!-- <section id="comments"> -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- </sction> -->
+
+<!-- <script> -->
+<!-- var disqus_config = function () { -->
+<!-- this.page.url = 'https://gorm.io/ja_JP/docs/update.html'; -->
+<!-- this.page.identifier = 'https://gorm.io/ja_JP/docs/update.html'; -->
+<!-- this.language = 'jp'; -->
+<!-- }; -->
+
+<!-- (function() { // DON'T EDIT BELOW THIS LINE -->
+<!-- var d = document, s = d.createElement('script'); -->
+<!-- s.src = 'https://gormv2.disqus.com/embed.js'; -->
+<!-- s.setAttribute('data-timestamp', +new Date()); -->
+<!-- (d.head || d.body).appendChild(s); -->
+<!-- })(); -->
+<!-- </script> -->
+<!--  -->
 
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
-              <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#全フィールドの更新"><span class="toc-text">全フィールドの更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#フィールドの更新"><span class="toc-text">フィールドの更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#更新するフィールドを指定"><span class="toc-text">更新するフィールドを指定</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hook-なしでの更新"><span class="toc-text">Hook なしでの更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#バッチでの更新"><span class="toc-text">バッチでの更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#expression-クエリをともなう更新"><span class="toc-text">expression クエリをともなう更新</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Hook-での値変更"><span class="toc-text">Hook での値変更</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#その他のオプション"><span class="toc-text">その他のオプション</span></a></li></ol>
+              <strong class="sidebar-title">内容</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E3%81%99%E3%81%B9%E3%81%A6%E3%81%AE%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%82%92%E4%BF%9D%E5%AD%98%E3%81%99%E3%82%8B"><span class="toc-text">すべてのフィールドを保存する</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8D%98%E4%B8%80%E3%81%AE%E3%82%AB%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%99%E3%82%8B"><span class="toc-text">単一のカラムを更新する</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A4%87%E6%95%B0%E3%81%AE%E3%82%AB%E3%83%A9%E3%83%A0%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%99%E3%82%8B"><span class="toc-text">複数のカラムを更新する</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%9F%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%82%92%E6%9B%B4%E6%96%B0%E3%81%99%E3%82%8B"><span class="toc-text">選択したフィールドを更新する</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E6%99%82%E3%81%AEHook"><span class="toc-text">更新時のHook</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E6%8B%AC%E6%9B%B4%E6%96%B0"><span class="toc-text">一括更新</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Global-Updates%E3%82%92%E9%98%B2%E3%81%90"><span class="toc-text">Global Updatesを防ぐ</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E3%81%95%E3%82%8C%E3%81%9F%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E6%95%B0%E3%82%92%E3%82%AB%E3%82%A6%E3%83%B3%E3%83%88%E3%81%99%E3%82%8B"><span class="toc-text">更新されたレコード数をカウントする</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%AB%98%E5%BA%A6%E3%81%AA%E6%A9%9F%E8%83%BD"><span class="toc-text">高度な機能</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL%E5%BC%8F%E3%81%A7%E6%9B%B4%E6%96%B0%E3%81%99%E3%82%8B"><span class="toc-text">SQL式で更新する</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%82%B5%E3%83%96%E3%82%AF%E3%82%A8%E3%83%AA%E3%81%A7%E3%81%AE%E6%9B%B4%E6%96%B0"><span class="toc-text">サブクエリでの更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hooks%E3%82%84%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%88%E3%83%A9%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AA%E3%81%97%E3%81%A7%E3%81%AE%E6%9B%B4%E6%96%B0"><span class="toc-text">Hooksやタイムトラッキングなしでの更新</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%A4%89%E6%9B%B4%E3%81%95%E3%82%8C%E3%81%9F%E3%83%AC%E3%82%B3%E3%83%BC%E3%83%89%E3%81%AE%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E8%BF%94%E5%8D%B4%E3%81%99%E3%82%8B"><span class="toc-text">変更されたレコードのデータを返却する</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E3%83%95%E3%82%A3%E3%83%BC%E3%83%AB%E3%83%89%E3%81%8C%E5%A4%89%E6%9B%B4%E3%81%95%E3%82%8C%E3%81%9F%E3%81%8B%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%81%99%E3%82%8B"><span class="toc-text">フィールドが変更されたかチェックする</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9B%B4%E6%96%B0%E5%80%A4%E3%81%AE%E5%A4%89%E6%9B%B4"><span class="toc-text">更新値の変更</span></a></li></ol></li></ol>
+
+              
+                <a href="https://translate.gorm.io/project/go-gorm/ja" target="_blank" id="article-improve">
+                  このページを改善する
+                </a>
+              
               <a href="#" id="article-toc-top">トップに戻る</a>
             </div>
           </aside>
@@ -206,7 +325,7 @@ s.setAttribute('data-timestamp', +new Date());
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">はじめに</strong><a href="index.html" class="sidebar-link">概要</a><a href="models.html" class="sidebar-link">モデルの宣言</a><a href="conventions.html" class="sidebar-link">規則</a><a href="connecting_to_the_database.html" class="sidebar-link">データベースへの接続</a><strong class="sidebar-title">CRUD Interface</strong><a href="create.html" class="sidebar-link">Create</a><a href="query.html" class="sidebar-link">Query</a><a href="update.html" class="sidebar-link current">Update</a><a href="delete.html" class="sidebar-link">Delete</a><strong class="sidebar-title">Associations</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Associations</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">チュートリアル</strong><a href="method_chaining.html" class="sidebar-link">メソッドチェーン</a><a href="error_handling.html" class="sidebar-link">エラーハンドリング</a><a href="hooks.html" class="sidebar-link">フック</a><a href="transactions.html" class="sidebar-link">トランザクション</a><a href="migration.html" class="sidebar-link">マイグレーション</a><a href="sql_builder.html" class="sidebar-link">素のSQLとSQLビルダー</a><a href="generic_interface.html" class="sidebar-link">一般的なデータベースインタフェース</a><strong class="sidebar-title">高度なトピック</strong><a href="composite_primary_key.html" class="sidebar-link">複合主キー</a><a href="write_plugins.html" class="sidebar-link">Write Plugins</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">ロガー</a><a href="changelog.html" class="sidebar-link">更新履歴</a><a href="/community.html" class="sidebar-link">コミュニティ</a><a href="/contribute.html" class="sidebar-link">コントリビュート</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">このサイトを翻訳する</a>
+    <strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">概要</a><a href="models.html" class="sidebar-link">モデルを宣言する</a><a href="connecting_to_the_database.html" class="sidebar-link">データベースに接続する</a><strong class="sidebar-title">CRUD Interface</strong><a href="create.html" class="sidebar-link">レコードの作成</a><a href="query.html" class="sidebar-link">レコードの取得</a><a href="advanced_query.html" class="sidebar-link">高度なクエリ</a><a href="update.html" class="sidebar-link current">レコードの更新</a><a href="delete.html" class="sidebar-link">レコードの削除</a><a href="sql_builder.html" class="sidebar-link">Raw SQL & SQL Builder</a><strong class="sidebar-title">アソシエーション</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Association Mode</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">Tutorials</strong><a href="context.html" class="sidebar-link">Context</a><a href="error_handling.html" class="sidebar-link">エラーハンドリング</a><a href="method_chaining.html" class="sidebar-link">Method Chaining</a><a href="session.html" class="sidebar-link">Session</a><a href="hooks.html" class="sidebar-link">Hooks</a><a href="transactions.html" class="sidebar-link">トランザクション</a><a href="migration.html" class="sidebar-link">マイグレーション</a><a href="logger.html" class="sidebar-link">Logger</a><a href="generic_interface.html" class="sidebar-link">汎用データベースインターフェース</a><a href="performance.html" class="sidebar-link">パフォーマンス</a><a href="data_types.html" class="sidebar-link">データ型のカスタマイズ</a><a href="scopes.html" class="sidebar-link">Scopes</a><a href="conventions.html" class="sidebar-link">規約</a><a href="settings.html" class="sidebar-link">値の受け渡し</a><strong class="sidebar-title">Advanced Topics</strong><a href="dbresolver.html" class="sidebar-link">Database Resolver</a><a href="sharding.html" class="sidebar-link">シャーディング</a><a href="serializer.html" class="sidebar-link">Serializer</a><a href="prometheus.html" class="sidebar-link">Prometheus</a><a href="hints.html" class="sidebar-link">Hints</a><a href="indexes.html" class="sidebar-link">Index</a><a href="constraints.html" class="sidebar-link">制約</a><a href="composite_primary_key.html" class="sidebar-link">複合主キー</a><a href="security.html" class="sidebar-link">セキュリティ</a><a href="gorm_config.html" class="sidebar-link">GORM Config</a><a href="write_plugins.html" class="sidebar-link">プラグインの作成</a><a href="write_driver.html" class="sidebar-link">ドライバの作成</a><a href="changelog.html" class="sidebar-link">変更履歴</a><a href="/community.html" class="sidebar-link">コミュニティ</a><a href="/contribute.html" class="sidebar-link">貢献する</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">現在のサイトを翻訳する</a>
   </div>
 </aside>
 
@@ -217,13 +336,22 @@ s.setAttribute('data-timestamp', +new Date());
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2013~2020 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      &copy; 2013~2023 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
-      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+      <div id="gorm.cn" style="display:none">
+      感谢 <a href="https://www.qiniu.com/" target="_blank">七牛云</a> 对 CDN 的赞助，<a href="https://github.com/unknwon" target="_blank">无闻</a> 对域名 <a href="https://gorm.cn" target="_blank">gorm.cn</a> 的捐赠<br>
+      <a href="http://beian.miit.gov.cn/" target="_blank" data-spm-anchor-id="a3c00.7621333.7y9jhqsfz.112">浙ICP备2020033190号-1</a><br>
+      </div>
+
+      <script>
+        if (window.location.hostname.includes("gorm.cn")) {
+          document.getElementById("gorm.cn").style.display = 'block';
+        }
+      </script>
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/go-gorm/gorm" class="footer-link" target="_blank"><i class="fab fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -234,12 +362,12 @@ s.setAttribute('data-timestamp', +new Date());
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
       <li class="mobile-nav-item">
-        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>ホーム</a>
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Home</a>
       </li>
-      <a href="/ja_JP/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>ドキュメント</a><a href="/ja_JP/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>コミュニティ</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ja_JP/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>コントリビュート</a>
+      <a href="/ja_JP/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>ドキュメント</a><a href="/ja_JP/gen/" class="mobile-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ja_JP/community.html" class="mobile-nav-link"><i class="fab fa-slack"></i>コミュニティ</a><a href="https://pkg.go.dev/gorm.io/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ja_JP/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
     </ul>
     
-      <strong class="mobile-nav-title">はじめに</strong><a href="index.html" class="mobile-nav-link">概要</a><a href="models.html" class="mobile-nav-link">モデルの宣言</a><a href="conventions.html" class="mobile-nav-link">規則</a><a href="connecting_to_the_database.html" class="mobile-nav-link">データベースへの接続</a><strong class="mobile-nav-title">CRUD Interface</strong><a href="create.html" class="mobile-nav-link">Create</a><a href="query.html" class="mobile-nav-link">Query</a><a href="update.html" class="mobile-nav-link current">Update</a><a href="delete.html" class="mobile-nav-link">Delete</a><strong class="mobile-nav-title">Associations</strong><a href="belongs_to.html" class="mobile-nav-link">Belongs To</a><a href="has_one.html" class="mobile-nav-link">Has One</a><a href="has_many.html" class="mobile-nav-link">Has Many</a><a href="many_to_many.html" class="mobile-nav-link">Many To Many</a><a href="associations.html" class="mobile-nav-link">Associations</a><a href="preload.html" class="mobile-nav-link">Preloading (Eager Loading)</a><strong class="mobile-nav-title">チュートリアル</strong><a href="method_chaining.html" class="mobile-nav-link">メソッドチェーン</a><a href="error_handling.html" class="mobile-nav-link">エラーハンドリング</a><a href="hooks.html" class="mobile-nav-link">フック</a><a href="transactions.html" class="mobile-nav-link">トランザクション</a><a href="migration.html" class="mobile-nav-link">マイグレーション</a><a href="sql_builder.html" class="mobile-nav-link">素のSQLとSQLビルダー</a><a href="generic_interface.html" class="mobile-nav-link">一般的なデータベースインタフェース</a><strong class="mobile-nav-title">高度なトピック</strong><a href="composite_primary_key.html" class="mobile-nav-link">複合主キー</a><a href="write_plugins.html" class="mobile-nav-link">Write Plugins</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">ロガー</a><a href="changelog.html" class="mobile-nav-link">更新履歴</a><a href="/community.html" class="mobile-nav-link">コミュニティ</a><a href="/contribute.html" class="mobile-nav-link">コントリビュート</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">このサイトを翻訳する</a>
+      <strong class="mobile-nav-title">Getting Started</strong><a href="index.html" class="mobile-nav-link">概要</a><a href="models.html" class="mobile-nav-link">モデルを宣言する</a><a href="connecting_to_the_database.html" class="mobile-nav-link">データベースに接続する</a><strong class="mobile-nav-title">CRUD Interface</strong><a href="create.html" class="mobile-nav-link">レコードの作成</a><a href="query.html" class="mobile-nav-link">レコードの取得</a><a href="advanced_query.html" class="mobile-nav-link">高度なクエリ</a><a href="update.html" class="mobile-nav-link current">レコードの更新</a><a href="delete.html" class="mobile-nav-link">レコードの削除</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL & SQL Builder</a><strong class="mobile-nav-title">アソシエーション</strong><a href="belongs_to.html" class="mobile-nav-link">Belongs To</a><a href="has_one.html" class="mobile-nav-link">Has One</a><a href="has_many.html" class="mobile-nav-link">Has Many</a><a href="many_to_many.html" class="mobile-nav-link">Many To Many</a><a href="associations.html" class="mobile-nav-link">Association Mode</a><a href="preload.html" class="mobile-nav-link">Preloading (Eager Loading)</a><strong class="mobile-nav-title">Tutorials</strong><a href="context.html" class="mobile-nav-link">Context</a><a href="error_handling.html" class="mobile-nav-link">エラーハンドリング</a><a href="method_chaining.html" class="mobile-nav-link">Method Chaining</a><a href="session.html" class="mobile-nav-link">Session</a><a href="hooks.html" class="mobile-nav-link">Hooks</a><a href="transactions.html" class="mobile-nav-link">トランザクション</a><a href="migration.html" class="mobile-nav-link">マイグレーション</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="generic_interface.html" class="mobile-nav-link">汎用データベースインターフェース</a><a href="performance.html" class="mobile-nav-link">パフォーマンス</a><a href="data_types.html" class="mobile-nav-link">データ型のカスタマイズ</a><a href="scopes.html" class="mobile-nav-link">Scopes</a><a href="conventions.html" class="mobile-nav-link">規約</a><a href="settings.html" class="mobile-nav-link">値の受け渡し</a><strong class="mobile-nav-title">Advanced Topics</strong><a href="dbresolver.html" class="mobile-nav-link">Database Resolver</a><a href="sharding.html" class="mobile-nav-link">シャーディング</a><a href="serializer.html" class="mobile-nav-link">Serializer</a><a href="prometheus.html" class="mobile-nav-link">Prometheus</a><a href="hints.html" class="mobile-nav-link">Hints</a><a href="indexes.html" class="mobile-nav-link">Index</a><a href="constraints.html" class="mobile-nav-link">制約</a><a href="composite_primary_key.html" class="mobile-nav-link">複合主キー</a><a href="security.html" class="mobile-nav-link">セキュリティ</a><a href="gorm_config.html" class="mobile-nav-link">GORM Config</a><a href="write_plugins.html" class="mobile-nav-link">プラグインの作成</a><a href="write_driver.html" class="mobile-nav-link">ドライバの作成</a><a href="changelog.html" class="mobile-nav-link">変更履歴</a><a href="/community.html" class="mobile-nav-link">コミュニティ</a><a href="/contribute.html" class="mobile-nav-link">貢献する</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">現在のサイトを翻訳する</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
@@ -252,19 +380,21 @@ s.setAttribute('data-timestamp', +new Date());
       
         <option value="de_DE">Deutsch</option>
       
-        <option value="es_ES">Español</option>
-      
         <option value="id_ID">bahasa Indonesia</option>
-      
-        <option value="it_IT">Italiano</option>
       
         <option value="ja_JP" selected>日本語</option>
       
         <option value="ru_RU">Русский</option>
       
+        <option value="ko_KR">한국어</option>
+      
+        <option value="hi_IN">हिन्दी</option>
+      
         <option value="fr_FR">French</option>
       
-        <option value="ko_KR">한국어</option>
+        <option value="it_IT">Italiano</option>
+      
+        <option value="es_ES">Español</option>
       
     </select>
   </div>
@@ -282,12 +412,9 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/js/mobile_nav.js"></script>
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 <script src="/js/code_expander.js"></script>
-
-
-<script src="/js/404_fix.js"></script>
 
 <!-- endbuild -->
 

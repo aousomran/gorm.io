@@ -6,69 +6,58 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://gorm.io/ko_KR/docs/models.html">
+  <link rel="canonical" href="https://gorm.io/ko_KR/docs/models.html">
   <!-- Alternative links -->
   
     
-      <link rel="alternative" hreflang="en" href="http://gorm.io/docs/models.html">
+      <link rel="alternative" hreflang="en" href="https://gorm.io/docs/models.html">
     
-      <link rel="alternative" hreflang="zh_CN" href="http://gorm.io/zh_CN/docs/models.html">
+      <link rel="alternative" hreflang="zh_CN" href="https://gorm.io/zh_CN/docs/models.html">
     
-      <link rel="alternative" hreflang="de_DE" href="http://gorm.io/de_DE/docs/models.html">
+      <link rel="alternative" hreflang="de_DE" href="https://gorm.io/de_DE/docs/models.html">
     
-      <link rel="alternative" hreflang="es_ES" href="http://gorm.io/es_ES/docs/models.html">
+      <link rel="alternative" hreflang="id_ID" href="https://gorm.io/id_ID/docs/models.html">
     
-      <link rel="alternative" hreflang="id_ID" href="http://gorm.io/id_ID/docs/models.html">
+      <link rel="alternative" hreflang="ja_JP" href="https://gorm.io/ja_JP/docs/models.html">
     
-      <link rel="alternative" hreflang="it_IT" href="http://gorm.io/it_IT/docs/models.html">
+      <link rel="alternative" hreflang="ru_RU" href="https://gorm.io/ru_RU/docs/models.html">
     
-      <link rel="alternative" hreflang="ja_JP" href="http://gorm.io/ja_JP/docs/models.html">
+      <link rel="alternative" hreflang="ko_KR" href="https://gorm.io/ko_KR/docs/models.html">
     
-      <link rel="alternative" hreflang="ru_RU" href="http://gorm.io/ru_RU/docs/models.html">
+      <link rel="alternative" hreflang="hi_IN" href="https://gorm.io/hi_IN/docs/models.html">
     
-      <link rel="alternative" hreflang="fr_FR" href="http://gorm.io/fr_FR/docs/models.html">
+      <link rel="alternative" hreflang="fr_FR" href="https://gorm.io/fr_FR/docs/models.html">
     
-      <link rel="alternative" hreflang="ko_KR" href="http://gorm.io/ko_KR/docs/models.html">
+      <link rel="alternative" hreflang="it_IT" href="https://gorm.io/it_IT/docs/models.html">
+    
+      <link rel="alternative" hreflang="es_ES" href="https://gorm.io/es_ES/docs/models.html">
     
   
   <!-- Icon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
-  <meta name="msapplication-TileColor" content="#2f83cd">
-  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
-  <meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- CSS -->
   <!-- build:css build/css/navy.css -->
   
 <link rel="stylesheet" href="/css/navy.css">
 
   <!-- endbuild -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="GORM">
+  <link rel="alternate" href="/atom.xml" title="GORM" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="모델 선언모델은 보통 일반적인 Go언어 구조체, 기본 Go 타입 또는 포인터입니다. sql.Scanner 과 driver.Valuer 인터페이스도 지원합니다. 모델 예제: type User struct &amp;#123;  gorm.Model  Name         string  Age          sql.NullInt64  Birthday     *time">
+  <meta name="description" content="모델 선언모델은 기본 Go 유형, 포인터&#x2F;별칭 또는 Scanner및 Valuer인터페이스를 구현하는 사용자 정의 유형이 있는 일반 구조체입니다. 예를 들면 다음과 같습니다: type User struct &amp;#123;  ID           uint  Name         string  Email        *string  Age">
 <meta property="og:type" content="website">
 <meta property="og:title" content="모델 선언">
-<meta property="og:url" content="http://gorm.io/ko_KR/docs/models.html">
+<meta property="og:url" content="https://gorm.io/ko_KR/docs/models.html">
 <meta property="og:site_name" content="GORM">
-<meta property="og:description" content="모델 선언모델은 보통 일반적인 Go언어 구조체, 기본 Go 타입 또는 포인터입니다. sql.Scanner 과 driver.Valuer 인터페이스도 지원합니다. 모델 예제: type User struct &amp;#123;  gorm.Model  Name         string  Age          sql.NullInt64  Birthday     *time">
+<meta property="og:description" content="모델 선언모델은 기본 Go 유형, 포인터&#x2F;별칭 또는 Scanner및 Valuer인터페이스를 구현하는 사용자 정의 유형이 있는 일반 구조체입니다. 예를 들면 다음과 같습니다: type User struct &amp;#123;  ID           uint  Name         string  Email        *string  Age">
 <meta property="og:locale" content="ko_KR">
-<meta property="article:published_time" content="2020-02-19T02:13:50.018Z">
-<meta property="article:modified_time" content="2020-02-19T02:13:50.018Z">
+<meta property="article:published_time" content="2023-11-10T12:07:29.107Z">
+<meta property="article:modified_time" content="2023-11-10T12:07:29.107Z">
 <meta property="article:author" content="Jinzhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="zhangjinzhu">
@@ -81,17 +70,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WSNPD75');</script>
 
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
     <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="/ko_KR/" id="logo">GORM</a>
+      <a href="/ko_KR/" id="logo">
+        <img src="/gorm.svg" alt="GORM">
+      </a>
     </h1>
     <nav id="main-nav">
-      <a href="/ko_KR/docs/" class="main-nav-link"><i class="fa fa-book"></i>문서</a><a href="/ko_KR/community.html" class="main-nav-link"><i class="fa fa-slack"></i>커뮤니티</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ko_KR/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>기여하기</a>
+      <a href="/ko_KR/docs/" class="main-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/ko_KR/gen/" class="main-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ko_KR/community.html" class="main-nav-link"><i class="fab fa-slack"></i>Community</a><a href="https://pkg.go.dev/gorm.io/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ko_KR/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
@@ -109,19 +100,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <option value="de_DE">Deutsch</option>
         
-          <option value="es_ES">Español</option>
-        
           <option value="id_ID">bahasa Indonesia</option>
-        
-          <option value="it_IT">Italiano</option>
         
           <option value="ja_JP">日本語</option>
         
           <option value="ru_RU">Русский</option>
         
+          <option value="ko_KR" selected>한국어</option>
+        
+          <option value="hi_IN">हिन्दी</option>
+        
           <option value="fr_FR">French</option>
         
-          <option value="ko_KR" selected>한국어</option>
+          <option value="it_IT">Italiano</option>
+        
+          <option value="es_ES">Español</option>
         
       </select>
     </div>
@@ -142,161 +135,253 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">모델 선언</h1>
-                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/ko_KR/docs/models.md" target="_blank" rel="noopener" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+                
+                <a target="_blank" rel="noopener" href="https://translate.gorm.io/project/go-gorm/ko" class="article-edit-link" title="페이지 수정"><i class="fa fa-pencil"></i></a>
+                
               </header>
               <div class="article-content" itemprop="articleBody">
-                <html><head></head><body><h2 id="모델-선언" class="article-heading"><a href="#모델-선언" class="headerlink" title="모델 선언"></a>모델 선언<a class="article-anchor" href="#모델-선언" aria-hidden="true"></a></h2><p>모델은 보통 일반적인 Go언어 구조체, 기본 Go 타입 또는 포인터입니다. <a href="https://golang.org/pkg/database/sql/#Scanner" target="_blank" rel="noopener"><code>sql.Scanner</code></a> 과 <a href="https://golang.org/pkg/database/sql/driver/#Valuer" target="_blank" rel="noopener"><code>driver.Valuer</code></a> 인터페이스도 지원합니다.</p>
-<p>모델 예제:</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name         <span class="keyword">string</span></span><br><span class="line">  Age          sql.NullInt64</span><br><span class="line">  Birthday     *time.Time</span><br><span class="line">  Email        <span class="keyword">string</span>  <span class="string">`gorm:"type:varchar(100);unique_index"`</span></span><br><span class="line">  Role         <span class="keyword">string</span>  <span class="string">`gorm:"size:255"`</span> <span class="comment">// 필드 사이즈를 255로 설정합니다.</span></span><br><span class="line">  MemberNumber *<span class="keyword">string</span> <span class="string">`gorm:"unique;not null"`</span> <span class="comment">// MemberNumber를 유니크, not null로 설정합니다.</span></span><br><span class="line">  Num          <span class="keyword">int</span>     <span class="string">`gorm:"AUTO_INCREMENT"`</span> <span class="comment">// Num을 자동증가 번호로 설정합니다.</span></span><br><span class="line">  Address      <span class="keyword">string</span>  <span class="string">`gorm:"index:addr"`</span> <span class="comment">// 이름이 `addr`인 인덱스를 작성합니다.</span></span><br><span class="line">  IgnoreMe     <span class="keyword">int</span>     <span class="string">`gorm:"-"`</span> <span class="comment">// 이 항목은 무시합니다.</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+                <html><head></head><body><h2 id="모델-선언" class="article-heading"><a href="#모델-선언" class="headerlink" title="모델 선언"></a>모델 선언<a class="article-anchor" href="#모델-선언" aria-hidden="true"></a></h2><p>모델은 기본 Go 유형, 포인터/별칭 또는 <a target="_blank" rel="noopener" href="https://pkg.go.dev/database/sql/?tab=doc#Scanner">Scanner</a>및 <a target="_blank" rel="noopener" href="https://pkg.go.dev/database/sql/driver#Valuer">Valuer</a>인터페이스를 구현하는 사용자 정의 유형이 있는 일반 구조체입니다.</p>
+<p>예를 들면 다음과 같습니다:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  ID           <span class="type">uint</span></span><br><span class="line">  Name         <span class="type">string</span></span><br><span class="line">  Email        *<span class="type">string</span></span><br><span class="line">  Age          <span class="type">uint8</span></span><br><span class="line">  Birthday     *time.Time</span><br><span class="line">  MemberNumber sql.NullString</span><br><span class="line">  ActivatedAt  sql.NullTime</span><br><span class="line">  CreatedAt    time.Time</span><br><span class="line">  UpdatedAt    time.Time</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="구조체-태그" class="article-heading"><a href="#구조체-태그" class="headerlink" title="구조체 태그"></a>구조체 태그<a class="article-anchor" href="#구조체-태그" aria-hidden="true"></a></h2><p>태그는 모델을 선언 시 선택사항입니다. GORM은 아래의 태그들을 지원합니다:</p>
-<h3 id="지원하는-구조체-태그" class="article-heading"><a href="#지원하는-구조체-태그" class="headerlink" title="지원하는 구조체 태그"></a>지원하는 구조체 태그<a class="article-anchor" href="#지원하는-구조체-태그" aria-hidden="true"></a></h3><table>
+<h2 id="규칙" class="article-heading"><a href="#규칙" class="headerlink" title="규칙"></a>규칙<a class="article-anchor" href="#규칙" aria-hidden="true"></a></h2><p>GORM은 구성보다 규칙을 선호합니다. 기본적으로 GORM은 <code>ID</code>를 기본 키로 사용하고, 복수형 <code>snake_cases</code>를 구조체 이름을 테이블 이름으로, <code>snake_case</code>를 열 이름으로, 생성/업데이트 시간을 추적하기 위해 <code>CreatedAt</code>, <code>UpdatedAt</code>을 사용합니다.</p>
+<p>GORM에서 채택한 규칙을 따르는 경우 구성/코드를 거의 작성하지 않아도 됩니다. 규칙이 요구 사항과 일치하지 않는 경우 <a href="conventions.html">GORM을 사용하여 규칙을 구성할 수 있습니다.</a></p>
+<h2 id="gorm-Model" class="article-heading"><a href="#gorm-Model" class="headerlink" title="gorm.Model"></a>gorm.Model<a class="article-anchor" href="#gorm-Model" aria-hidden="true"></a></h2><p>GORM은 <code>ID</code>, <code>CreatedAt</code>, <code>UpdatedAt</code>, <code>DeletedAt</code> 필드를 포함하는 <code>gorm.Model</code> 구조체를 정의합니다.</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// gorm.Model definition</span></span><br><span class="line"><span class="keyword">type</span> Model <span class="keyword">struct</span> {</span><br><span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:"primaryKey"`</span></span><br><span class="line">  CreatedAt time.Time</span><br><span class="line">  UpdatedAt time.Time</span><br><span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:"index"`</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>해당 필드를 포함하도록 구조체를 만들 할 수 있습니다. <a href="#embedded_struct">Embedded Struct</a>를 참조하세요.</p>
+<h2 id="고급" class="article-heading"><a href="#고급" class="headerlink" title="고급"></a>고급<a class="article-anchor" href="#고급" aria-hidden="true"></a></h2><h3 id="필드-수준-권한" class="article-heading"><a href="#필드-수준-권한" class="headerlink" title="필드 수준 권한"></a><span id="field_permission">필드 수준 권한</span><a class="article-anchor" href="#필드-수준-권한" aria-hidden="true"></a></h3><p>내보낸 필드는 GORM으로 CRUD를 수행할 때 모든 권한을 가지며, GORM에서는 태그를 사용하여 필드 수준 권한을 읽기 전용, 쓰기 전용, 만들기 전용, 업데이트 전용 또는 무시로 설정할 수 있습니다.</p>
+<blockquote class="note warn"><p><strong>참고</strong> GORM 마이그레이터를 사용하여 테이블을 만들 때 무시된 필드는 생성되지 않습니다.</p>
+</blockquote>
+
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-:create"`</span> <span class="comment">// 읽기/생성 허용</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-:update"`</span> <span class="comment">// 읽기/수정 허용</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-"`</span>        <span class="comment">// 읽기/쓰기 허용 (생성 및 수정)</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"&lt;-:false"`</span>  <span class="comment">// 읽기전용, 쓰기 불가능</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-&gt;"`</span>        <span class="comment">// 읽기허용 (설정되지 않은경우 쓰기 불가능)</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-&gt;;&lt;-:create"`</span> <span class="comment">//읽기/생성 허용</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-&gt;:false;&lt;-:create"`</span> <span class="comment">// 생성만 가능 (읽기 불가능)</span></span><br><span class="line">  Name <span class="type">string</span> <span class="string">`gorm:"-"`</span>  <span class="comment">// gorm 에서 이 필드 무시</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Creating-x2F-Updating-Time-x2F-Unix-Milli-x2F-Nano-Seconds-Tracking-생성-x2F-업데이트-시-시간-x2F-유닉스시간-밀리-x2F-나노-기록" class="article-heading"><a href="#Creating-x2F-Updating-Time-x2F-Unix-Milli-x2F-Nano-Seconds-Tracking-생성-x2F-업데이트-시-시간-x2F-유닉스시간-밀리-x2F-나노-기록" class="headerlink" title="Creating/Updating Time/Unix (Milli/Nano) Seconds Tracking 생성/업데이트 시 시간/유닉스시간(밀리/나노) 기록"></a><name id="time_tracking">Creating/Updating Time/Unix (Milli/Nano) Seconds Tracking 생성/업데이트 시 시간/유닉스시간(밀리/나노) 기록</name><a class="article-anchor" href="#Creating-x2F-Updating-Time-x2F-Unix-Milli-x2F-Nano-Seconds-Tracking-생성-x2F-업데이트-시-시간-x2F-유닉스시간-밀리-x2F-나노-기록" aria-hidden="true"></a></h3><p>GORM use <code>CreatedAt</code>, <code>UpdatedAt</code> to track creating/updating time by convention, and GORM will set the  <a href="gorm_config.html#now_func">current time</a> when creating/updating if the fields are defined</p>
+<p>To use fields with a different name, you can configure those fields with tag <code>autoCreateTime</code>, <code>autoUpdateTime</code></p>
+<p>If you prefer to save UNIX (milli/nano) seconds instead of time, you can simply change the field’s data type from <code>time.Time</code> to <code>int</code></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  CreatedAt time.Time <span class="comment">// Set to current time if it is zero on creating</span></span><br><span class="line">  UpdatedAt <span class="type">int</span>       <span class="comment">// Set to current unix seconds on updating or if it is zero on creating</span></span><br><span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:"autoUpdateTime:nano"`</span> <span class="comment">// Use unix nano seconds as updating time</span></span><br><span class="line">  Updated   <span class="type">int64</span> <span class="string">`gorm:"autoUpdateTime:milli"`</span><span class="comment">// Use unix milli seconds as updating time</span></span><br><span class="line">  Created   <span class="type">int64</span> <span class="string">`gorm:"autoCreateTime"`</span>      <span class="comment">// Use unix seconds as creating time</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h3 id="Embedded-Struct" class="article-heading"><a href="#Embedded-Struct" class="headerlink" title="Embedded Struct"></a><span id="embedded_struct">Embedded Struct</span><a class="article-anchor" href="#Embedded-Struct" aria-hidden="true"></a></h3><p>For anonymous fields, GORM will include its fields into its parent struct, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  ID        <span class="type">uint</span>           <span class="string">`gorm:"primaryKey"`</span></span><br><span class="line">  CreatedAt time.Time</span><br><span class="line">  UpdatedAt time.Time</span><br><span class="line">  DeletedAt gorm.DeletedAt <span class="string">`gorm:"index"`</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>For a normal struct field, you can embed it with the tag <code>embedded</code>, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Author <span class="keyword">struct</span> {</span><br><span class="line">    Name  <span class="type">string</span></span><br><span class="line">    Email <span class="type">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID      <span class="type">int</span></span><br><span class="line">  Author  Author <span class="string">`gorm:"embedded"`</span></span><br><span class="line">  Upvotes <span class="type">int32</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID    <span class="type">int64</span></span><br><span class="line">    Name  <span class="type">string</span></span><br><span class="line">    Email <span class="type">string</span></span><br><span class="line">  Upvotes  <span class="type">int32</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<p>And you can use tag <code>embeddedPrefix</code> to add prefix to embedded fields’ db name, for example:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID      <span class="type">int</span></span><br><span class="line">  Author  Author <span class="string">`gorm:"embedded;embeddedPrefix:author_"`</span></span><br><span class="line">  Upvotes <span class="type">int32</span></span><br><span class="line">}</span><br><span class="line"><span class="comment">// equals</span></span><br><span class="line"><span class="keyword">type</span> Blog <span class="keyword">struct</span> {</span><br><span class="line">  ID          <span class="type">int64</span></span><br><span class="line">    AuthorName  <span class="type">string</span></span><br><span class="line">    AuthorEmail <span class="type">string</span></span><br><span class="line">  Upvotes     <span class="type">int32</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+
+<h3 id="Fields-Tags" class="article-heading"><a href="#Fields-Tags" class="headerlink" title="Fields Tags"></a><span id="tags">Fields Tags</span><a class="article-anchor" href="#Fields-Tags" aria-hidden="true"></a></h3><p>Tags are optional to use when declaring models, GORM supports the following tags: Tags are case insensitive, however <code>camelCase</code> is preferred.</p>
+<table>
 <thead>
 <tr>
-<th>태그</th>
+<th>태그 이름</th>
 <th>설명</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>Column</td>
-<td>컬럼명을 지정합니다.</td>
+<td>column</td>
+<td>column 이름</td>
 </tr>
 <tr>
-<td>Type</td>
-<td>데이터 타입을 지정합니다.</td>
+<td>type</td>
+<td>column 데이터 유형, 호환 가능한 일반 유형 (예: bool, int, uint, float, string, time, bytes)을 사용하는 것을 선호합니다. 이는 모든 데이터베이스에서 작동하며 <code>not null</code>, <code>size</code>, <code>autoIncrement</code>와 같은 태그들과 함께 사용할 수 있습니다.<br> varbinary (8)과 같은 특정 데이터베이스의 데이터 유형도 지원됩니다. 단, 사용하게 된다면 전체 타입을 명시해주어야 합니다. 예: MEDIUMINT UNSIGNED NOT NULL AUTO_INCREMENT</td>
 </tr>
 <tr>
-<td>Size</td>
-<td>컬럼 사이즈를 지정합니다. 기본값은 255 입니다.</td>
+<td>serializer</td>
+<td>specifies serializer for how to serialize and deserialize data into db, e.g: <code>serializer:json/gob/unixtime</code></td>
 </tr>
 <tr>
-<td>PRIMARY_KEY</td>
-<td>기본키로 지정합니다.</td>
+<td>size</td>
+<td>specifies column data size/length, e.g: <code>size:256</code></td>
 </tr>
 <tr>
-<td>UNIQUE</td>
-<td>유니크 제약을 지정합니다.</td>
+<td>primaryKey</td>
+<td>specifies column as primary key</td>
 </tr>
 <tr>
-<td>DEFAULT</td>
-<td>기본값을 지정합니다.</td>
+<td>unique</td>
+<td>specifies column as unique</td>
 </tr>
 <tr>
-<td>PRECISION</td>
-<td>자릿수를 지정합니다.</td>
+<td>default</td>
+<td>specifies column default value</td>
 </tr>
 <tr>
-<td>NOT NULL</td>
-<td>NOT NULL 제약을 지정합니다.</td>
+<td>precision</td>
+<td>specifies column precision</td>
 </tr>
 <tr>
-<td>AUTO_INCREMENT</td>
-<td>자동증가번호 유무를 지정합니다.</td>
+<td>scale</td>
+<td>specifies column scale</td>
 </tr>
 <tr>
-<td>INDEX</td>
-<td>이름이 있거나, 없는 인덱스를 생성합니다. 이름이 같을 경우 복합 인덱스가 작성됩니다.</td>
+<td>not null</td>
+<td>specifies column as NOT NULL</td>
 </tr>
 <tr>
-<td>UNIQUE_INDEX</td>
-<td><code>INDEX</code>와 같이 유니크 인덱스를 작성합니다.</td>
+<td>autoIncrement</td>
+<td>specifies column auto incrementable</td>
 </tr>
 <tr>
-<td>EMBEDDED</td>
-<td>임베디드 구조체로 설정합니다.</td>
+<td>autoIncrementIncrement</td>
+<td>auto increment step, controls the interval between successive column values</td>
 </tr>
 <tr>
-<td>EMBEDDED_PREFIX</td>
-<td>임베디드 구조체의 접두사 이름을 지정합니다.</td>
+<td>embedded</td>
+<td>embed the field</td>
+</tr>
+<tr>
+<td>embeddedPrefix</td>
+<td>column name prefix for embedded fields</td>
+</tr>
+<tr>
+<td>autoCreateTime</td>
+<td>track current time when creating, for <code>int</code> fields, it will track unix seconds, use value <code>nano</code>/<code>milli</code> to track unix nano/milli seconds, e.g: <code>autoCreateTime:nano</code></td>
+</tr>
+<tr>
+<td>autoUpdateTime</td>
+<td>track current time when creating/updating, for <code>int</code> fields, it will track unix seconds, use value <code>nano</code>/<code>milli</code> to track unix nano/milli seconds, e.g: <code>autoUpdateTime:milli</code></td>
+</tr>
+<tr>
+<td>index</td>
+<td>create index with options, use same name for multiple fields creates composite indexes, refer <a href="indexes.html">Indexes</a> for details</td>
+</tr>
+<tr>
+<td>uniqueIndex</td>
+<td>same as <code>index</code>, but create uniqued index</td>
+</tr>
+<tr>
+<td>check</td>
+<td>creates check constraint, eg: <code>check:age &gt; 13</code>, refer <a href="constraints.html">Constraints</a></td>
+</tr>
+<tr>
+<td>&lt;-</td>
+<td>set field’s write permission, <code>&lt;-:create</code> create-only field, <code>&lt;-:update</code> update-only field, <code>&lt;-:false</code> no write permission, <code>&lt;-</code> create and update permission</td>
+</tr>
+<tr>
+<td>-&gt;</td>
+<td>set field’s read permission, <code>-&gt;:false</code> no read permission</td>
 </tr>
 <tr>
 <td>-</td>
-<td>이 항목은 무시됩니다.</td>
+<td>ignore this field, <code>-</code> no read/write permission, <code>-:migration</code> no migrate permission, <code>-:all</code> no read/write/migrate permission</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>add comment for field when migration</td>
 </tr>
 </tbody></table>
-<h3 id="Struct-tags-for-Associations" class="article-heading"><a href="#Struct-tags-for-Associations" class="headerlink" title="Struct tags for Associations"></a>Struct tags for Associations<a class="article-anchor" href="#Struct-tags-for-Associations" aria-hidden="true"></a></h3><p>Check out the Associations section for details</p>
-<table>
-<thead>
-<tr>
-<th>Tag</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>MANY2MANY</td>
-<td>Specifies join table name</td>
-</tr>
-<tr>
-<td>FOREIGNKEY</td>
-<td>Specifies foreign key</td>
-</tr>
-<tr>
-<td>ASSOCIATION_FOREIGNKEY</td>
-<td>Specifies association foreign key</td>
-</tr>
-<tr>
-<td>POLYMORPHIC</td>
-<td>Specifies polymorphic type</td>
-</tr>
-<tr>
-<td>POLYMORPHIC_VALUE</td>
-<td>Specifies polymorphic value</td>
-</tr>
-<tr>
-<td>JOINTABLE_FOREIGNKEY</td>
-<td>Specifies foreign key of jointable</td>
-</tr>
-<tr>
-<td>ASSOCIATION_JOINTABLE_FOREIGNKEY</td>
-<td>Specifies association foreign key of jointable</td>
-</tr>
-<tr>
-<td>SAVE_ASSOCIATIONS</td>
-<td>AutoSave associations or not</td>
-</tr>
-<tr>
-<td>ASSOCIATION_AUTOUPDATE</td>
-<td>AutoUpdate associations or not</td>
-</tr>
-<tr>
-<td>ASSOCIATION_AUTOCREATE</td>
-<td>AutoCreate associations or not</td>
-</tr>
-<tr>
-<td>ASSOCIATION_SAVE_REFERENCE</td>
-<td>AutoSave associations reference or not</td>
-</tr>
-<tr>
-<td>PRELOAD</td>
-<td>Auto Preload associations or not</td>
-</tr>
-</tbody></table>
+<h3 id="Associations-Tags" class="article-heading"><a href="#Associations-Tags" class="headerlink" title="Associations Tags"></a>Associations Tags<a class="article-anchor" href="#Associations-Tags" aria-hidden="true"></a></h3><p>GORM allows configure foreign keys, constraints, many2many table through tags for Associations, check out the <a href="associations.html#tags">Associations section</a> for details</p>
 </body></html>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-19T02:13:50.018Z" itemprop="dateModified">갱신일: 2020-02-19</time>
-<a href="index.html" class="article-footer-prev" title="개요"><i class="fa fa-chevron-left"></i><span>이전</span></a><a href="conventions.html" class="article-footer-next" title="규칙"><span>다음</span><i class="fa fa-chevron-right"></i></a>
-              </footer>
+
               
-<section id="comments">
-<div id="disqus_thread"></div>
-</sction>
+              <div>
+                <a href="v2_release_note.html" target="_blank">
+                  <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/go-gorm/gorm?label=Latest GORM Release&color=red&&style=for-the-badge&logo=go&logoColor=red">
+                </a>
+              </div>
+              
 
-<script>
-var disqus_config = function () {
-this.page.url = 'http://gorm.io/ko_KR/docs/models.html';
-this.page.identifier = 'http://gorm.io/ko_KR/docs/models.html';
-this.language = 'ko';
-};
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-11-10T12:07:29.107Z" itemprop="dateModified">마지막 수정: 2023-11-10</time>
+<a href="index.html" class="article-footer-prev" title="개요"><i class="fa fa-chevron-left"></i><span>이전</span></a><a href="connecting_to_the_database.html" class="article-footer-next" title="Database에 연결하기"><span>다음</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gorm.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+              <div class="post_sponsors">
+                <div class="sponsors-wrapper-pc open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
 
+    <div class="sponsors">
+      <h1>Gold Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <div class="sponsor_item">
+        <a href="https://hubuc.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="sponsors-wrapper-mobile open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors</h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h1>Gold Sponsors</h1>
+      <div class="sponsor_item">
+        <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+
+              <!--  -->
+<!-- <section id="comments"> -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- </sction> -->
+
+<!-- <script> -->
+<!-- var disqus_config = function () { -->
+<!-- this.page.url = 'https://gorm.io/ko_KR/docs/models.html'; -->
+<!-- this.page.identifier = 'https://gorm.io/ko_KR/docs/models.html'; -->
+<!-- this.language = 'ko'; -->
+<!-- }; -->
+
+<!-- (function() { // DON'T EDIT BELOW THIS LINE -->
+<!-- var d = document, s = d.createElement('script'); -->
+<!-- s.src = 'https://gormv2.disqus.com/embed.js'; -->
+<!-- s.setAttribute('data-timestamp', +new Date()); -->
+<!-- (d.head || d.body).appendChild(s); -->
+<!-- })(); -->
+<!-- </script> -->
+<!--  -->
 
             </div>
           </div>
@@ -304,15 +389,21 @@ s.setAttribute('data-timestamp', +new Date());
             <div id="article-toc-inner">
               <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
               <strong class="sidebar-title">내용</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#모델-선언"><span class="toc-text">모델 선언</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#구조체-태그"><span class="toc-text">구조체 태그</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#지원하는-구조체-태그"><span class="toc-text">지원하는 구조체 태그</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Struct-tags-for-Associations"><span class="toc-text">Struct tags for Associations</span></a></li></ol></li></ol>
-              <a href="#" id="article-toc-top">맨 위로 돌아가기</a>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%EB%AA%A8%EB%8D%B8-%EC%84%A0%EC%96%B8"><span class="toc-text">모델 선언</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B7%9C%EC%B9%99"><span class="toc-text">규칙</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#gorm-Model"><span class="toc-text">gorm.Model</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%EA%B3%A0%EA%B8%89"><span class="toc-text">고급</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%ED%95%84%EB%93%9C-%EC%88%98%EC%A4%80-%EA%B6%8C%ED%95%9C"><span class="toc-text">필드 수준 권한</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Creating-x2F-Updating-Time-x2F-Unix-Milli-x2F-Nano-Seconds-Tracking-%EC%83%9D%EC%84%B1-x2F-%EC%97%85%EB%8D%B0%EC%9D%B4%ED%8A%B8-%EC%8B%9C-%EC%8B%9C%EA%B0%84-x2F-%EC%9C%A0%EB%8B%89%EC%8A%A4%EC%8B%9C%EA%B0%84-%EB%B0%80%EB%A6%AC-x2F-%EB%82%98%EB%85%B8-%EA%B8%B0%EB%A1%9D"><span class="toc-text">Creating&#x2F;Updating Time&#x2F;Unix (Milli&#x2F;Nano) Seconds Tracking 생성&#x2F;업데이트 시 시간&#x2F;유닉스시간(밀리&#x2F;나노) 기록</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Embedded-Struct"><span class="toc-text">Embedded Struct</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Fields-Tags"><span class="toc-text">Fields Tags</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Associations-Tags"><span class="toc-text">Associations Tags</span></a></li></ol></li></ol>
+
+              
+                <a href="https://translate.gorm.io/project/go-gorm/ko" target="_blank" id="article-improve">
+                  페이지 수정
+                </a>
+              
+              <a href="#" id="article-toc-top">위로 가기</a>
             </div>
           </aside>
         </div>
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">시작하기</strong><a href="index.html" class="sidebar-link">개요</a><a href="models.html" class="sidebar-link current">모델 선언</a><a href="conventions.html" class="sidebar-link">규칙</a><a href="connecting_to_the_database.html" class="sidebar-link">데이터베이스 연결</a><strong class="sidebar-title">CRUD 인터페이스</strong><a href="create.html" class="sidebar-link">Create</a><a href="query.html" class="sidebar-link">Query</a><a href="update.html" class="sidebar-link">Update</a><a href="delete.html" class="sidebar-link">Delete</a><strong class="sidebar-title">Associations</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Associations</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">튜토리얼</strong><a href="method_chaining.html" class="sidebar-link">Method Chaining</a><a href="error_handling.html" class="sidebar-link">Error Handling</a><a href="hooks.html" class="sidebar-link">Hooks</a><a href="transactions.html" class="sidebar-link">Transactions</a><a href="migration.html" class="sidebar-link">Migration</a><a href="sql_builder.html" class="sidebar-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Generic Database Interface</a><strong class="sidebar-title">Advanced Topics</strong><a href="composite_primary_key.html" class="sidebar-link">Composite Primary Key</a><a href="write_plugins.html" class="sidebar-link">Write Plugins</a><a href="dialects.html" class="sidebar-link">GORM Dialects</a><a href="logger.html" class="sidebar-link">Logger</a><a href="changelog.html" class="sidebar-link">변경이력</a><a href="/community.html" class="sidebar-link">커뮤니티</a><a href="/contribute.html" class="sidebar-link">기여하기</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">현재 사이트 번역하기</a>
+    <strong class="sidebar-title">시작하기</strong><a href="index.html" class="sidebar-link">개요</a><a href="models.html" class="sidebar-link current">구조 작성</a><a href="connecting_to_the_database.html" class="sidebar-link">Database에 연결하기</a><strong class="sidebar-title">CRUD 상호작용</strong><a href="create.html" class="sidebar-link">생성</a><a href="query.html" class="sidebar-link">선택</a><a href="advanced_query.html" class="sidebar-link">고급 선택</a><a href="update.html" class="sidebar-link">수정</a><a href="delete.html" class="sidebar-link">삭제</a><a href="sql_builder.html" class="sidebar-link">Raw SQL & SQL 빌더</a><strong class="sidebar-title">Associations</strong><a href="belongs_to.html" class="sidebar-link">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Association Mode</a><a href="preload.html" class="sidebar-link">Preloading (Eager Loading)</a><strong class="sidebar-title">강좌</strong><a href="context.html" class="sidebar-link">내용</a><a href="error_handling.html" class="sidebar-link">에러 핸들링</a><a href="method_chaining.html" class="sidebar-link">Method Chaining</a><a href="session.html" class="sidebar-link">세션</a><a href="hooks.html" class="sidebar-link">Hooks</a><a href="transactions.html" class="sidebar-link">Transactions</a><a href="migration.html" class="sidebar-link">마이그레이션</a><a href="logger.html" class="sidebar-link">Logger</a><a href="generic_interface.html" class="sidebar-link">Generic Database Interface</a><a href="performance.html" class="sidebar-link">Performance</a><a href="data_types.html" class="sidebar-link">Data Type 커스터마이징</a><a href="scopes.html" class="sidebar-link">Scopes</a><a href="conventions.html" class="sidebar-link">규칙</a><a href="settings.html" class="sidebar-link">설정</a><strong class="sidebar-title">Advanced Topics</strong><a href="dbresolver.html" class="sidebar-link">Database Resolver</a><a href="sharding.html" class="sidebar-link">Sharding</a><a href="serializer.html" class="sidebar-link">Serializer</a><a href="prometheus.html" class="sidebar-link">Prometheus</a><a href="hints.html" class="sidebar-link">Hints</a><a href="indexes.html" class="sidebar-link">Indexes</a><a href="constraints.html" class="sidebar-link">Constraints</a><a href="composite_primary_key.html" class="sidebar-link">Composite Primary Key</a><a href="security.html" class="sidebar-link">보안</a><a href="gorm_config.html" class="sidebar-link">GORM 설정</a><a href="write_plugins.html" class="sidebar-link">플러그인 작성</a><a href="write_driver.html" class="sidebar-link">드라이버 작성</a><a href="changelog.html" class="sidebar-link">변경 로그</a><a href="/community.html" class="sidebar-link">커뮤니티</a><a href="/contribute.html" class="sidebar-link">기여</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">현제 페이지 번역하기</a>
   </div>
 </aside>
 
@@ -323,13 +414,22 @@ s.setAttribute('data-timestamp', +new Date());
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2013~2020 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      &copy; 2013~2023 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
-      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+      <div id="gorm.cn" style="display:none">
+      感谢 <a href="https://www.qiniu.com/" target="_blank">七牛云</a> 对 CDN 的赞助，<a href="https://github.com/unknwon" target="_blank">无闻</a> 对域名 <a href="https://gorm.cn" target="_blank">gorm.cn</a> 的捐赠<br>
+      <a href="http://beian.miit.gov.cn/" target="_blank" data-spm-anchor-id="a3c00.7621333.7y9jhqsfz.112">浙ICP备2020033190号-1</a><br>
+      </div>
+
+      <script>
+        if (window.location.hostname.includes("gorm.cn")) {
+          document.getElementById("gorm.cn").style.display = 'block';
+        }
+      </script>
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/go-gorm/gorm" class="footer-link" target="_blank"><i class="fab fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -342,10 +442,10 @@ s.setAttribute('data-timestamp', +new Date());
       <li class="mobile-nav-item">
         <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Home</a>
       </li>
-      <a href="/ko_KR/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>문서</a><a href="/ko_KR/community.html" class="mobile-nav-link"><i class="fa fa-slack"></i>커뮤니티</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ko_KR/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>기여하기</a>
+      <a href="/ko_KR/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Docs</a><a href="/ko_KR/gen/" class="mobile-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ko_KR/community.html" class="mobile-nav-link"><i class="fab fa-slack"></i>Community</a><a href="https://pkg.go.dev/gorm.io/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ko_KR/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Contribute</a>
     </ul>
     
-      <strong class="mobile-nav-title">시작하기</strong><a href="index.html" class="mobile-nav-link">개요</a><a href="models.html" class="mobile-nav-link current">모델 선언</a><a href="conventions.html" class="mobile-nav-link">규칙</a><a href="connecting_to_the_database.html" class="mobile-nav-link">데이터베이스 연결</a><strong class="mobile-nav-title">CRUD 인터페이스</strong><a href="create.html" class="mobile-nav-link">Create</a><a href="query.html" class="mobile-nav-link">Query</a><a href="update.html" class="mobile-nav-link">Update</a><a href="delete.html" class="mobile-nav-link">Delete</a><strong class="mobile-nav-title">Associations</strong><a href="belongs_to.html" class="mobile-nav-link">Belongs To</a><a href="has_one.html" class="mobile-nav-link">Has One</a><a href="has_many.html" class="mobile-nav-link">Has Many</a><a href="many_to_many.html" class="mobile-nav-link">Many To Many</a><a href="associations.html" class="mobile-nav-link">Associations</a><a href="preload.html" class="mobile-nav-link">Preloading (Eager Loading)</a><strong class="mobile-nav-title">튜토리얼</strong><a href="method_chaining.html" class="mobile-nav-link">Method Chaining</a><a href="error_handling.html" class="mobile-nav-link">Error Handling</a><a href="hooks.html" class="mobile-nav-link">Hooks</a><a href="transactions.html" class="mobile-nav-link">Transactions</a><a href="migration.html" class="mobile-nav-link">Migration</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL and SQL Builder</a><a href="generic_interface.html" class="mobile-nav-link">Generic Database Interface</a><strong class="mobile-nav-title">Advanced Topics</strong><a href="composite_primary_key.html" class="mobile-nav-link">Composite Primary Key</a><a href="write_plugins.html" class="mobile-nav-link">Write Plugins</a><a href="dialects.html" class="mobile-nav-link">GORM Dialects</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="changelog.html" class="mobile-nav-link">변경이력</a><a href="/community.html" class="mobile-nav-link">커뮤니티</a><a href="/contribute.html" class="mobile-nav-link">기여하기</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">현재 사이트 번역하기</a>
+      <strong class="mobile-nav-title">시작하기</strong><a href="index.html" class="mobile-nav-link">개요</a><a href="models.html" class="mobile-nav-link current">구조 작성</a><a href="connecting_to_the_database.html" class="mobile-nav-link">Database에 연결하기</a><strong class="mobile-nav-title">CRUD 상호작용</strong><a href="create.html" class="mobile-nav-link">생성</a><a href="query.html" class="mobile-nav-link">선택</a><a href="advanced_query.html" class="mobile-nav-link">고급 선택</a><a href="update.html" class="mobile-nav-link">수정</a><a href="delete.html" class="mobile-nav-link">삭제</a><a href="sql_builder.html" class="mobile-nav-link">Raw SQL & SQL 빌더</a><strong class="mobile-nav-title">Associations</strong><a href="belongs_to.html" class="mobile-nav-link">Belongs To</a><a href="has_one.html" class="mobile-nav-link">Has One</a><a href="has_many.html" class="mobile-nav-link">Has Many</a><a href="many_to_many.html" class="mobile-nav-link">Many To Many</a><a href="associations.html" class="mobile-nav-link">Association Mode</a><a href="preload.html" class="mobile-nav-link">Preloading (Eager Loading)</a><strong class="mobile-nav-title">강좌</strong><a href="context.html" class="mobile-nav-link">내용</a><a href="error_handling.html" class="mobile-nav-link">에러 핸들링</a><a href="method_chaining.html" class="mobile-nav-link">Method Chaining</a><a href="session.html" class="mobile-nav-link">세션</a><a href="hooks.html" class="mobile-nav-link">Hooks</a><a href="transactions.html" class="mobile-nav-link">Transactions</a><a href="migration.html" class="mobile-nav-link">마이그레이션</a><a href="logger.html" class="mobile-nav-link">Logger</a><a href="generic_interface.html" class="mobile-nav-link">Generic Database Interface</a><a href="performance.html" class="mobile-nav-link">Performance</a><a href="data_types.html" class="mobile-nav-link">Data Type 커스터마이징</a><a href="scopes.html" class="mobile-nav-link">Scopes</a><a href="conventions.html" class="mobile-nav-link">규칙</a><a href="settings.html" class="mobile-nav-link">설정</a><strong class="mobile-nav-title">Advanced Topics</strong><a href="dbresolver.html" class="mobile-nav-link">Database Resolver</a><a href="sharding.html" class="mobile-nav-link">Sharding</a><a href="serializer.html" class="mobile-nav-link">Serializer</a><a href="prometheus.html" class="mobile-nav-link">Prometheus</a><a href="hints.html" class="mobile-nav-link">Hints</a><a href="indexes.html" class="mobile-nav-link">Indexes</a><a href="constraints.html" class="mobile-nav-link">Constraints</a><a href="composite_primary_key.html" class="mobile-nav-link">Composite Primary Key</a><a href="security.html" class="mobile-nav-link">보안</a><a href="gorm_config.html" class="mobile-nav-link">GORM 설정</a><a href="write_plugins.html" class="mobile-nav-link">플러그인 작성</a><a href="write_driver.html" class="mobile-nav-link">드라이버 작성</a><a href="changelog.html" class="mobile-nav-link">변경 로그</a><a href="/community.html" class="mobile-nav-link">커뮤니티</a><a href="/contribute.html" class="mobile-nav-link">기여</a><a href="/contribute.html#Translate-this-site" class="mobile-nav-link">현제 페이지 번역하기</a>
     
   </div>
   <div id="mobile-lang-select-wrap">
@@ -358,19 +458,21 @@ s.setAttribute('data-timestamp', +new Date());
       
         <option value="de_DE">Deutsch</option>
       
-        <option value="es_ES">Español</option>
-      
         <option value="id_ID">bahasa Indonesia</option>
-      
-        <option value="it_IT">Italiano</option>
       
         <option value="ja_JP">日本語</option>
       
         <option value="ru_RU">Русский</option>
       
+        <option value="ko_KR" selected>한국어</option>
+      
+        <option value="hi_IN">हिन्दी</option>
+      
         <option value="fr_FR">French</option>
       
-        <option value="ko_KR" selected>한국어</option>
+        <option value="it_IT">Italiano</option>
+      
+        <option value="es_ES">Español</option>
       
     </select>
   </div>
@@ -388,12 +490,9 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/js/mobile_nav.js"></script>
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 <script src="/js/code_expander.js"></script>
-
-
-<script src="/js/404_fix.js"></script>
 
 <!-- endbuild -->
 

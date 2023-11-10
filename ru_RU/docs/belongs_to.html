@@ -6,47 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Canonical links -->
-  <link rel="canonical" href="http://gorm.io/ru_RU/docs/belongs_to.html">
+  <link rel="canonical" href="https://gorm.io/ru_RU/docs/belongs_to.html">
   <!-- Alternative links -->
   
   <!-- Icon -->
-  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
-  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
-  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
-  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
-  <meta name="msapplication-TileColor" content="#2f83cd">
-  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
-  <meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <!-- CSS -->
   <!-- build:css build/css/navy.css -->
   
 <link rel="stylesheet" href="/css/navy.css">
 
   <!-- endbuild -->
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
   <!-- RSS -->
-  <link rel="alternate" href="/atom.xml" title="GORM">
+  <link rel="alternate" href="/atom.xml" title="GORM" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Belongs ToСвязь принадлежит к &quot;belongs to&quot; устанавливает связь один к одному с другой моделью, каждый экземпляр текущей модели “принадлежит” экземпляру другой модели. Для примера, если ваше">
+  <meta name="description" content="Принадлежит к (Belongs To)Отношение belongs to устанавливает связь один к одному с другой моделью, таким образом, чтобы каждый экземпляр объявленной модели “принадлежал” одному экземпляру другой модел">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Belongs To">
-<meta property="og:url" content="http://gorm.io/ru_RU/docs/belongs_to.html">
+<meta property="og:url" content="https://gorm.io/ru_RU/docs/belongs_to.html">
 <meta property="og:site_name" content="GORM">
-<meta property="og:description" content="Belongs ToСвязь принадлежит к &quot;belongs to&quot; устанавливает связь один к одному с другой моделью, каждый экземпляр текущей модели “принадлежит” экземпляру другой модели. Для примера, если ваше">
+<meta property="og:description" content="Принадлежит к (Belongs To)Отношение belongs to устанавливает связь один к одному с другой моделью, таким образом, чтобы каждый экземпляр объявленной модели “принадлежал” одному экземпляру другой модел">
 <meta property="og:locale" content="ru_RU">
-<meta property="article:published_time" content="2020-02-19T02:13:50.020Z">
-<meta property="article:modified_time" content="2020-02-19T02:13:50.020Z">
+<meta property="article:published_time" content="2023-11-10T12:07:29.123Z">
+<meta property="article:modified_time" content="2023-11-10T12:07:29.123Z">
 <meta property="article:author" content="Jinzhu">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="zhangjinzhu">
@@ -59,22 +46,24 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-WSNPD75');</script>
 
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container">
     <header id="header" class="wrapper">
   <div id="header-inner" class="inner">
     <h1 id="logo-wrap">
-      <a href="/ru_RU/" id="logo">GORM</a>
+      <a href="/ru_RU/" id="logo">
+        <img src="/gorm.svg" alt="GORM">
+      </a>
     </h1>
     <nav id="main-nav">
-      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></I>Документация</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fa fa-slack"></I>Сообщество</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></I>Поддержать</a>
+      <a href="/ru_RU/docs/" class="main-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/gen/" class="main-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ru_RU/community.html" class="main-nav-link"><i class="fab fa-slack"></i>Сообщество</a><a href="https://pkg.go.dev/gorm.io/gorm" class="main-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="main-nav-link"><i class="fa fa-rocket"></i>Внести вклад</a>
       <div id="search-input-wrap">
         <div id="search-input-icon">
           <i class="fa fa-search"></i>
         </div>
-        <input type="search" id="search-input" placeholder="Поиск...">
+        <input type="search" id="search-input" placeholder="Поиск в документации...">
       </div>
     </nav>
     <div id="lang-select-wrap">
@@ -87,19 +76,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         
           <option value="de_DE">Deutsch</option>
         
-          <option value="es_ES">Español</option>
-        
           <option value="id_ID">bahasa Indonesia</option>
-        
-          <option value="it_IT">Italiano</option>
         
           <option value="ja_JP">日本語</option>
         
           <option value="ru_RU" selected>Русский</option>
         
+          <option value="ko_KR">한국어</option>
+        
+          <option value="hi_IN">हिन्दी</option>
+        
           <option value="fr_FR">French</option>
         
-          <option value="ko_KR">한국어</option>
+          <option value="it_IT">Italiano</option>
+        
+          <option value="es_ES">Español</option>
         
       </select>
     </div>
@@ -120,61 +111,158 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <div class="inner">
               <header class="article-header">
                 <h1 class="article-title" itemprop="name">Belongs To</h1>
-                <a href="https://github.com/jinzhu/gorm.io/edit/master/pages/ru_RU/docs/belongs_to.md" target="_blank" rel="noopener" class="article-edit-link" title="Улучшить этот раздел"><i class="fa fa-pencil"></i></a>
+                
+                <a target="_blank" rel="noopener" href="https://translate.gorm.io/project/go-gorm/ru" class="article-edit-link" title="Улучшить эту страницу"><i class="fa fa-pencil"></i></a>
+                
               </header>
               <div class="article-content" itemprop="articleBody">
-                <html><head></head><body><h2 id="Belongs-To" class="article-heading"><a href="#Belongs-To" class="headerlink" title="Belongs To"></a>Belongs To<a class="article-anchor" href="#Belongs-To" aria-hidden="true"></a></h2><p>Связь <code>принадлежит к "belongs to"</code> устанавливает связь один к одному с другой моделью, каждый экземпляр текущей модели “принадлежит” экземпляру другой модели.</p>
-<p>Для примера, если ваше приложение содержит пользователей и профили, и каждый профиль может быть присвоен одному пользователю</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="comment">// `Profile` принадлежит к `User`, где `UserID` это внешний ключ</span></span><br><span class="line"><span class="keyword">type</span> Profile <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  UserID <span class="keyword">int</span></span><br><span class="line">  User   User</span><br><span class="line">  Name   <span class="keyword">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+                <html><head></head><body><h2 id="Принадлежит-к-Belongs-To" class="article-heading"><a href="#Принадлежит-к-Belongs-To" class="headerlink" title="Принадлежит к (Belongs To)"></a>Принадлежит к (Belongs To)<a class="article-anchor" href="#Принадлежит-к-Belongs-To" aria-hidden="true"></a></h2><p>Отношение <code>belongs to</code> устанавливает связь один к одному с другой моделью, таким образом, чтобы каждый экземпляр объявленной модели “принадлежал” одному экземпляру другой модели.</p>
+<p>Например, если в вашем приложении есть пользователи и компании, и каждый пользователь может быть только в одной компании, то следующие типы отражают это отношение. Обратите внимание, что у объекта <code>User</code> есть <code>CompanyID</code> и <code>Company</code>. По умолчанию, <code>CompanyID</code> неявно используется для создания отношения внешнего ключа между таблицами <code>User</code> и <code>Company</code>, и поэтому должен быть включен в структуру <code>User</code> для заполнения внутренней структуры <code>Company</code>.</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="comment">// `User` принадлежит к `Company`, `CompanyID` это внешний ключ</span></span><br><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">int</span></span><br><span class="line">  Company   Company</span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Foreign-Key" class="article-heading"><a href="#Foreign-Key" class="headerlink" title="Foreign Key"></a>Foreign Key<a class="article-anchor" href="#Foreign-Key" aria-hidden="true"></a></h2><p>Для определения принадлежности к отношениям, внешний ключ должен существовать, по умолчанию внешний ключ использует имя типа владельца плюс его первичный ключ.</p>
-<p>Например, для определения модели, которая принадлежит <code>User</code>, внешний ключ должен быть <code>UserID</code>.</p>
-<p>GORM дает возможность настроить внешний ключ, например:</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Profile <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="keyword">string</span></span><br><span class="line">  User      User <span class="string">`gorm:"foreignkey:UserRefer"`</span> <span class="comment">// использовать UserRefer как внешний ключ</span></span><br><span class="line">  UserRefer <span class="keyword">uint</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<p>Подробнее о заполнении внутренней структуры см. в <a href="belongs_to.html#Eager-Loading">Нетерпеливая загрузка</a>.</p>
+<h2 id="Переопределение-внешнего-ключа" class="article-heading"><a href="#Переопределение-внешнего-ключа" class="headerlink" title="Переопределение внешнего ключа"></a>Переопределение внешнего ключа<a class="article-anchor" href="#Переопределение-внешнего-ключа" aria-hidden="true"></a></h2><p>Чтобы определить отношение “belongs to”, внешний ключ должен существовать, внешний ключ по умолчанию использует имя типа владельца плюс имя его первичного поля.</p>
+<p>Для приведенного выше примера, чтобы определить модель <code>User</code>, которая принадлежит <code>Company</code>, внешний ключ должен быть <code>CompanyID</code> по соглашению</p>
+<p>GORM предоставляет возможность настраивать внешний ключ, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name         <span class="type">string</span></span><br><span class="line">  CompanyRefer <span class="type">int</span></span><br><span class="line">  Company      Company <span class="string">`gorm:"foreignKey:CompanyRefer"`</span></span><br><span class="line">  <span class="comment">// использовать CompanyRefer как внешний ключ</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Association-ForeignKey" class="article-heading"><a href="#Association-ForeignKey" class="headerlink" title="Association ForeignKey"></a>Association ForeignKey<a class="article-anchor" href="#Association-ForeignKey" aria-hidden="true"></a></h2><p>Для принадлежности к отношениям, GORM обычно использует первичный ключ владельца как значение внешнего ключа, например, модель <code>User</code> с полем <code>ID</code>.</p>
-<p>Когда вы привязываете профиль к пользователю, GORM сохранит пользовательский <code>ID</code> в поле профиля <code>UserID</code>.</p>
-<p>Вы можете изменить это тэгом <code>association_foreignkey</code>, пример:</p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Refer <span class="keyword">string</span></span><br><span class="line">  Name <span class="keyword">string</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Profile <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="keyword">string</span></span><br><span class="line">  User      User <span class="string">`gorm:"association_foreignkey:Refer"`</span> <span class="comment">// использовать Refer как ассоциативный внешний ключ</span></span><br><span class="line">  UserRefer <span class="keyword">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h2 id="Переопределить-ссылки" class="article-heading"><a href="#Переопределить-ссылки" class="headerlink" title="Переопределить ссылки"></a>Переопределить ссылки<a class="article-anchor" href="#Переопределить-ссылки" aria-hidden="true"></a></h2><p>Для отношения belongs to GORM обычно использует первичное поле владельца в качестве значения внешнего ключа, в приведенном выше примере это поле <code>Company</code> <code>ID</code>.</p>
+<p>Когда вы назначаете пользователя в компанию, GORM сохраняет <code>ID</code> компании в поле <code>CompanyID</code> пользователя.</p>
+<p>Вы можете изменить это с помощью тега <code>references</code>, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">string</span></span><br><span class="line">  Company   Company <span class="string">`gorm:"references:Code"`</span> <span class="comment">// использовать Code, как ссылку</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Code <span class="type">string</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
-<h2 id="Работа-с-Принадлежит-к" class="article-heading"><a href="#Работа-с-Принадлежит-к" class="headerlink" title="Работа с Принадлежит к"></a>Работа с Принадлежит к<a class="article-anchor" href="#Работа-с-Принадлежит-к" aria-hidden="true"></a></h2><p>Вы можете найти <code>belongs to</code> связи с помощью <code>Related</code></p>
-<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line">db.Model(&user).Related(&profile)</span><br><span class="line"><span class="comment">//// SELECT * FROM profiles WHERE user_id = 111; // 111 is user's ID</span></span><br></pre></td></tr></tbody></table></figure>
+<blockquote class="note warn"><p><strong>ПРИМЕЧАНИЕ</strong> GORM обычно определяет связь, как <code>has one</code> если переопределяемое имя внешнего ключа уже существует в типе владельца, нам нужно указать тег <code>references</code> с <code>названием ключа</code>.</p>
+</blockquote>
 
-<p>Для расширенного использования, смотрите <a href="associations.html#Association-Mode">Режим связей</a></p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">string</span></span><br><span class="line">  Company   Company <span class="string">`gorm:"references:CompanyID"`</span> <span class="comment">// использовать Company.CompanyID, как ссылку</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  CompanyID   <span class="type">int</span></span><br><span class="line">  Code        <span class="type">string</span></span><br><span class="line">  Name        <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+
+<h2 id="CRUD-с-Belongs-To" class="article-heading"><a href="#CRUD-с-Belongs-To" class="headerlink" title="CRUD с Belongs To"></a>CRUD с Belongs To<a class="article-anchor" href="#CRUD-с-Belongs-To" aria-hidden="true"></a></h2><p>Пожалуйста, проверьте <a href="associations.html#Association-Mode">Режим ассоциации</a> для работы с отношениями “belongs to”</p>
+<h2 id="Жадная-загрузка" class="article-heading"><a href="#Жадная-загрузка" class="headerlink" title="Жадная загрузка"></a>Жадная загрузка<a class="article-anchor" href="#Жадная-загрузка" aria-hidden="true"></a></h2><p>GORM разрешает жадную загрузку, относящуюся к ассоциациям с <code>предварительной загрузкой (preload)</code> или <code>объединениями (joins)</code>, смотрите <a href="preload.html">Предварительная загрузка (Жадная загрузка)</a> для получения подробной информации</p>
+<h2 id="Ограничения-внешних-ключей" class="article-heading"><a href="#Ограничения-внешних-ключей" class="headerlink" title="Ограничения внешних ключей"></a>Ограничения внешних ключей<a class="article-anchor" href="#Ограничения-внешних-ключей" aria-hidden="true"></a></h2><p>Вы можете настроить ограничения <code>onUpdate</code>, <code>OnDelete</code> с помощью тега <code>constraint</code>, он будет создан при миграции с помощью GORM, например:</p>
+<figure class="highlight go"><table><tbody><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> User <span class="keyword">struct</span> {</span><br><span class="line">  gorm.Model</span><br><span class="line">  Name      <span class="type">string</span></span><br><span class="line">  CompanyID <span class="type">int</span></span><br><span class="line">  Company   Company <span class="string">`gorm:"constraint:OnUpdate:CASCADE,OnDelete:SET NULL;"`</span></span><br><span class="line">}</span><br><span class="line"></span><br><span class="line"><span class="keyword">type</span> Company <span class="keyword">struct</span> {</span><br><span class="line">  ID   <span class="type">int</span></span><br><span class="line">  Name <span class="type">string</span></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 </body></html>
               </div>
-              <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2020-02-19T02:13:50.020Z" itemprop="dateModified">Последнее обновление: 2020-02-19</time>
-<a href="delete.html" class="article-footer-prev" title="Удаление"><i class="fa fa-chevron-left"></i><span>Назад</span></a><a href="has_one.html" class="article-footer-next" title="Has One"><span>Далее</span><i class="fa fa-chevron-right"></i></a>
-              </footer>
+
               
-<section id="comments">
-<div id="disqus_thread"></div>
-</sction>
+              <div>
+                <a href="v2_release_note.html" target="_blank">
+                  <img alt="GitHub tag (latest SemVer)" src="https://img.shields.io/github/v/tag/go-gorm/gorm?label=Latest GORM Release&color=red&&style=for-the-badge&logo=go&logoColor=red">
+                </a>
+              </div>
+              
 
-<script>
-var disqus_config = function () {
-this.page.url = 'http://gorm.io/ru_RU/docs/belongs_to.html';
-this.page.identifier = 'http://gorm.io/ru_RU/docs/belongs_to.html';
-this.language = 'ru';
-};
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2023-11-10T12:07:29.123Z" itemprop="dateModified">Последнее обновление: 2023-11-10</time>
+<a href="sql_builder.html" class="article-footer-prev" title="Raw SQL и конструктор SQL"><i class="fa fa-chevron-left"></i><span>Пред.</span></a><a href="has_one.html" class="article-footer-next" title="Has One"><span>След.</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
 
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://gorm.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
+              <div class="post_sponsors">
+                <div class="sponsors-wrapper-pc open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
 
+    <div class="sponsors">
+      <h1>Gold Sponsors <i class="far fa-kiss-wink-heart"></i></h1>
+      <div class="sponsor_item">
+        <a href="https://hubuc.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+<div class="sponsors-wrapper-mobile open-collective-sponsors">
+  <div class="inner">
+    <div class="sponsors">
+      <h1>Platinum Sponsors</h1>
+      <!-- <div class="sponsor_item"> -->
+      <!--   <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener"> -->
+      <!--     <img src="/sponsors-imgs/chainlink.png" alt="chainlink"> -->
+      <!--   </a> -->
+      <!-- </div> -->
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+
+    <div class="sponsors">
+      <h1>Gold Sponsors</h1>
+      <div class="sponsor_item">
+        <a href="https://chainlinklabs.com" target="_blank" rel="sponsored noopener" title="hubuc">
+          <img src="/sponsors-imgs/hubuc.svg" alt="hubuc">
+        </a>
+      </div>
+      <div class="sponsor_item">
+        <a href="https://www.bytebase.com/?utm_source=github&utm_medium=github-gorm-sponsor-logo&utm_campaign=gorm-20220715" target="_blank" rel="sponsored noopener" title="bytebase">
+          <img src="/sponsors-imgs/bytebase.png" alt="bytebase">
+        </a>
+      </div>
+
+      <div class="sponsor_item" title="Help to deliver a better GORM!">
+        <a class="become-sponsor" href="/contribute.html#Donations">Become a Sponsor!</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+              </div>
+
+              <!--  -->
+<!-- <section id="comments"> -->
+<!-- <div id="disqus_thread"></div> -->
+<!-- </sction> -->
+
+<!-- <script> -->
+<!-- var disqus_config = function () { -->
+<!-- this.page.url = 'https://gorm.io/ru_RU/docs/belongs_to.html'; -->
+<!-- this.page.identifier = 'https://gorm.io/ru_RU/docs/belongs_to.html'; -->
+<!-- this.language = 'ru'; -->
+<!-- }; -->
+
+<!-- (function() { // DON'T EDIT BELOW THIS LINE -->
+<!-- var d = document, s = d.createElement('script'); -->
+<!-- s.src = 'https://gormv2.disqus.com/embed.js'; -->
+<!-- s.setAttribute('data-timestamp', +new Date()); -->
+<!-- (d.head || d.body).appendChild(s); -->
+<!-- })(); -->
+<!-- </script> -->
+<!--  -->
 
             </div>
           </div>
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <div id="sidebar-ad-wrapper" class="tagmanager_ad"></div>
-              <strong class="sidebar-title">Содержание</strong>
-              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Belongs-To"><span class="toc-text">Belongs To</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Foreign-Key"><span class="toc-text">Foreign Key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Association-ForeignKey"><span class="toc-text">Association ForeignKey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Работа-с-Принадлежит-к"><span class="toc-text">Работа с Принадлежит к</span></a></li></ol>
+              <strong class="sidebar-title">Содержимое</strong>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9F%D1%80%D0%B8%D0%BD%D0%B0%D0%B4%D0%BB%D0%B5%D0%B6%D0%B8%D1%82-%D0%BA-Belongs-To"><span class="toc-text">Принадлежит к (Belongs To)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9F%D0%B5%D1%80%D0%B5%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B5%D0%B3%D0%BE-%D0%BA%D0%BB%D1%8E%D1%87%D0%B0"><span class="toc-text">Переопределение внешнего ключа</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9F%D0%B5%D1%80%D0%B5%D0%BE%D0%BF%D1%80%D0%B5%D0%B4%D0%B5%D0%BB%D0%B8%D1%82%D1%8C-%D1%81%D1%81%D1%8B%D0%BB%D0%BA%D0%B8"><span class="toc-text">Переопределить ссылки</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#CRUD-%D1%81-Belongs-To"><span class="toc-text">CRUD с Belongs To</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%96%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0"><span class="toc-text">Жадная загрузка</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%D0%9E%D0%B3%D1%80%D0%B0%D0%BD%D0%B8%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B2%D0%BD%D0%B5%D1%88%D0%BD%D0%B8%D1%85-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9"><span class="toc-text">Ограничения внешних ключей</span></a></li></ol>
+
+              
+                <a href="https://translate.gorm.io/project/go-gorm/ru" target="_blank" id="article-improve">
+                  Улучшить эту страницу
+                </a>
+              
               <a href="#" id="article-toc-top">Вернуться к началу</a>
             </div>
           </aside>
@@ -182,7 +270,7 @@ s.setAttribute('data-timestamp', +new Date());
       </article>
       <aside id="sidebar" role="navigation">
   <div class="inner">
-    <strong class="sidebar-title">С чего начать?</strong><a href="index.html" class="sidebar-link">Общие сведения</a><a href="models.html" class="sidebar-link">Объявление моделей</a><a href="conventions.html" class="sidebar-link">Определения</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создание</a><a href="query.html" class="sidebar-link">Запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удаление</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link current">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Связи</a><a href="preload.html" class="sidebar-link">Подгрузка данных(Жадная загрузка)</a><strong class="sidebar-title">Туториалы</strong><a href="method_chaining.html" class="sidebar-link">Цепочка вызовов</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграции</a><a href="sql_builder.html" class="sidebar-link">Чистый SQL и SQL Builder</a><a href="generic_interface.html" class="sidebar-link">Нативный интерфейс БД</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="composite_primary_key.html" class="sidebar-link">Составной первичный ключ</a><a href="write_plugins.html" class="sidebar-link">Плагины (Колбеки)</a><a href="dialects.html" class="sidebar-link">Поддерживаемые БД</a><a href="logger.html" class="sidebar-link">Логирование</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Сделать вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевод текущего сайта</a>
+    <strong class="sidebar-title">Начало работы</strong><a href="index.html" class="sidebar-link">Обзор</a><a href="models.html" class="sidebar-link">Объявление моделей</a><a href="connecting_to_the_database.html" class="sidebar-link">Подключение к базе данных</a><strong class="sidebar-title">CRUD интерфейс</strong><a href="create.html" class="sidebar-link">Создать</a><a href="query.html" class="sidebar-link">Запрос</a><a href="advanced_query.html" class="sidebar-link">Расширенный запрос</a><a href="update.html" class="sidebar-link">Обновление</a><a href="delete.html" class="sidebar-link">Удалить</a><a href="sql_builder.html" class="sidebar-link">Raw SQL и конструктор SQL</a><strong class="sidebar-title">Связи</strong><a href="belongs_to.html" class="sidebar-link current">Belongs To</a><a href="has_one.html" class="sidebar-link">Has One</a><a href="has_many.html" class="sidebar-link">Has Many</a><a href="many_to_many.html" class="sidebar-link">Many To Many</a><a href="associations.html" class="sidebar-link">Режим связи</a><a href="preload.html" class="sidebar-link">Предзагрузка (Нетерпеливая загрузка)</a><strong class="sidebar-title">Обучение</strong><a href="context.html" class="sidebar-link">Контекст</a><a href="error_handling.html" class="sidebar-link">Обработка ошибок</a><a href="method_chaining.html" class="sidebar-link">Цепочки методов</a><a href="session.html" class="sidebar-link">Сессия</a><a href="hooks.html" class="sidebar-link">Хуки</a><a href="transactions.html" class="sidebar-link">Транзакции</a><a href="migration.html" class="sidebar-link">Миграция</a><a href="logger.html" class="sidebar-link">Logger</a><a href="generic_interface.html" class="sidebar-link">Универсальный интерфейс базы данных</a><a href="performance.html" class="sidebar-link">Производительность</a><a href="data_types.html" class="sidebar-link">Настройка типов данных</a><a href="scopes.html" class="sidebar-link">Области</a><a href="conventions.html" class="sidebar-link">Преобразования</a><a href="settings.html" class="sidebar-link">Настройки</a><strong class="sidebar-title">Дополнительные возможности</strong><a href="dbresolver.html" class="sidebar-link">Резолвер базы данных</a><a href="sharding.html" class="sidebar-link">Шардирование</a><a href="serializer.html" class="sidebar-link">Сериализатор</a><a href="prometheus.html" class="sidebar-link">Prometheus</a><a href="hints.html" class="sidebar-link">Подсказки</a><a href="indexes.html" class="sidebar-link">Индексы</a><a href="constraints.html" class="sidebar-link">Ограничения</a><a href="composite_primary_key.html" class="sidebar-link">Композитный первичный ключ</a><a href="security.html" class="sidebar-link">Безопасность</a><a href="gorm_config.html" class="sidebar-link">Настройки GORM</a><a href="write_plugins.html" class="sidebar-link">Написание плагинов</a><a href="write_driver.html" class="sidebar-link">Написание драйверов</a><a href="changelog.html" class="sidebar-link">История изменений</a><a href="/community.html" class="sidebar-link">Сообщество</a><a href="/contribute.html" class="sidebar-link">Внести вклад</a><a href="/contribute.html#Translate-this-site" class="sidebar-link">Перевести текущий сайт</a>
   </div>
 </aside>
 
@@ -193,13 +281,22 @@ s.setAttribute('data-timestamp', +new Date());
     <footer id="footer" class="wrapper">
   <div class="inner">
     <div id="footer-copyright">
-      &copy; 2013~2020 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
+      &copy; 2013~2023 <a href="https://github.com/jinzhu" target="_blank">Jinzhu</a><br>
       Documentation licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>.<br>
-      <a href="https://github.com/jinzhu/gorm.io" target="_blank">Source Code of this site</a>
+      <div id="gorm.cn" style="display:none">
+      感谢 <a href="https://www.qiniu.com/" target="_blank">七牛云</a> 对 CDN 的赞助，<a href="https://github.com/unknwon" target="_blank">无闻</a> 对域名 <a href="https://gorm.cn" target="_blank">gorm.cn</a> 的捐赠<br>
+      <a href="http://beian.miit.gov.cn/" target="_blank" data-spm-anchor-id="a3c00.7621333.7y9jhqsfz.112">浙ICP备2020033190号-1</a><br>
+      </div>
+
+      <script>
+        if (window.location.hostname.includes("gorm.cn")) {
+          document.getElementById("gorm.cn").style.display = 'block';
+        }
+      </script>
     </div>
     <div id="footer-links">
-      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
-      <a href="https://github.com/jinzhu/gorm" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+      <a href="https://twitter.com/zhangjinzhu" class="footer-link" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/go-gorm/gorm" class="footer-link" target="_blank"><i class="fab fa-github-alt"></i></a>
     </div>
   </div>
 </footer>
@@ -210,9 +307,9 @@ s.setAttribute('data-timestamp', +new Date());
   <div id="mobile-nav-inner">
     <ul id="mobile-nav-list">
       <li class="mobile-nav-item">
-        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></I>Главная</a>
+        <a href="/" class="mobile-nav-link" rel="external" target="_blank"><i class="fa fa-home"></i>Главная</a>
       </li>
-      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></I>Документация</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fa fa-slack"></I>Сообщество</a><a href="https://pkg.go.dev/github.com/jinzhu/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></I>Поддержать</a>
+      <a href="/ru_RU/docs/" class="mobile-nav-link"><i class="fa fa-book"></i>Документация</a><a href="/ru_RU/gen/" class="mobile-nav-link"><i class="fa fa-tools"></i>Gen</a><a href="/ru_RU/community.html" class="mobile-nav-link"><i class="fab fa-slack"></i>Сообщество</a><a href="https://pkg.go.dev/gorm.io/gorm" class="mobile-nav-link" target="_blank"><i class="fa fa-cogs"></i>API</a><a href="/ru_RU/contribute.html" class="mobile-nav-link"><i class="fa fa-rocket"></i>Внести вклад</a>
     </ul>
     
   </div>
@@ -226,19 +323,21 @@ s.setAttribute('data-timestamp', +new Date());
       
         <option value="de_DE">Deutsch</option>
       
-        <option value="es_ES">Español</option>
-      
         <option value="id_ID">bahasa Indonesia</option>
-      
-        <option value="it_IT">Italiano</option>
       
         <option value="ja_JP">日本語</option>
       
         <option value="ru_RU" selected>Русский</option>
       
+        <option value="ko_KR">한국어</option>
+      
+        <option value="hi_IN">हिन्दी</option>
+      
         <option value="fr_FR">French</option>
       
-        <option value="ko_KR">한국어</option>
+        <option value="it_IT">Italiano</option>
+      
+        <option value="es_ES">Español</option>
       
     </select>
   </div>
@@ -256,12 +355,9 @@ s.setAttribute('data-timestamp', +new Date());
 <script src="/js/mobile_nav.js"></script>
 
 
-<script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs=" crossorigin="anonymous"></script>
 
 <script src="/js/code_expander.js"></script>
-
-
-<script src="/js/404_fix.js"></script>
 
 <!-- endbuild -->
 
